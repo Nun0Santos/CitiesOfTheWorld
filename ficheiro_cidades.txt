@@ -1,0 +1,25 @@
+Barcelona, Espanha
+Madrid, Espanha
+Sevilha, Espanha
+Oslo, Noruega
+Bergen, Noruega
+Berlim, Alemanha
+Hamburgo, Alemanha
+Munique, Alemanha
+Dortmund, Alemanha
+Lisboa, Portugal
+Almada, Portugal
+Porto, Portugal
+Maia, Portugal
+Xangai, China
+Pequim, China
+Paris, França
+Lyon, França
+Rio de Janeiro, Brasil
+Fortaleza, Brasil
+Manaus, Brasil
+Nova Iorque, Estados Unidos
+Detroit, Estados Unidos
+Los Angeles, Estados Unidos
+Chicago, Estados Unidos
+Yenne, Senegal
