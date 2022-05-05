@@ -299,7 +299,7 @@ public class Frame extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem5);
 
-        jMenuItem6.setText("Acrescentar cidade");
+        jMenuItem6.setText("Adicionar cidade");
         jMenu2.add(jMenuItem6);
 
         jMenuItem7.setText("Alterar atributos de uma cidade");

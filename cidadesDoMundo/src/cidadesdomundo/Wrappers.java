@@ -14,140 +14,258 @@ import java.util.regex.Pattern;
 /**
  *
  * @author User
+ 
  */
 public class Wrappers {
     
-       public static String DBCity(String pesquisa) throws FileNotFoundException, IOException {
+       public static String encontrarLinkDBCityPais(String pais) throws FileNotFoundException, IOException { //encontra cidade de um pais
         String link = "https://pt.db-city.com/";
         String DBCity;
-        HttpRequestFunctions.httpRequest1(link, pesquisa, "pais.html");
-        String ER = "https://pt.db-city.com/[0-9]+";
+        HttpRequestFunctions.httpRequest1(link, pais, "pais.txt"); //pesqusiar pais
+        String ER = "<a href=\"/([A-Za-z]+--[A-Za-z]+--[A-Za-z]+)\" title=\"[A-Za-z]+\">([A-Za-z]+)</a>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
-        Scanner input = new Scanner(new FileInputStream("pais.html"));
+        Scanner input = new Scanner(new FileInputStream("pais.txt"));
         while (input.hasNextLine()) {
             String linha = input.nextLine();
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                DBCity = m.group();
-                HttpRequestFunctions.httpRequest1(DBCity, "", "pais.html");
-                return DBCity;
+                DBCity = m.group(1);
+                 return "https://pt.db-city.com/" + DBCity;
             }
         }
         input.close();
         return null;
     }
         
-    public static String Wikipedia(String pesquisa) throws FileNotFoundException, IOException {        
-        String link = "https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal";
-        HttpRequestFunctions.httpRequest2(link, pesquisa, "cidades.html");
-            return null;   
+    public static String Wikipedia(String cidade) throws FileNotFoundException, IOException {        
+        String link = "https://pt.wikipedia.org/wiki/";
+        HttpRequestFunctions.httpRequest1(link, cidade, "cidade.txt");
+        return "https://pt.wikipedia.org/wiki/" + cidade;   
     }
    
-    public static String procuraNomeCidade() throws IOException {
-        String er = "data-href=\"https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/2.png\" class=\"async\" alt=\"([a-ZA-Z]+)";
-        Pattern p = Pattern.compile(er);
-        Scanner fich = new Scanner(new FileInputStream("cidades.html"));
-        while (fich.hasNextLine()) {
-            String linha = fich.nextLine();
-            Matcher m = p.matcher(linha);
+    public static String procuraCP(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<th>Código postal [A-Za-z]+</th><td>([0-9]+)</td>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
             if (m.find()) {
-                fich.close();
+                input.close();
                 return m.group(1);
             }
         }
-        fich.close();
+        input.close();
         return null;
-
-    } 
- 
-    public static String procuraPais() throws FileNotFoundException{
-        String aux = "";      
-        String er2 = "<span class=\".* nationality\">([^<]+)</span>";
-        Pattern p2 = Pattern.compile(er2);
-        Scanner fich = new Scanner(new FileInputStream("filmes.html"));
-        while (fich.hasNextLine()) {
-            String linha2 = fich.nextLine();
-            Matcher m2 = p2.matcher(linha2);
-            if (m2.find()) {
-                aux = aux + m2.group(1) + "\t";
-            }
-        }
-        if (aux.isEmpty()) {
-            fich.close();
-            return null;
-        }
-        fich.close();
-        return aux;         
     }
  
-     public static int procuraNumeroHabitantes() throws FileNotFoundException{     
-        String er = "<span class=\"what light\">Ano de produção</span>";
-        String er2 = "<span class=\"that\">([0-9]+)</span>";
-        Pattern p = Pattern.compile(er);
-        Pattern p2 = Pattern.compile(er2);
-        Scanner fich = new Scanner(new FileInputStream("filmes.html"));
-        while (fich.hasNextLine()) {
-            String linha = fich.nextLine();
-            Matcher m1 = p.matcher(linha);
-            if (m1.find()) {
-                linha = fich.nextLine();
-                Matcher m2 = p2.matcher(linha);
-                if (m2.find()) {
-                    fich.close();
-                    return Integer.parseInt(m2.group(1));
-                }
+   public static double procuraNumeroHabitantes(String link) throws FileNotFoundException, IOException{     
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<th>Número de habitantes [A-Za-z]+</th><td>([^A-Z]+) habitantes</td>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return Double.parseDouble(m.group(1).replace(".","")); //Falta tirar o . no final
             }
         }
-        fich.close();
+        input.close();
         return -1;
-    }
+               
+    };
 
-    public static int procuraClima() throws FileNotFoundException{      
-        String er = "<td style=\"vertical-align: top; text-align: left; text-align:left;\">";
-        String er2 = "<a href=\"/wiki/Portugal\" title=\"Portugal\"></a>([^<]+)";
-        String er3 = "</td>";
-        Pattern p = Pattern.compile(er);
-        Pattern p2 = Pattern.compile(er2);
-        Pattern p3 = Pattern.compile(er3);
-        Scanner fich = new Scanner(new FileInputStream("filmes.html"));
-        while (fich.hasNextLine()) {
-            String linha = fich.nextLine();
-            Matcher m1 = p.matcher(linha);
-            if (m1.find()) {
-                linha = fich.nextLine();
-                Matcher m2 = p2.matcher(linha);
-                if (m2.find()) {
-                    linha = fich.nextLine();
-                    Matcher m3 = p3.matcher(linha);
-                    if (m3.find()) {
-                        fich.close();
-                        return Integer.parseInt(m3.group(1));
-                    }
-                }
+    public static String procuraClima(String link) throws FileNotFoundException, IOException{      
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<tr><th>Clima [A-Za-z]</th><td>([^0-9]+)</td></tr>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
             }
         }
-        return -1;           
+        input.close();
+        return null;
+    };
+    
+    public static String procuraCapitais(String link) throws FileNotFoundException{ //wili
+       return null;
+    };
+    
+    public static String procuraAltitude(String link) throws IOException{
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<th>Altitude [A-Za-z]+</th><td>([0-9]+) m</td>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    };
+    
+    public static String procuraLongitude(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "</b>, Longitude: <b class=\"longitude\">([^A-Za-z]+)</b>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
     }
     
-    public static String procuraCapitais() throws FileNotFoundException{
-        String aux = "";      
-        String er2 = "<span class=\".* nationality\">([^<]+)</span>";
-        Pattern p2 = Pattern.compile(er2);
-        Scanner fich = new Scanner(new FileInputStream("filmes.html"));
-        while (fich.hasNextLine()) {
-            String linha2 = fich.nextLine();
-            Matcher m2 = p2.matcher(linha2);
-            if (m2.find()) {
-                aux = aux + m2.group(1) + "\t";
+    public static String procuraLatitude(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "Latitude: <b class=\"latitude\">([^A-Za-z]+)</b>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
             }
         }
-        if (aux.isEmpty()) {
-            fich.close();
-            return null;
-        }
-        fich.close();
-        return aux;         
+        input.close();
+        return null;
     }
+    
+    public static String procuraFUSO(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = " ";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    }
+    
+    public static double procuraArea(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<br />([^A-Za-z]+) km²</td>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return Double.parseDouble(m.group(1).replace(",","."));
+            }
+        }
+        input.close();
+        return -1;
+    }
+    
+    public static String procuraPresidente(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<td><a href=\"/wiki/[^0-9]+\" title=\"[A-Za-z\s]+\">([A-Za-z\s]+)</a>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    }
+    
+    public static double procuraDensidadePopulacional(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<th>Densidade populacional [A-Za-z]+</th><td>([^A-Z]+)/km²";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+               return Double.parseDouble(m.group(1).replace(".","").replace(",","."));
+            }
+        }
+        input.close();
+        return -1;
+    }
+    
+     public static String procuraCidadesGeminadas(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    }
+     
+     public static String procuraWebsite(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "</th><td><a class=\"url\" href=\"([^0-9]+)\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    }
+    
+    
+    
 }
