@@ -4,6 +4,10 @@
  */
 package cidadesdomundo;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author User
@@ -263,6 +267,11 @@ public class Frame extends javax.swing.JFrame {
         });
 
         jButton1.setText("Pesquisar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -460,6 +469,31 @@ public class Frame extends javax.swing.JFrame {
         jDialog4.setLocation(200, 200);
         jDialog4.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         //HttpRequestFunctions.httpRequest1("https://eden.dei.uc.pt/~abs/ID/pessoas.html", "", "pessoas.html");
+         String pais = jTextField1.getText();  
+         String [] campos=pais.split(", ");
+         String cidade = null;
+        try {
+                cidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+         String web = null;
+        try {
+            web = Wrappers.procuraWebsite(cidade);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         System.out.println("Website " + web);
+         
+         
+       
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
