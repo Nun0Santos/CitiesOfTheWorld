@@ -29,8 +29,8 @@ public class TP {
          /*String geminadas = Wrappers.procuraCidadesGeminadas(cidade);
          System.out.println("Cidades geminadas " + geminadas);*/
          
-         String web = Wrappers.procuraWebsite(cidade);
-         System.out.println("Website " + web);
+         /*String web = Wrappers.procuraWebsite(cidade);
+         System.out.println("Website " + web);*/
         
         
         /*String cidadeWiki = Wrappers.Wikipedia(campos[0]);
@@ -47,8 +47,8 @@ public class TP {
         System.out.println("cp " + cp);*/
         
         
-        /*Double habi = Wrappers.procuraNumeroHabitantes(cidade);
-        System.out.println("Habitantes " + habi);*/
+        Double habi = Wrappers.procuraNumeroHabitantes(cidade);
+        System.out.println("Habitantes " + habi);
         
         /*String clima = Wrappers.procuraClima(cidade);
         System.out.println("Clima " + clima);*/
