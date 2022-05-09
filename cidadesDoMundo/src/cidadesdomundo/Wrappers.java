@@ -265,6 +265,22 @@ public class Wrappers {
         input.close();
         return null;
     }
+     public static Cidade criaCidade(String cidad) throws IOException {
+        //String nome = Wrappers.(cidade);
+        String pais = Wrappers.encontrarLinkDBCityPais(cidade);
+        String capital = Wrappers.procuraCapitais(cidad);
+        /*String linkBandeiraPais = Wrappers.obtem_editora(isbn);
+        String linguaOficial = Wrappers.obtem_editora(isbn);
+        String linkBandeiraCidade = Wrappers.obtem_editora(isbn);
+        String linkMonumentos = Wrappers.obtem_editora(isbn);*/
+        Double areaCidade = Wrappers.procuraArea(cidad);
+        
+
+
+        Cidade c = new Cidade(nome,pais,capital,linkBandeiraPais,linguaOficial,linkBandeiraCidade,linkMonumentos,areaCidade,nHabitantes,densidadePopulacional,codigoPostal,presidente,latitude,longitude,altitude,clima,fusoHorario,website,cidadesGeminadas);
+        return c;
+    }
+
     
     
     

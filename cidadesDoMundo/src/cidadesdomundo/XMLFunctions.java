@@ -23,17 +23,30 @@ public class XMLFunctions {
             }
             else{
                 raiz = doc.getRootElement();
+                return null;
             }
             
             Element pai = new Element("cidades");
             Attribute nome = new Attribute("nome",cidad.getNome());
             pai.setAttribute(nome);
             
-            Element filho = new Element("pais",cidad.getPais());
+            Element filho = new Element("pais").addContent(cidad.getNome());
             pai.addContent(filho);
             
+            filho = new Element("capital").addContent(cidad.getCapital());
+            pai.addContent(filho);
             
-            return null;
+            filho = new Element("latitude").addContent(Double.toString(cidad.getLatitude()));
+            pai.addContent(filho);
+            
+            filho = new Element("longitude").addContent(Double.toString(cidad.getLongitude()));
+            pai.addContent(filho);
+            
+            filho = new Element("capital").addContent(cidad.getCapital());
+            pai.addContent(filho);
+            return doc;        
+           
         };
+        
         
 }

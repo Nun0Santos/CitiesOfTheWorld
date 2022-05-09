@@ -7,6 +7,7 @@ package cidadesdomundo;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.jdom2.Document;
 
 /**
  *
@@ -415,6 +416,10 @@ public class Frame extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        Document doc = XMLJDomFunctions.lerDocumentoXML("pais.xml");
+        String texto = XMLJDomFunctions.escreverDocumentoString(doc);
+        jTextArea1.setText(texto);
+                                              
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
