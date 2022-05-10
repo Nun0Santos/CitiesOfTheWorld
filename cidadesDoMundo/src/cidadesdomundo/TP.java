@@ -62,6 +62,7 @@ public class TP {
         /*Double area = Wrappers.procuraArea(cidade);
         System.out.println("Area " + area);*/
         
+        Cidade x = XMLFunctions.adicionaCidade(campos[0]);
         
   
         
