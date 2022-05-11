@@ -84,7 +84,7 @@ public class Wrappers {
 
     public static String procuraClima(String link) throws FileNotFoundException, IOException{      
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
-        String ER = "<tr><th>Clima [A-Za-z]</th><td>([^0-9]+)</td></tr>";
+        String ER = "<tr><th>Clima [A-Za-z]+</th><td>([^0-9]+)</td></tr>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -104,7 +104,7 @@ public class Wrappers {
        return null;
     };
     
-    public static String procuraAltitude(String link) throws IOException{
+    public static double procuraAltitude(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
         String ER = "<th>Altitude [A-Za-z]+</th><td>([0-9]+) m</td>";
         Pattern p = Pattern.compile(ER);
@@ -115,11 +115,11 @@ public class Wrappers {
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                return m.group(1);
+                return Double.parseDouble(m.group(1));
             }
         }
         input.close();
-        return null;
+        return -1;
     };
     
     public static String procuraLongitude(String link) throws IOException {
@@ -160,7 +160,7 @@ public class Wrappers {
     
     public static String procuraFUSO(String link) throws IOException {
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
-        String ER = " ";
+        String ER = "[A-Za-z]+</abbr> ([^4-9]+)<br /><em>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -265,6 +265,43 @@ public class Wrappers {
         input.close();
         return null;
     }
+     
+     public static String procuraBandeiraPais(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "title=\"Bandeira [A-Za-z]+\"><img src=\"([^9]+)\" alt=\"Bandeira [A-Za-z]+\" /></a></div>";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    } 
+     
+     
+     public static String procuraBandeiraCidade(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<img alt=\"Bandeira de [A-Za-z]+\" src=\"([^9]+)\" decoding=\"async\"";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    } 
      public static Cidade criaCidade(String cidad) throws IOException {
         //String nome = Wrappers.(cidade);
         String pais = Wrappers.encontrarLinkDBCityPais(cidad);

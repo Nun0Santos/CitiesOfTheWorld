@@ -33,8 +33,8 @@ public class TP {
          System.out.println("Website " + web);*/
         
         
-        /*String cidadeWiki = Wrappers.Wikipedia(campos[0]);
-        System.out.println("link cidadeWiki " + cidadeWiki);*/
+        String cidadeWiki = Wrappers.Wikipedia(campos[0]);
+        System.out.println("link cidadeWiki " + cidadeWiki);
         
         /*String pres = Wrappers.procuraPresidente(cidadeWiki);
         System.out.println("Presidente " + pres);*/
@@ -47,8 +47,8 @@ public class TP {
         System.out.println("cp " + cp);*/
         
         
-        Double habi = Wrappers.procuraNumeroHabitantes(cidade);
-        System.out.println("Habitantes " + habi);
+        /*Double habi = Wrappers.procuraNumeroHabitantes(cidade);
+        System.out.println("Habitantes " + habi);*/
         
         /*String clima = Wrappers.procuraClima(cidade);
         System.out.println("Clima " + clima);*/
@@ -62,13 +62,18 @@ public class TP {
         /*Double area = Wrappers.procuraArea(cidade);
         System.out.println("Area " + area);*/
         
-        Cidade x = XMLFunctions.adicionaCidade(campos[0]);
+        //Cidade x = XMLFunctions.adicionaCidade(campos[0]);
         
-  
+         /*String fuso = Wrappers.procuraFUSO(cidade);
+         System.out.println("FUSO " + fuso);*/
         
         
-        
-        /*String alt = Wrappers.procuraAltitude(cidade); //funciona
+         /*String bandeira = Wrappers.procuraBandeiraPais(cidade);
+         System.out.println("Bandeira " + bandeira);*/  
+         
+          String bandeiraC = Wrappers.procuraBandeiraCidade(cidadeWiki);
+         System.out.println("Bandeira " + bandeiraC);
+        /*double alt = Wrappers.procuraAltitude(cidade); //funciona
         System.out.println("Altitude " + alt);*/
 
 
