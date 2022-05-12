@@ -31,24 +31,24 @@ public class Cidade {
 
     public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, int areaCidade, int nHabitantes, int densidadePopulacional, String codigoPostal, String presidente, float latitude, float longitude, float altitude, String clima, String fusoHorario, String website, String cidadesGeminadas) {
         this.nome = nome;
-        this.pais = pais; x
-        this.capital = capital; x
-        this.linkBandeiraPais = linkBandeiraPais; x 
-        this.linguaOficial = linguaOficial; x
-        this.linkBandeiraCidade = linkBandeiraCidade; x
-        this.linkMonumentos = linkMonumentos; x
-        this.areaCidade = areaCidade; x 
-        this.nHabitantes = nHabitantes; x
-        this.densidadePopulacional = densidadePopulacional; x
-        this.codigoPostal = codigoPostal; x
-        this.presidente = presidente; x
-        this.latitude = latitude; x
-        this.longitude = longitude; x
-        this.altitude = altitude; x
-        this.clima = clima; x
-        this.fusoHorario = fusoHorario; x
-        this.website = website; x
-        this.cidadesGeminadas = cidadesGeminadas; x
+        this.pais = pais; 
+        this.capital = capital; 
+        this.linkBandeiraPais = linkBandeiraPais; 
+        this.linguaOficial = linguaOficial; 
+        this.linkBandeiraCidade = linkBandeiraCidade; 
+        this.linkMonumentos = linkMonumentos; 
+        this.areaCidade = areaCidade; 
+        this.nHabitantes = nHabitantes; 
+        this.densidadePopulacional = densidadePopulacional; 
+        this.codigoPostal = codigoPostal; 
+        this.presidente = presidente; 
+        this.latitude = latitude; 
+        this.longitude = longitude; 
+        this.altitude = altitude; 
+        this.clima = clima; 
+        this.fusoHorario = fusoHorario; 
+        this.website = website; 
+        this.cidadesGeminadas = cidadesGeminadas; 
     }
 
     public String getNome() {

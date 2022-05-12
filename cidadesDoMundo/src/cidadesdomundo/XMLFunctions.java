@@ -87,6 +87,4 @@ public class XMLFunctions {
             return doc;        
            
         };
-        
-       
 }
