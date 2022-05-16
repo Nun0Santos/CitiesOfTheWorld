@@ -16,39 +16,39 @@ public class Cidade {
     String linguaOficial;
     String linkBandeiraCidade;
     String linkMonumentos;
-    int areaCidade;
-    int nHabitantes;
-    int densidadePopulacional;
+    Double areaCidade;
+    Double nHabitantes;
+    Double densidadePopulacional;
     String codigoPostal;
     String presidente;
-    float latitude;
-    float longitude;
-    float altitude;
+    Double latitude; //alterar
+    Double longitude;
+    Double altitude;
     String clima;
     String fusoHorario;
     String website;
     String cidadesGeminadas;
 
-    public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, int areaCidade, int nHabitantes, int densidadePopulacional, String codigoPostal, String presidente, float latitude, float longitude, float altitude, String clima, String fusoHorario, String website, String cidadesGeminadas) {
+    public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, Double areaCidade, Double nHabitantes, Double densidadePopulacional, String codigoPostal, String presidente, Double latitude, Double longitude, Double altitude, String clima, String fusoHorario, String website, String cidadesGeminadas) {
         this.nome = nome;
-        this.pais = pais; 
-        this.capital = capital; 
-        this.linkBandeiraPais = linkBandeiraPais; 
-        this.linguaOficial = linguaOficial; 
-        this.linkBandeiraCidade = linkBandeiraCidade; 
-        this.linkMonumentos = linkMonumentos; 
-        this.areaCidade = areaCidade; 
-        this.nHabitantes = nHabitantes; 
-        this.densidadePopulacional = densidadePopulacional; 
-        this.codigoPostal = codigoPostal; 
-        this.presidente = presidente; 
-        this.latitude = latitude; 
-        this.longitude = longitude; 
-        this.altitude = altitude; 
-        this.clima = clima; 
-        this.fusoHorario = fusoHorario; 
-        this.website = website; 
-        this.cidadesGeminadas = cidadesGeminadas; 
+        this.pais = pais;
+        this.capital = capital;
+        this.linkBandeiraPais = linkBandeiraPais;
+        this.linguaOficial = linguaOficial;
+        this.linkBandeiraCidade = linkBandeiraCidade;
+        this.linkMonumentos = linkMonumentos;
+        this.areaCidade = areaCidade;
+        this.nHabitantes = nHabitantes;
+        this.densidadePopulacional = densidadePopulacional;
+        this.codigoPostal = codigoPostal;
+        this.presidente = presidente;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.altitude = altitude;
+        this.clima = clima;
+        this.fusoHorario = fusoHorario;
+        this.website = website;
+        this.cidadesGeminadas = cidadesGeminadas;
     }
 
     public String getNome() {
@@ -107,27 +107,27 @@ public class Cidade {
         this.linkMonumentos = linkMonumentos;
     }
 
-    public int getAreaCidade() {
+    public Double getAreaCidade() {
         return areaCidade;
     }
 
-    public void setAreaCidade(int areaCidade) {
+    public void setAreaCidade(Double areaCidade) {
         this.areaCidade = areaCidade;
     }
 
-    public int getnHabitantes() {
+    public Double getnHabitantes() {
         return nHabitantes;
     }
 
-    public void setnHabitantes(int nHabitantes) {
+    public void setnHabitantes(Double nHabitantes) {
         this.nHabitantes = nHabitantes;
     }
 
-    public int getDensidadePopulacional() {
+    public Double getDensidadePopulacional() {
         return densidadePopulacional;
     }
 
-    public void setDensidadePopulacional(int densidadePopulacional) {
+    public void setDensidadePopulacional(Double densidadePopulacional) {
         this.densidadePopulacional = densidadePopulacional;
     }
 
@@ -147,27 +147,27 @@ public class Cidade {
         this.presidente = presidente;
     }
 
-    public float getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(float latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
-    public float getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(float longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
-    public float getAltitude() {
+    public Double getAltitude() {
         return altitude;
     }
 
-    public void setAltitude(float altitude) {
+    public void setAltitude(Double altitude) {
         this.altitude = altitude;
     }
 
@@ -202,4 +202,12 @@ public class Cidade {
     public void setCidadesGeminadas(String cidadesGeminadas) {
         this.cidadesGeminadas = cidadesGeminadas;
     }
+
+
+    
 }
+
+   
+
+    
+    

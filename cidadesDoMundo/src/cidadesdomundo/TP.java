@@ -16,14 +16,23 @@ public class TP {
     public static void main(String[] args) throws IOException {
         String lista= "Lisboa, Portugal";
         String [] campos=lista.split(", ");
+        Document doc = null;
+       
         
-        //Cidade x = XMLFunctions.adicionaCidade(camppos[1], doc);
-        //Document doc = XMLJDomFunctions.lerDocumentoXML("pais.xml");
-        
-        //String cidade = Wrappers.procuraPais(campos[1]);
+      
         
         String cidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
         System.out.println("link cidade " + cidade);
+        
+        Cidade x = Wrappers.criaCidade(cidade);
+        
+        doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+                
+        
+         
+         //Cidade x = XMLFunctions.adicionaCidade(camppos[1], doc);
+        //Document doc = XMLJDomFunctions.lerDocumentoXML("pais.xml");
         
         
          /*String geminadas = Wrappers.procuraCidadesGeminadas(cidade);
@@ -33,8 +42,8 @@ public class TP {
          System.out.println("Website " + web);*/
         
         
-        String cidadeWiki = Wrappers.Wikipedia(campos[0]);
-        System.out.println("link cidadeWiki " + cidadeWiki);
+        /*String cidadeWiki = Wrappers.Wikipedia(campos[0]);
+        System.out.println("link cidadeWiki " + cidadeWiki);*/
         
         /*String pres = Wrappers.procuraPresidente(cidadeWiki);
         System.out.println("Presidente " + pres);*/
@@ -71,8 +80,9 @@ public class TP {
          /*String bandeira = Wrappers.procuraBandeiraPais(cidade);
          System.out.println("Bandeira " + bandeira);*/  
          
-          String bandeiraC = Wrappers.procuraBandeiraCidade(cidadeWiki);
-         System.out.println("Bandeira " + bandeiraC);
+         /*String bandeiraC = Wrappers.procuraBandeiraCidade(cidadeWiki);
+         System.out.println("Bandeira " + bandeiraC);*/
+         
         /*double alt = Wrappers.procuraAltitude(cidade); //funciona
         System.out.println("Altitude " + alt);*/
 

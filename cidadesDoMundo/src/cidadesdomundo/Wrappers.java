@@ -122,7 +122,7 @@ public class Wrappers {
         return -1;
     };
     
-    public static String procuraLongitude(String link) throws IOException {
+    public static double procuraLongitude(String link) throws IOException {
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
         String ER = "</b>, Longitude: <b class=\"longitude\">([^A-Za-z]+)</b>";
         Pattern p = Pattern.compile(ER);
@@ -133,14 +133,14 @@ public class Wrappers {
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                return m.group(1);
+                return Double.parseDouble(m.group(1));
             }
         }
         input.close();
-        return null;
+        return -1;
     }
     
-    public static String procuraLatitude(String link) throws IOException {
+    public static double procuraLatitude(String link) throws IOException {
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
         String ER = "Latitude: <b class=\"latitude\">([^A-Za-z]+)</b>";
         Pattern p = Pattern.compile(ER);
@@ -151,11 +151,11 @@ public class Wrappers {
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                return m.group(1);
+                return Double.parseDouble(m.group(1));
             }
         }
         input.close();
-        return null;
+        return -1;
     }
     
     public static String procuraFUSO(String link) throws IOException {
@@ -301,23 +301,58 @@ public class Wrappers {
         }
         input.close();
         return null;
+    }
+       public static String procuraLinguaOficial(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
+    }
+         public static String procuraMonumentos(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "";
+        Pattern p = Pattern.compile(ER);
+        Matcher m;
+        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
+        while (input.hasNextLine()) {
+            String linha = input.nextLine();
+            m = p.matcher(linha);
+            if (m.find()) {
+                input.close();
+                return m.group(1);
+            }
+        }
+        input.close();
+        return null;
     } 
      public static Cidade criaCidade(String cidad) throws IOException {
-        //String nome = Wrappers.(cidade);
+         
+        String nome = Wrappers. encontrarLinkDBCityPais(cidad);
         String pais = Wrappers.encontrarLinkDBCityPais(cidad);
         String capital = Wrappers.procuraCapitais(cidad);
-        /*String linkBandeiraPais = Wrappers.obtem_editora(isbn);
-        String linguaOficial = Wrappers.obtem_editora(isbn);
-        String linkBandeiraCidade = Wrappers.obtem_editora(isbn);
-        String linkMonumentos = Wrappers.obtem_editora(isbn);*/
+        String linkBandeiraPais = Wrappers.procuraBandeiraPais(cidad);
+        String linguaOficial = Wrappers.procuraLinguaOficial(cidad);
+        String linkBandeiraCidade = Wrappers.procuraBandeiraCidade(cidad);
+        String linkMonumentos = Wrappers.procuraMonumentos(cidad);
         Double areaCidade = Wrappers.procuraArea(cidad);
         Double nHabitantes = Wrappers.procuraNumeroHabitantes(cidad);
         Double densidadePopulacional = Wrappers.procuraDensidadePopulacional(cidad);
         String codigoPostal = Wrappers.procuraCP(cidad);
         String presidente = Wrappers.procuraPresidente(cidad);
-        String latitude = Wrappers.procuraLatitude(cidad);
-        String longitude = Wrappers.procuraLongitude(cidad);
-        String altitude = Wrappers.procuraAltitude(cidad);
+        Double latitude = Wrappers.procuraLatitude(cidad);
+        Double longitude = Wrappers.procuraLongitude(cidad);
+        Double altitude = Wrappers.procuraAltitude(cidad);
         String clima = Wrappers.procuraClima(cidad);
         String fusoHorario = Wrappers.procuraFUSO(cidad);
         String website = Wrappers.procuraWebsite(cidad);
