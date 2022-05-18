@@ -16,18 +16,27 @@ public class TP {
     public static void main(String[] args) throws IOException {
         String lista= "Lisboa, Portugal";
         String [] campos=lista.split(", ");
-        Document doc = null;
        
         
-      
+     
+        String linkCidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
+        System.out.println("link cidade " + linkCidade);
         
-        String cidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
-        System.out.println("link cidade " + cidade);
+        Cidade x = Wrappers.criaCidade(linkCidade);
         
-        Cidade x = Wrappers.criaCidade(cidade);
+        
+        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        doc = XMLFunctions.adicionaCidade(x, doc);
+        
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+
+        
+        
+        /*
         
         doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+      
+        x = XMLFunctions.adicionaCidade(campos[0], doc);*/
                 
         
          
