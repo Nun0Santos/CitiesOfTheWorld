@@ -29,12 +29,12 @@ public class HttpRequestFunctions {
             
             if (!pesquisa.isEmpty()) {
                //Criar URL com palavra de pesquisa
-               System.out.println(link + URLEncoder.encode(pesquisa,"UTF-8").replace("_","+"));
+              // System.out.println("link 0 " + link + URLEncoder.encode(pesquisa,"UTF-8").replace("_","+"));
                url = new URL(link + URLEncoder.encode(pesquisa,"UTF-8").replace("_","+")); //alterar replace se necessário
             }
             else{
                //Criar URL simples, sem palavra de pesquisa
-                System.out.println(link);
+                //System.out.println("link 1 " +  link);
                url = new URL(link);
             }
             //System.out.println(url);

@@ -4,6 +4,8 @@
  */
 package cidadesdomundo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
@@ -15,7 +17,7 @@ public class Cidade {
     String linkBandeiraPais;
     String linguaOficial;
     String linkBandeiraCidade;
-    String linkMonumentos;
+    String linkMonumentos; //aqui ArrayList
     Double areaCidade;
     Double nHabitantes;
     Double densidadePopulacional;
@@ -27,7 +29,7 @@ public class Cidade {
     String clima;
     String fusoHorario;
     String website;
-    String cidadesGeminadas;
+    String cidadesGeminadas; //ArrayList
 
     public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, Double areaCidade, Double nHabitantes, Double densidadePopulacional, String codigoPostal, String presidente, Double latitude, Double longitude, Double altitude, String clima, String fusoHorario, String website, String cidadesGeminadas) {
         this.nome = nome;

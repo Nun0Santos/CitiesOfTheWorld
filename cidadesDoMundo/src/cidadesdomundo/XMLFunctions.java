@@ -23,31 +23,36 @@ public class XMLFunctions {
             }
             else{
                 raiz = doc.getRootElement();
-                return null;
-            }
+                //return null;
             
-            Element pai = new Element("cidades");
+            
+            Element pai = new Element("cidade");
+            
             Attribute nome = new Attribute("nome",cidad.getNome());
             pai.setAttribute(nome);
             
-            Element filho = new Element("pais").addContent(cidad.getNome());
+            nome = new Attribute("pais",cidad.getPais());
+            pai.setAttribute(nome);
+            
+            
+            Element filho = new Element("capital").addContent(cidad.getCapital());
             pai.addContent(filho);
             
-            filho = new Element("capital").addContent(cidad.getCapital());
-            pai.addContent(filho);
+            Element links = new Element("links");
             
             filho = new Element("linkBandeiraPais").addContent(cidad.getLinkBandeiraPais());
-            pai.addContent(filho);
+            links.addContent(filho);
+            
+            filho = new Element("linkBandeiraCidade").addContent(cidad.getLinkBandeiraCidade());
+            links.addContent(filho);
+            
+            filho = new Element("linkMonumentos").addContent(cidad.getLinkMonumentos());
+            links.addContent(filho);
+            
             
             filho = new Element("linguaOficial").addContent(cidad.getLinguaOficial());
             pai.addContent(filho);
-            
-            filho = new Element("linkBandeiraCidade").addContent(cidad.getLinkBandeiraCidade());
-            pai.addContent(filho);
-            
-            filho = new Element("linkMonumentos").addContent(cidad.getLinkMonumentos());
-            pai.addContent(filho);
-            
+    
             filho = new Element("areaCidade").addContent(Double.toString(cidad.getAreaCidade()));
             pai.addContent(filho);
             
@@ -83,7 +88,9 @@ public class XMLFunctions {
             
             filho = new Element("cidadesGeminadas").addContent((cidad.getCidadesGeminadas()));
             pai.addContent(filho);
-        
+            
+            raiz.addContent(pai);
+            }
             return doc;        
            
         };

@@ -101,7 +101,7 @@ public class Wrappers {
     };
     
     public static String procuraCapitais(String link) throws FileNotFoundException{ //wili
-       return null;
+       return "xxx";
     };
     
     public static double procuraAltitude(String link) throws IOException{
@@ -194,8 +194,8 @@ public class Wrappers {
         return -1;
     }
     
-    public static String procuraPresidente(String link) throws IOException { // Wiki
-        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+    public static String procuraPresidente(String cidade) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/", cidade, "cidade2.txt"); 
         String ER = "<td><a href=\"/wiki/[^0-9]+\" title=\"[A-Za-z\s]+\">([A-Za-z\s]+)</a>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
@@ -231,7 +231,7 @@ public class Wrappers {
     }
     
      public static String procuraCidadesGeminadas(String link) throws IOException { // Wiki
-        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        /*HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
         String ER = "";
         Pattern p = Pattern.compile(ER);
         Matcher m;
@@ -244,8 +244,8 @@ public class Wrappers {
                 return m.group(1);
             }
         }
-        input.close();
-        return null;
+        input.close();*/
+        return "null";
     }
      
      public static String procuraWebsite(String link) throws IOException { // Wiki
@@ -303,7 +303,7 @@ public class Wrappers {
         return null;
     }
        public static String procuraLinguaOficial(String link) throws IOException { // Wiki
-        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        /*HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
         String ER = "";
         Pattern p = Pattern.compile(ER);
         Matcher m;
@@ -316,11 +316,11 @@ public class Wrappers {
                 return m.group(1);
             }
         }
-        input.close();
-        return null;
+        input.close();*/
+        return "null";
     }
          public static String procuraMonumentos(String link) throws IOException { // Wiki
-        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+       /* HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
         String ER = "";
         Pattern p = Pattern.compile(ER);
         Matcher m;
@@ -333,13 +333,13 @@ public class Wrappers {
                 return m.group(1);
             }
         }
-        input.close();
-        return null;
+        input.close();*/
+        return "null";
     } 
-     public static Cidade criaCidade(String cidad) throws IOException {
+     public static Cidade criaCidade(String c1,String p , String cidad) throws IOException {
          
-        String nome = Wrappers. encontrarLinkDBCityPais(cidad);
-        String pais = Wrappers.encontrarLinkDBCityPais(cidad);
+        //String nome = Wrappers. encontrarLinkDBCityPais(c);
+        //String pais = Wrappers.encontrarLinkDBCityPais(cidad);
         String capital = Wrappers.procuraCapitais(cidad);
         String linkBandeiraPais = Wrappers.procuraBandeiraPais(cidad);
         String linguaOficial = Wrappers.procuraLinguaOficial(cidad);
@@ -349,7 +349,7 @@ public class Wrappers {
         Double nHabitantes = Wrappers.procuraNumeroHabitantes(cidad);
         Double densidadePopulacional = Wrappers.procuraDensidadePopulacional(cidad);
         String codigoPostal = Wrappers.procuraCP(cidad);
-        String presidente = Wrappers.procuraPresidente(cidad);
+        String presidente = Wrappers.procuraPresidente(c1);
         Double latitude = Wrappers.procuraLatitude(cidad);
         Double longitude = Wrappers.procuraLongitude(cidad);
         Double altitude = Wrappers.procuraAltitude(cidad);
@@ -358,8 +358,12 @@ public class Wrappers {
         String website = Wrappers.procuraWebsite(cidad);
         String cidadesGeminadas = Wrappers.procuraCidadesGeminadas(cidad);
 
-        Cidade c = new Cidade(nome,pais,capital,linkBandeiraPais,linguaOficial,linkBandeiraCidade,linkMonumentos,areaCidade,nHabitantes,densidadePopulacional,codigoPostal,presidente,latitude,longitude,altitude,clima,fusoHorario,website,cidadesGeminadas);
+        Cidade c = new Cidade(c1,p,capital,linkBandeiraPais,linguaOficial,linkBandeiraCidade,linkMonumentos,areaCidade,nHabitantes,densidadePopulacional,codigoPostal,presidente,latitude,longitude,altitude,clima,fusoHorario,website,cidadesGeminadas);
         return c;
+    }
+
+    static Cidade criaCidade(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     

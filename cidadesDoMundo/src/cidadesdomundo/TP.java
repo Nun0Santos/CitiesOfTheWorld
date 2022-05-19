@@ -22,11 +22,12 @@ public class TP {
         String linkCidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
         System.out.println("link cidade " + linkCidade);
         
-        Cidade x = Wrappers.criaCidade(linkCidade);
+        Cidade x = Wrappers.criaCidade(campos[0],campos[1],linkCidade);
         
         
         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        doc = XMLFunctions.adicionaCidade(x, doc);
+        doc = XMLFunctions.adicionaCidade(x,doc);
+        
         
         XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
 
@@ -52,9 +53,9 @@ public class TP {
         
         
         /*String cidadeWiki = Wrappers.Wikipedia(campos[0]);
-        System.out.println("link cidadeWiki " + cidadeWiki);*/
+        System.out.println("link cidadeWiki " + cidadeWiki);
         
-        /*String pres = Wrappers.procuraPresidente(cidadeWiki);
+        String pres = Wrappers.procuraPresidente(cidadeWiki);
         System.out.println("Presidente " + pres);*/
         
         /*double den = Wrappers.procuraDensidadePopulacional(cidade);
