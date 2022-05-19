@@ -94,4 +94,30 @@ public class XMLFunctions {
             return doc;        
            
         };
+        public static Document eliminaCidade(String procura, Document doc){
+            Element raiz;
+       
+            if(doc == null){
+                System.out.println("Ficheiro XML não existe!\n");
+            }
+            raiz = doc.getRootElement();
+            List todasCidades = raiz.getChildren("cidade");
+            boolean found = false;
+
+            for(int i=0; i<todasCidades.size(); ++i){
+                Element cidade = (Element)todasCidades.get(i); //Obtem a cidade  i da lista
+                if(cidade.getAttributeValue("nome").equals(procura)){
+                     cidade.getParent().removeContent(cidade);
+                     System.out.println("Cidade eliminada com sucesso!");
+                     found = true;
+                 }
+             }
+            if(!found){
+                System.out.println("A cidade " + procura + " nao foi encontrado");
+                return null;
+            }  
+       return doc;
+        
+        
+        }
 }

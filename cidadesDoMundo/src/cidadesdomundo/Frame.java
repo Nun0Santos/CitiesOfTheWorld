@@ -235,7 +235,18 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel7.setText("Cidade");
 
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+
         jButton7.setText("Eliminar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog6Layout = new javax.swing.GroupLayout(jDialog6.getContentPane());
         jDialog6.getContentPane().setLayout(jDialog6Layout);
@@ -564,18 +575,18 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
           String lista= jTextField8.getText();
           String [] campos=lista.split(", ");
+          String linkCidade = null;
+          Cidade x = null;
           
-          String link = null;
-           Cidade x = null;
         try {
-            link = Wrappers.encontrarLinkDBCityPais(campos[1]);
+            linkCidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
             
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
          
         try {
-            x = Wrappers.criaCidade(campos[0],campos[1],link);
+            x = Wrappers.criaCidade(campos[0],campos[1],linkCidade);
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -584,11 +595,33 @@ public class Frame extends javax.swing.JFrame {
           doc = XMLFunctions.adicionaCidade(x, doc);
           XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
           JOptionPane.showMessageDialog(this,"Cidade adicioanada com sucesso!");
+          jDialog7.setVisible(false);
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        doc=XMLFunctions.eliminaCidade(jTextField7.getText(),doc);
+      
+        if(doc !=null){
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc,"cidades.xml");
+            JOptionPane.showMessageDialog(this,"Cidade eliminada com sucesso");
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"Erro ao eliminar cidade");
+        }
+       jDialog6.setVisible(false);
+
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
     /**
      * @param args the command line arguments
