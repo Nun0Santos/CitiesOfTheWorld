@@ -14,31 +14,34 @@ import org.jdom2.Document;
 public class TP {
     
     public static void main(String[] args) throws IOException {
-        String lista= "Lisboa, Portugal";
+        String lista= "Roma, Itália";
         String [] campos=lista.split(", ");
        
         
      
-        String linkCidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
-        System.out.println("link cidade " + linkCidade);
+        String linkPais = Wrappers.encontrarLinkDBCityPais(campos[1]);
+        System.out.println("link cidade " + linkPais);
         
-        Cidade x = Wrappers.criaCidade(campos[0],campos[1],linkCidade);
+       /*Cidade x = Wrappers.criaCidade(campos[0],campos[1],linkPais);
         
         
         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
         doc = XMLFunctions.adicionaCidade(x,doc);
         
         
-        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");*/
 
         
-        
+        String lingua = Wrappers.procuraLinguaOficial(campos[1]);
+        System.out.println("lingua " + lingua);
+         
         /*
         
         doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
       
         x = XMLFunctions.adicionaCidade(campos[0], doc);*/
-                
+        
+        
         
          
          //Cidade x = XMLFunctions.adicionaCidade(camppos[1], doc);
@@ -62,9 +65,7 @@ public class TP {
         System.out.println("Densidade pop " + den);*/
         
         
-        /*String cp = Wrappers.procuraCP(cidade);
-        System.out.println("cp " + cp);*/
-        
+       
         
         /*Double habi = Wrappers.procuraNumeroHabitantes(cidade);
         System.out.println("Habitantes " + habi);*/

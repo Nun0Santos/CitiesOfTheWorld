@@ -23,13 +23,13 @@ public class Cidade {
     Double densidadePopulacional;
     String codigoPostal;
     String presidente;
-    Double latitude; //alterar
+    Double latitude; 
     Double longitude;
     Double altitude;
     String clima;
     String fusoHorario;
     String website;
-    String cidadesGeminadas; //ArrayList
+    String cidadesGeminadas; 
 
     public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, Double areaCidade, Double nHabitantes, Double densidadePopulacional, String codigoPostal, String presidente, Double latitude, Double longitude, Double altitude, String clima, String fusoHorario, String website, String cidadesGeminadas) {
         this.nome = nome;
@@ -76,6 +76,8 @@ public class Cidade {
     public void setCapital(String capital) {
         this.capital = capital;
     }
+
+   
 
     public String getLinkBandeiraPais() {
         return linkBandeiraPais;
@@ -203,10 +205,7 @@ public class Cidade {
 
     public void setCidadesGeminadas(String cidadesGeminadas) {
         this.cidadesGeminadas = cidadesGeminadas;
-    }
-
-
-    
+    } 
 }
 
    

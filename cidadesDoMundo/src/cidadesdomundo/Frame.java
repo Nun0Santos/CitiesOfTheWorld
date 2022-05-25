@@ -5,9 +5,12 @@
 package cidadesdomundo;
 
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.XdmValue;
 import org.jdom2.Document;
 
 /**
@@ -91,6 +94,11 @@ public class Frame extends javax.swing.JFrame {
         jLabel2.setText("Nome");
 
         jButton2.setText("Pesquisar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -120,6 +128,11 @@ public class Frame extends javax.swing.JFrame {
         jLabel3.setText("País");
 
         jButton3.setText("Pesquisar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
         jDialog2.getContentPane().setLayout(jDialog2Layout);
@@ -149,6 +162,11 @@ public class Frame extends javax.swing.JFrame {
         jLabel4.setText("Nº Habitantes");
 
         jButton4.setText("Pesquisar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
         jDialog3.getContentPane().setLayout(jDialog3Layout);
@@ -178,6 +196,11 @@ public class Frame extends javax.swing.JFrame {
         jLabel5.setText("Clima");
 
         jButton5.setText("Pesquisar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog4Layout = new javax.swing.GroupLayout(jDialog4.getContentPane());
         jDialog4.getContentPane().setLayout(jDialog4Layout);
@@ -207,6 +230,11 @@ public class Frame extends javax.swing.JFrame {
         jLabel6.setText("Capitais");
 
         jButton6.setText("Pesquisar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jDialog5Layout = new javax.swing.GroupLayout(jDialog5.getContentPane());
         jDialog5.getContentPane().setLayout(jDialog5Layout);
@@ -575,18 +603,18 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
           String lista= jTextField8.getText();
           String [] campos=lista.split(", ");
-          String linkCidade = null;
+          String linkPais = null;
           Cidade x = null;
           
         try {
-            linkCidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
+            linkPais = Wrappers.encontrarLinkDBCityPais(campos[1]);
             
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
          
         try {
-            x = Wrappers.criaCidade(campos[0],campos[1],linkCidade);
+            x = Wrappers.criaCidade(campos[0],campos[1],linkPais);
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -622,6 +650,160 @@ public class Frame extends javax.swing.JFrame {
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+          try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp= null;
+            
+            String valor = jTextField2.getText();
+            
+            if (jDialog1.getTitle().equals("Nome"))
+                xp = "//cidade[contains(@nome,'" + valor + "')]/@nome";
+           
+            if (jDialog1.getTitle().equals("Capital"))
+                xp = "//cidade[contains(@capital,'" + valor + "')]/@capital";
+            if (jDialog1.getTitle().equals("Area"))
+                xp = "//cidade/Geografia[contains(areaCidade,'" + valor + "')]/areaCidade";
+            if (jDialog1.getTitle().equals("nHabitantes"))
+                xp = "//cidade/Demografia[contains(nHabitantes,'" + valor + "')]/nHabitantes";
+            if (jDialog1.getTitle().equals("Idioma"))
+                xp = "//cidade/Dados[contains(linguaOficial,'" + valor + "')]/linguaOficial";
+          
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+            
+            if (res == null)
+                jTextArea1.setText("Ficheiro nao existe");
+            else if (res.size()==0)
+                jTextArea1.setText("Pesquisa sem informacao");
+            else{               
+                jTextArea1.setText(x);
+            }
+            jDialog1.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+          try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp= null;
+            String valor = jTextField3.getText();
+            
+            if (jDialog2.getTitle().equals("Pais"))
+                xp = "//cidade[contains(@pais,'" + valor + "')]/@pais";
+            
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+            
+            if (res == null)
+                jTextArea1.setText("Ficheiro nao existe");
+            else if (res.size()==0)
+                jTextArea1.setText("Pesquisa sem informacao");
+            else{               
+                jTextArea1.setText(x);
+            }
+            jDialog2.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+         try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp= null;
+            
+            String valor = jTextField4.getText();
+            
+           
+            xp = "//cidade/Geografia[contains(areaCidade,'" + valor + "')]/areaCidade";
+            
+            if (jDialog3.getTitle().equals("nHabitantes"))
+                xp = "//cidade/Demografia[contains(nHabitantes,'" + valor + "')]/nHabitantes";
+           
+          
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+            
+            if (res == null)
+                jTextArea1.setText("Ficheiro nao existe");
+            else if (res.size()==0)
+                jTextArea1.setText("Pesquisa sem informacao");
+            else{               
+                jTextArea1.setText(x);
+            }
+            jDialog3.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+         try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp= null;
+            
+            String valor = jTextField5.getText();
+            
+            if (jDialog4.getTitle().equals("Clima"))
+                xp = "//cidade/Geografia[contains(Clima,'" + valor + "')]/Clima";
+          
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+            
+            if (res == null)
+                jTextArea1.setText("Ficheiro nao existe");
+            else if (res.size()==0)
+                jTextArea1.setText("Pesquisa sem informacao");
+            else{               
+                jTextArea1.setText(x);
+            }
+            jDialog4.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+         try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp= null;
+            
+            String valor = jTextField6.getText();
+            
+            if (jDialog5.getTitle().equals("Nome"))
+                xp = "//cidade[contains(@capital = true,'" + valor + "')]/@nome";
+ 
+            
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+            
+            if (res == null)
+                jTextArea1.setText("Ficheiro nao existe");
+            else if (res.size()==0)
+                jTextArea1.setText("Pesquisa sem informacao");
+            else{               
+                jTextArea1.setText(x);
+            }
+            jDialog5.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments

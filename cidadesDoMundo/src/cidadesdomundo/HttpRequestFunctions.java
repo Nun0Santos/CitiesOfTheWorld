@@ -37,7 +37,7 @@ public class HttpRequestFunctions {
                 //System.out.println("link 1 " +  link);
                url = new URL(link);
             }
-            //System.out.println(url);
+            System.out.println(url);
             URLConnection ligacao = url.openConnection();
 
             //Ver User-Agent actual de um determinado browser : http://whatsmyuseragent.com

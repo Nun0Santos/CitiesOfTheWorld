@@ -28,17 +28,53 @@ public class XMLFunctions {
             
             Element pai = new Element("cidade");
             
+            
             Attribute nome = new Attribute("nome",cidad.getNome());
             pai.setAttribute(nome);
             
             nome = new Attribute("pais",cidad.getPais());
             pai.setAttribute(nome);
             
+            nome = new Attribute("capital",cidad.getCapital());
+            pai.setAttribute(nome);
             
-            Element filho = new Element("capital").addContent(cidad.getCapital());
-            pai.addContent(filho);
             
+            Element administracao = new Element("Administração");
+            
+            
+            Element filho = new Element("codigoPostal").addContent(cidad.getCodigoPostal());
+            administracao.addContent(filho);
+            
+            filho = new Element("presidente").addContent(cidad.getPresidente());
+            administracao.addContent(filho);
+            
+            pai.addContent(administracao);
+
+            
+            
+            Element dados = new Element("Dados");
+            
+            
+            filho = new Element("website").addContent((cidad.getWebsite()));
+            dados.addContent(filho);
+                
+            filho = new Element("linguaOficial").addContent(cidad.getLinguaOficial());
+            dados.addContent(filho);
+    
+            
+            filho = new Element("fusoHorario").addContent((cidad.getFusoHorario()));
+            dados.addContent(filho);
+            
+          
+            filho = new Element("cidadesGeminadas").addContent((cidad.getCidadesGeminadas()));
+            dados.addContent(filho);
+            
+            pai.addContent(dados);
+             
+             
+
             Element links = new Element("links");
+            
             
             filho = new Element("linkBandeiraPais").addContent(cidad.getLinkBandeiraPais());
             links.addContent(filho);
@@ -49,46 +85,43 @@ public class XMLFunctions {
             filho = new Element("linkMonumentos").addContent(cidad.getLinkMonumentos());
             links.addContent(filho);
             
+            pai.addContent(links);
             
-            filho = new Element("linguaOficial").addContent(cidad.getLinguaOficial());
-            pai.addContent(filho);
-    
-            filho = new Element("areaCidade").addContent(Double.toString(cidad.getAreaCidade()));
-            pai.addContent(filho);
             
-            filho = new Element("nHabitantes").addContent(Double.toString(cidad.getnHabitantes()));
-            pai.addContent(filho);
             
-            filho = new Element("densidadePopulacional").addContent(Double.toString(cidad.getDensidadePopulacional()));
-            pai.addContent(filho);
             
-            filho = new Element("codigoPostal").addContent(cidad.getCodigoPostal());
-            pai.addContent(filho);
-            
-            filho = new Element("presidente").addContent(cidad.getPresidente());
-            pai.addContent(filho);
+            Element geografia = new Element("Geografia");
             
             filho = new Element("latitude").addContent(Double.toString(cidad.getLatitude()));
-            pai.addContent(filho);
+            geografia.addContent(filho);
             
             filho = new Element("longitude").addContent(Double.toString(cidad.getLongitude()));
-            pai.addContent(filho);
+            geografia.addContent(filho);
+            
+            filho = new Element("areaCidade").addContent(Double.toString(cidad.getAreaCidade()));
+            geografia.addContent(filho);
             
             filho = new Element("altitude").addContent(Double.toString(cidad.getAltitude()));
-            pai.addContent(filho);
+            geografia.addContent(filho);
             
             filho = new Element("clima").addContent((cidad.getClima()));
-            pai.addContent(filho);
+            geografia.addContent(filho);
             
-            filho = new Element("fusoHorario").addContent((cidad.getFusoHorario()));
-            pai.addContent(filho);
+            pai.addContent(geografia);
             
-            filho = new Element("website").addContent((cidad.getWebsite()));
-            pai.addContent(filho);
             
-            filho = new Element("cidadesGeminadas").addContent((cidad.getCidadesGeminadas()));
-            pai.addContent(filho);
             
+            Element demografia = new Element("Demografia");
+            
+            filho = new Element("nHabitantes").addContent(Double.toString(cidad.getnHabitantes()));
+            demografia.addContent(filho);
+            
+            filho = new Element("densidadePopulacional").addContent(Double.toString(cidad.getDensidadePopulacional()));
+            demografia.addContent(filho);
+            
+            pai.addContent(demografia);
+            
+    
             raiz.addContent(pai);
             }
             return doc;        
