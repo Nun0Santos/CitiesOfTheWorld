@@ -11,27 +11,28 @@ import java.util.ArrayList;
  * @author User
  */
 public class Cidade {
+
     String nome;
     String pais;
     String capital;
     String linkBandeiraPais;
     String linguaOficial;
     String linkBandeiraCidade;
-    String linkMonumentos; //aqui ArrayList
+    ArrayList linkMonumentos;
     Double areaCidade;
     Double nHabitantes;
     Double densidadePopulacional;
     String codigoPostal;
     String presidente;
-    Double latitude; 
+    Double latitude;
     Double longitude;
     Double altitude;
     String clima;
     String fusoHorario;
     String website;
-    ArrayList cidadesGeminadas; 
+    ArrayList cidadesGeminadas;
 
-    public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, Double areaCidade, Double nHabitantes, Double densidadePopulacional, String codigoPostal, String presidente, Double latitude, Double longitude, Double altitude, String clima, String fusoHorario, String website, ArrayList cidadesGeminadas) {
+    public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, ArrayList linkMonumentos, Double areaCidade, Double nHabitantes, Double densidadePopulacional, String codigoPostal, String presidente, Double latitude, Double longitude, Double altitude, String clima, String fusoHorario, String website, ArrayList cidadesGeminadas) {
         this.nome = nome;
         this.pais = pais;
         this.capital = capital;
@@ -77,8 +78,6 @@ public class Cidade {
         this.capital = capital;
     }
 
-   
-
     public String getLinkBandeiraPais() {
         return linkBandeiraPais;
     }
@@ -103,11 +102,11 @@ public class Cidade {
         this.linkBandeiraCidade = linkBandeiraCidade;
     }
 
-    public String getLinkMonumentos() {
+    public ArrayList getLinkMonumentos() {
         return linkMonumentos;
     }
 
-    public void setLinkMonumentos(String linkMonumentos) {
+    public void setLinkMonumentos(ArrayList linkMonumentos) {
         this.linkMonumentos = linkMonumentos;
     }
 
@@ -205,10 +204,5 @@ public class Cidade {
 
     public void setCidadesGeminadas(ArrayList cidadesGeminadas) {
         this.cidadesGeminadas = cidadesGeminadas;
-    } 
+    }
 }
-
-   
-
-    
-    

@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE cidades SYSTEM "cidades.dtd">
 <cidades>
      <cidade nome="Lisboa" pais="Portugal" capital="true">
-          <Administração>
+          <Administracao>
                <codigoPostal>1100</codigoPostal>
-               <presidente>abs</presidente>
-          </Administração>
+               <presidente>Fernando Medina</presidente>
+          </Administracao>
           <Dados>
-               <website />
-               <linguaOficial>null</linguaOficial>
-               <fusoHorario>+0:00 (Europe/Lisbon)</fusoHorario>
-               <cidadesGeminadas>null</cidadesGeminadas>
+               <website>https://www.lisboa.pt</website>
+               <linguaOficial>Português&lt;br /&gt;Mirandese</linguaOficial>
+               <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Brasília</cidad>
+                    <cidad>Salvador</cidad>
+                    <cidad>Rio de Janeiro</cidad>
+                    <cidad>Salvador</cidad>
+                    <cidad>São Paulo</cidad>
+               </cidadesGeminadas>
           </Dados>
           <links>
-               <linkBandeiraPais>//dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-               <linkBandeiraCidade />
-               <linkMonumentos>null</linkMonumentos>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
+               <linkMonumentos />
           </links>
           <Geografia>
                <latitude>38.7071</latitude>
                <longitude>-9.13549</longitude>
-               <areaCidade>100</areaCidade>
+               <areaCidade>84.8</areaCidade>
                <altitude>4.0</altitude>
                <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
           </Geografia>
           <Demografia>
-               <nHabitantes>500</nHabitantes>
+               <nHabitantes>507220.0</nHabitantes>
                <densidadePopulacional>5981.4</densidadePopulacional>
           </Demografia>
      </cidade>

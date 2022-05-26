@@ -10,11 +10,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.jdom2.Attribute;
 import org.jdom2.DocType;
+import org.jdom2.Document;
+import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.Namespace;
 import org.jdom2.input.SAXBuilder;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 
 /**
  *
@@ -23,7 +23,7 @@ import org.w3c.dom.Element;
 public class JDOMFunctionsValidate {
     //Executa validação do documento XML usando  DTD 
 
-    public static Document validarDTD(String caminhoFicheiro) throws IOException {
+    public static Document validarDTD(String caminhoFicheiro) throws IOException, JDOMException {
         try {
             SAXBuilder builder = new SAXBuilder(true);  // true ativa a validação
             Document doc = (Document) builder.build(new File(caminhoFicheiro));
@@ -60,13 +60,13 @@ public class JDOMFunctionsValidate {
         return null;
     }
 
-    public static int validarDocumentoDTD(String xmlFile, String DTDFile) throws IOException {
+    public static int validarDocumentoDTD(String xmlFile, String DTDFile) throws IOException, JDOMException {
         Document doc = (Document) XMLJDomFunctions.lerDocumentoXML(xmlFile);
         File f = new File(DTDFile);
         if (doc != null && f.exists()) { //DTD e XML existem
             Element raiz = doc.getRootElement();
             //Atribuir DTD ao ficheiro XML
-            DocType dtd = new DocType(raiz.getName, DTDFile);
+            DocType dtd = new DocType(raiz.getName(), DTDFile);
             doc.setDocType(dtd);
 
             //Gravar o XML com as alterações em disco

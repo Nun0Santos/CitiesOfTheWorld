@@ -23,7 +23,9 @@ public class Wrappers {
         String link = "https://pt.db-city.com/";
         String DBCity;
         HttpRequestFunctions.httpRequest1(link, pais, "pais.txt"); //pesqusiar pais
-        String ER = "<a href=\"/([A-Za-z]+--[A-Za-z]+--[A-Za-z]+)\" title=\"[A-Za-z]+\">([A-Za-z]+)</a>"; // n esta bem
+        String ER = "<a href=\"/([A-Za-z]+--[A-Za-z]+--[A-Za-z]+)\" title=\"[^0-9]+\">([^0-9]+)</a>";
+        //String ER = "<link rel=\"canonical\" href=\"https://pt.db-city.com/\" /><link rel=\"section\" href=\"/[^0-9]+\" title=\"([^0-9]+)\" />"; 
+
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("pais.txt"));
@@ -129,7 +131,6 @@ public class Wrappers {
     
     public static double procuraAltitude(String link) throws IOException {
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
-        System.out.println("Link dentro de altitude " + link);
         String ER = "<th>Altitude [^0-9]+</th><td>([0-9]+) m</td>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
@@ -195,7 +196,7 @@ public class Wrappers {
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                return m.group(1);
+                return "UTC  " + m.group(1);
             }
         }
         input.close();
@@ -221,7 +222,6 @@ public class Wrappers {
     }
 
     public static String procuraPresidente(String link) throws IOException { // Wiki
-        System.out.println("link dentro do presi " + link);
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
         String ER = "<tr><th>Presidente da Câmara [A-Za-z]+</th><td>([^0-9]+)</td></tr>";
         Pattern p = Pattern.compile(ER);
@@ -257,10 +257,11 @@ public class Wrappers {
         return -1;
     }
 
-    public static ArrayList<String> procuraCidadesGeminadas(String link) throws IOException { // Wiki //arraylist
+    public static ArrayList<String> procuraCidadesGeminadas(String link) throws IOException {
+        int count = 0;
         ArrayList<String> procuraCidadesGeminadas = new ArrayList<String>();
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
-        String ER = "<td><a href=\"[^0-9]+\"><img src=\"[^0-9]+\" alt=\"[^0-9]+\" class=\"img_drp\" /></a> <a href=\"[^0-9]+\" title=\"[^0-9]+\">([^0-9]+)</a>";
+        String ER = "<td><a href=\"[^\"]+\"><img src=\"[^\"]+\" alt=\"[^\"]+\" class=\"img_drp\" /></a> <a href=\"[^\"]+\" title=\"[^\"]+\">([^\"]+)</a>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -268,18 +269,21 @@ public class Wrappers {
             String linha = input.nextLine();
             m = p.matcher(linha);
             while (m.find()) {
-                input.close();
-                procuraCidadesGeminadas.add(m.group(1));
-                return procuraCidadesGeminadas;
+                if (count < 5) {
+                    procuraCidadesGeminadas.add(m.group(1));
+                    count++;
+                } else {
+                    return procuraCidadesGeminadas;
+                }
             }
         }
         input.close();
         return procuraCidadesGeminadas;
     }
 
-    public static String procuraWebsite(String cidade) throws IOException { // Wiki
-        HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/", cidade, "cidade2.txt");
-        String ER = "</th><td><a class=\"url\" href=\"([^0-9]+)\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"";
+    public static String procuraWebsite(String link) throws IOException { // Wiki
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
+        String ER = "<a class=\"url\" href=\"([^0-9]+)\" rel=\"nofollow noreferrer noopener\" target=\"_blank\" title=\"Sítio Web [^0-9]+\">[^0-9]+ <span class=\"fa fa-external-link\"></span></a>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -297,7 +301,7 @@ public class Wrappers {
 
     public static String procuraBandeiraPais(String link) throws IOException { // Wiki
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
-        String ER = "title=\"Bandeira [A-Za-z]+\"><img src=\"([^9]+)\" alt=\"Bandeira [A-Za-z]+\" /></a></div>";
+        String ER = "<a href=\"/[^0-9]+\" title=\"Bandeira [^0-9]+\"><img src=\"([^\"]+)\" alt=\"Bandeira [^0-9]+\" /></a>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -306,16 +310,16 @@ public class Wrappers {
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                return m.group(1);
+                return "https:" + m.group(1);
             }
         }
         input.close();
         return null;
     }
 
-    public static String procuraBandeiraCidade(String link) throws IOException { // Wiki
-        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
-        String ER = "<img alt=\"Bandeira de [A-Za-z]+\" src=\"([^9]+)\" decoding=\"async\"";
+    public static String procuraBandeiraCidade(String cidade) throws IOException {
+        HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/", cidade, "cidade2.txt");
+        String ER = "title=\"[^0-9]+\"><img alt=\"[^0-9]+\" src=\"([^\"]+)\" decoding=\"async\"";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -324,16 +328,15 @@ public class Wrappers {
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                return m.group(1);
+                return "https:" + m.group(1);
             }
         }
         input.close();
         return null;
     }
 
-    public static String procuraLinguaOficial(String pais) throws IOException { // Wiki
+    public static String procuraLinguaOficial(String pais) throws IOException {
         HttpRequestFunctions.httpRequest1("https://pt.db-city.com/", pais, "cidade2.txt");
-
         String ER = "<tr><th>Língua oficial</th><td>([^0-9]+)</td></tr><tr><th>[^0-9]+</th><td>[^0-9]+</td></tr>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
@@ -350,9 +353,10 @@ public class Wrappers {
         return "null";
     }
 
-    public static String procuraMonumentos(String link) throws IOException { // Wiki //arratlist
-        //ArrayList<String> procuraMonumentos = new ArrayList<String>();
-        /* HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+    public static ArrayList<String> procuraMonumentos(String link) throws IOException { // Wiki //arratlist
+        int count = 0;
+        ArrayList<String> procuraMonumentos = new ArrayList<String>();
+        /*HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
         String ER = "";
         Pattern p = Pattern.compile(ER);
         Matcher m;
@@ -360,14 +364,17 @@ public class Wrappers {
         while (input.hasNextLine()) {
             String linha = input.nextLine();
             m = p.matcher(linha);
-            if (m.find()) {
-                input.close();
-                return m.group(1);
+            while (m.find()) {
+                if (count < 5) {
+                    procuraMonumentos.add(m.group(1));
+                    count++;
+                } else {
+                    return procuraMonumentos;
+                }
             }
         }
         input.close();*/
-        //procuraMonumentos.add("Porto");
-        return "null";
+        return procuraMonumentos;
     }
 
     public static Cidade criaCidade(String cidade, String pais, String linkCidade) throws IOException {
@@ -375,8 +382,8 @@ public class Wrappers {
         String capital = Wrappers.procuraCapitais(pais, cidade);
         String linkBandeiraPais = Wrappers.procuraBandeiraPais(linkCidade);
         String linguaOficial = Wrappers.procuraLinguaOficial(pais);
-        String linkBandeiraCidade = Wrappers.procuraBandeiraCidade(linkCidade);
-        String linkMonumentos = Wrappers.procuraMonumentos(linkCidade); //aqui
+        String linkBandeiraCidade = Wrappers.procuraBandeiraCidade(cidade);
+        ArrayList linkMonumentos = Wrappers.procuraMonumentos(linkCidade);
         Double areaCidade = Wrappers.procuraArea(linkCidade);
         Double nHabitantes = Wrappers.procuraNumeroHabitantes(linkCidade);
         Double densidadePopulacional = Wrappers.procuraDensidadePopulacional(linkCidade);

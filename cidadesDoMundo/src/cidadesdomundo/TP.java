@@ -13,17 +13,14 @@ import org.jdom2.Document;
  * @author User
  */
 public class TP {
-    
+
     public static void main(String[] args) throws IOException {
-        String lista= "Porto, Portugal";
-        String [] campos=lista.split(", ");
-       
-        
-     
-        String linkPais = Wrappers.encontrarLinkDBCityPais(campos[1]);
-        System.out.println("link cidade " + linkPais);
-        
-       /*Cidade x = Wrappers.criaCidade(campos[0],campos[1],linkPais);
+        String lista = "madrid, Portugal";
+        String[] campos = lista.split(", ");
+
+        /* String linkPais = Wrappers.encontrarLinkDBCityPais(campos[1]);
+        System.out.println("link cidade " + linkPais);*/
+ /*Cidade x = Wrappers.criaCidade(campos[0],campos[1],linkPais);
         
         
         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
@@ -31,70 +28,35 @@ public class TP {
         
         
         XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");*/
-
-  
-  
-        
-        
-        
-         
-         //Cidade x = XMLFunctions.adicionaCidade(camppos[1], doc);
+        //Cidade x = XMLFunctions.adicionaCidade(camppos[1], doc);
         //Document doc = XMLJDomFunctions.lerDocumentoXML("pais.xml");
-        
-        
-         /*String geminadas = Wrappers.procuraCidadesGeminadas(cidade);
+        /*String geminadas = Wrappers.procuraCidadesGeminadas(linkPais);
          System.out.println("Cidades geminadas " + geminadas);*/
-         
-         /*String web = Wrappers.procuraWebsite(cidade);
-         System.out.println("Website " + web);*/
-        
-        
-        /*String cidadeWiki = Wrappers.Wikipedia(campos[0]);
+ /*String cidadeWiki = Wrappers.Wikipedia(campos[0]);
         System.out.println("link cidadeWiki " + cidadeWiki);
         
         String pres = Wrappers.procuraPresidente(cidadeWiki);
         System.out.println("Presidente " + pres);*/
-        
-        /*double den = Wrappers.procuraDensidadePopulacional(cidade);
+ /*double den = Wrappers.procuraDensidadePopulacional(cidade);
         System.out.println("Densidade pop " + den);*/
-        
-        
-       
-        
-        /*Double habi = Wrappers.procuraNumeroHabitantes(cidade);
+ /*Double habi = Wrappers.procuraNumeroHabitantes(cidade);
         System.out.println("Habitantes " + habi);*/
-        
-        /*String clima = Wrappers.procuraClima(cidade);
+ /*String clima = Wrappers.procuraClima(cidade);
         System.out.println("Clima " + clima);*/
-        
-        /*String longi = Wrappers.procuraLongitude(cidade);
+ /*String longi = Wrappers.procuraLongitude(cidade);
         System.out.println("Longitude " + longi);*/
-        
-        /*String lat = Wrappers.procuraLatitude(cidade);
+ /*String lat = Wrappers.procuraLatitude(cidade);
         System.out.println("Latitude " + lat);*/
-        
-        /*Double area = Wrappers.procuraArea(cidade);
+ /*Double area = Wrappers.procuraArea(cidade);
         System.out.println("Area " + area);*/
-        
         //Cidade x = XMLFunctions.adicionaCidade(campos[0]);
-        
-         /*String fuso = Wrappers.procuraFUSO(cidade);
+        /*String fuso = Wrappers.procuraFUSO(cidade);
          System.out.println("FUSO " + fuso);*/
-        
-        
-         /*String bandeira = Wrappers.procuraBandeiraPais(cidade);
-         System.out.println("Bandeira " + bandeira);*/  
-         
-         /*String bandeiraC = Wrappers.procuraBandeiraCidade(cidadeWiki);
+ /*String bandeira = Wrappers.procuraBandeiraPais(cidade);
+         System.out.println("Bandeira " + bandeira);*/
+ /*String bandeiraC = Wrappers.procuraBandeiraCidade(cidadeWiki);
          System.out.println("Bandeira " + bandeiraC);*/
-         
-        /*double alt = Wrappers.procuraAltitude(cidade); //funciona
+ /*double alt = Wrappers.procuraAltitude(cidade); //funciona
         System.out.println("Altitude " + alt);*/
-
-
-        
-        
-
-        
     }
 }

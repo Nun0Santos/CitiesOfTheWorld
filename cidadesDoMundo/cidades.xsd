@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XSD document created with EditiX XML Editor (http://www.editix.com) at Thu May 26 21:29:51 BST 2022 -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	
+	
+	
+	<xsd:element name="codigoPostal" type="xsd:string"/>
+	<xsd:element name="presidente" type="xsd:string"/>
+	<xsd:element name="website" type="xsd:string"/>
+	<xsd:element name="linguaOficial" type="xsd:string"/>
+	
+	<xsd:element name="fusoHorario" type="xsd:string"/>
+	<xsd:element name="cidad" type="xsd:string"/>
+	<xsd:element name="linkBandeiraPais" type="xsd:string"/>
+	<xsd:element name="linkBandeiraCidade" type="xsd:string"/>
+	
+	<xsd:element name="linkMonumentos" type="xsd:string" />
+	<xsd:element name="latitude" type="xsd:integer"/>
+	<xsd:element name="longitude" type="xsd:integer" />
+	
+	<xsd:element name="areaCidade" type="xsd:integer" />
+	<xsd:element name="altitude" type="xsd:integer"/>
+	<xsd:element name="clima" type="xsd:string" />
+	
+	<xsd:element name="nHabitantes" type="xsd:integer" />
+	<xsd:element name="densidadePopulacional" type="xsd:integer"/>
+	
+	<xsd:attribute name="Lisboa" type="xsd:string" />
+	<xsd:attribute name="pais" type="xsd:string"/>
+	<xsd:attribute name="capital" type="xsd:string" />
+	
+	<xsd:element name="Administracao">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="codigoPostal" />                
+            			<xsd:element ref="presidente" />
+        			</xsd:sequence>   
+    		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="Dados">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="website" />                
+            			<xsd:element ref="linguaOficial" />
+            			<xsd:element ref="fusoHorario" />                
+            			<xsd:element ref="cidadesGeminadas" />
+        			</xsd:sequence>   
+    		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="links">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="linkBandeiraPortugal" />                
+            			<xsd:element ref="linkBandeiraCidade" />
+            			<xsd:element ref="linkMonumentos" />                
+        			</xsd:sequence>   
+    		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="Geografia">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="latitude" />                
+            			<xsd:element ref="longitude" />
+            			<xsd:element ref="areaCidade" />                
+            			<xsd:element ref="altitude" />
+            			<xsd:element ref="clima" />                
+        			</xsd:sequence>   
+    		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="Demografia">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="nHabitantes" />                
+            			<xsd:element ref="densidadePopulacional" />           
+        			</xsd:sequence>   
+    		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="cidadesGeminadas">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="cidad" />                            
+        			</xsd:sequence>   
+    		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="cidade">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="Administracao"/>    
+          		  		<xsd:element ref="Dados" /> 
+          		  		<xsd:element ref="links" /> 
+          		  		<xsd:element ref="Geografia" /> 
+          		  		<xsd:element ref="Demografia" />                       
+        			</xsd:sequence>   
+        		<xsd:attribute ref="nome" use="required"/>
+	    		<xsd:attribute ref="pais" use="required"/>
+	    		<xsd:attribute ref="capital" use="required"/>
+    		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="cidades">   
+   		 <xsd:complexType>      
+        			<xsd:sequence>         
+          		  		<xsd:element ref="cidade"/>                          
+        			</xsd:sequence>  
+    		</xsd:complexType>
+	</xsd:element>
+	
+	
+	
+</xsd:schema>

@@ -16,6 +16,7 @@ import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
 import org.jdom2.Document;
 import org.jdom2.Element;
+import org.jdom2.JDOMException;
 
 /**
  *
@@ -1067,14 +1068,16 @@ public class Frame extends javax.swing.JFrame {
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
         try {
-            // TODO add your handling code here:
             int res = JDOMFunctionsValidate.validarDocumentoDTD("cidades.xml", "cidades.dtd");
+
             if (res == 1) {
-                JOptionPane.showMessageDialog(this, "O Ficheiro Válido por DTD.", "Validação", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "O Ficheiro é válido por DTD.", "Validação", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                JOptionPane.showMessageDialog(this, "O Ficheiro não Válido por DTD", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "O Ficheiro não é válido por DTD", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (JDOMException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jMenuItem2ActionPerformed

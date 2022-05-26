@@ -4,6 +4,7 @@
  */
 package cidadesdomundo;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.jdom2.Attribute;
 import org.jdom2.Document;
@@ -25,6 +26,9 @@ public class XMLFunctions {
             raiz = doc.getRootElement();
             //return null;
 
+            ArrayList<String> cg = new ArrayList<String>();
+            cg = cidad.getCidadesGeminadas(); // Cidades Geminadas
+
             Element pai = new Element("cidade");
 
             Attribute nome = new Attribute("nome", cidad.getNome());
@@ -36,7 +40,7 @@ public class XMLFunctions {
             nome = new Attribute("capital", cidad.getCapital());
             pai.setAttribute(nome);
 
-            Element administracao = new Element("Administração");
+            Element administracao = new Element("Administracao");
 
             Element filho = new Element("codigoPostal").addContent(cidad.getCodigoPostal());
             administracao.addContent(filho);
@@ -57,9 +61,16 @@ public class XMLFunctions {
             filho = new Element("fusoHorario").addContent((cidad.getFusoHorario()));
             dados.addContent(filho);
 
-            filho = new Element("cidadesGeminadas").addContent((cidad.getCidadesGeminadas()));
-            dados.addContent(filho);
+            Element cidadesGeminadas = new Element("cidadesGeminadas");
 
+            for (int i = 0; i < cg.size(); i++) {
+                System.out.println(cg.size());
+
+                Element c = new Element("cidad").addContent(cg.get(i));
+                cidadesGeminadas.addContent(c);
+            }
+
+            dados.addContent(cidadesGeminadas);
             pai.addContent(dados);
 
             Element links = new Element("links");

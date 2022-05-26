@@ -1,0 +1,43 @@
+<!-- DTD created at Thu May 26 19:32:59 BST 2022 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+
+
+<!ATTLIST cidade nome CDATA #REQUIRED>
+
+<!ATTLIST cidade pais CDATA #REQUIRED>
+<!ATTLIST cidade capital (true|false) #REQUIRED>
+
+<!ATTLIST cidades xmlns:xsi CDATA >
+
+<!ELEMENT cidades (cidade*)>
+
+<!ELEMENT cidade (Administracao,Dados,links,Geografia,Demografia)>
+
+<!ELEMENT Administracao (codigoPostal,presidente)>
+<!ELEMENT Dados (website,linguaOficial,fusoHorario,cidadesGeminadas)>
+<!ELEMENT links (linkBandeiraPais,linkBandeiraCidade,linkMonumentos)>
+<!ELEMENT Geografia (latitude,longitude,areaCidade,altitude,clima)>
+<!ELEMENT Demografia (nHabitantes,densidadePopulacional)>
+
+<!ELEMENT codigoPostal (#PCDATA)>
+<!ELEMENT presidente (#PCDATA)>
+
+<!ELEMENT website (#PCDATA)>
+<!ELEMENT linguaOficial (#PCDATA)>
+<!ELEMENT fusoHorario (#PCDATA)>
+<!ELEMENT cidadesGeminadas (cidad*)>
+
+<!ELEMENT cidad (#PCDATA)>
+
+<!ELEMENT linkBandeiraPais (#PCDATA)>
+<!ELEMENT linkBandeiraCidade (#PCDATA)>
+<!ELEMENT linkMonumentos (#PCDATA)>
+
+<!ELEMENT latitude (#PCDATA)>
+<!ELEMENT longitude (#PCDATA)>
+<!ELEMENT areaCidade (#PCDATA)>
+<!ELEMENT altitude (#PCDATA)>
+<!ELEMENT clima (#PCDATA)>
+
+<!ELEMENT nHabitantes (#PCDATA)>
+<!ELEMENT densidadePopulacional (#PCDATA)>
+
