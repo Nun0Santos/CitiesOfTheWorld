@@ -29,9 +29,9 @@ public class Cidade {
     String clima;
     String fusoHorario;
     String website;
-    String cidadesGeminadas; 
+    ArrayList cidadesGeminadas; 
 
-    public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, Double areaCidade, Double nHabitantes, Double densidadePopulacional, String codigoPostal, String presidente, Double latitude, Double longitude, Double altitude, String clima, String fusoHorario, String website, String cidadesGeminadas) {
+    public Cidade(String nome, String pais, String capital, String linkBandeiraPais, String linguaOficial, String linkBandeiraCidade, String linkMonumentos, Double areaCidade, Double nHabitantes, Double densidadePopulacional, String codigoPostal, String presidente, Double latitude, Double longitude, Double altitude, String clima, String fusoHorario, String website, ArrayList cidadesGeminadas) {
         this.nome = nome;
         this.pais = pais;
         this.capital = capital;
@@ -199,11 +199,11 @@ public class Cidade {
         this.website = website;
     }
 
-    public String getCidadesGeminadas() {
+    public ArrayList getCidadesGeminadas() {
         return cidadesGeminadas;
     }
 
-    public void setCidadesGeminadas(String cidadesGeminadas) {
+    public void setCidadesGeminadas(ArrayList cidadesGeminadas) {
         this.cidadesGeminadas = cidadesGeminadas;
     } 
 }

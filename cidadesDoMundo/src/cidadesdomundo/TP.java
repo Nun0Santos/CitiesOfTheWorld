@@ -5,6 +5,7 @@
 package cidadesdomundo;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import org.jdom2.Document;
 
 /**
@@ -14,7 +15,7 @@ import org.jdom2.Document;
 public class TP {
     
     public static void main(String[] args) throws IOException {
-        String lista= "Roma, Itália";
+        String lista= "Porto, Portugal";
         String [] campos=lista.split(", ");
        
         
@@ -32,9 +33,9 @@ public class TP {
         XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");*/
 
         
-        String lingua = Wrappers.procuraLinguaOficial(campos[1]);
-        System.out.println("lingua " + lingua);
-         
+        ArrayList<String> gemiandas = Wrappers.procuraCidadesGeminadas(linkPais);
+        
+         //System.out.println(modelList);
         /*
         
         doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");

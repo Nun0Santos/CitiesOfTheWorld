@@ -122,7 +122,8 @@ public class Wrappers {
     
     public static double procuraAltitude(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
-        String ER = "<th>Altitude [A-Za-z]+</th><td>([0-9]+) m</td>";
+        System.out.println("Link dentro de altitude " + link);
+        String ER = "<th>Altitude [^0-9]+</th><td>([0-9]+) m</td>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -247,24 +248,24 @@ public class Wrappers {
         return -1;
     }
     
-     public static String procuraCidadesGeminadas(String link) throws IOException { // Wiki //arraylist
-        //ArrayList<String> procuraCidadesGeminadas = new ArrayList<String>();
-        /*HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
-        String ER = "";
+     public static ArrayList <String> procuraCidadesGeminadas(String link) throws IOException { // Wiki //arraylist
+        ArrayList<String> procuraCidadesGeminadas = new ArrayList<String>();
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt"); 
+        String ER = "<td><a href=\"[^0-9]+\"><img src=\"[^0-9]+\" alt=\"[^0-9]+\" class=\"img_drp\" /></a> <a href=\"[^0-9]+\" title=\"[^0-9]+\">([^0-9]+)</a>";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
         while (input.hasNextLine()) {
             String linha = input.nextLine();
             m = p.matcher(linha);
-            if (m.find()) {
+            while (m.find()) {
                 input.close();
-                return m.group(1);
+                procuraCidadesGeminadas.add(m.group(1));
+                return procuraCidadesGeminadas;
             }
         }
-        input.close();*/
-       // procuraCidadesGeminadas.add("Lisboa");
-        return "null";
+        input.close();
+        return procuraCidadesGeminadas;
     }
      
      public static String procuraWebsite(String cidade) throws IOException { // Wiki
@@ -376,7 +377,7 @@ public class Wrappers {
         String clima = Wrappers.procuraClima(linkCidade);
         String fusoHorario = Wrappers.procuraFUSO(linkCidade);
         String website = Wrappers.procuraWebsite(cidade);
-        String cidadesGeminadas = Wrappers.procuraCidadesGeminadas(linkCidade); //aqui
+        ArrayList cidadesGeminadas = Wrappers.procuraCidadesGeminadas(linkCidade); //aqui
 
         Cidade c = new Cidade(cidade,pais,capital,linkBandeiraPais,linguaOficial,linkBandeiraCidade,linkMonumentos,areaCidade,nHabitantes,densidadePopulacional,codigoPostal,presidente,latitude,longitude,altitude,clima,fusoHorario,website,cidadesGeminadas);
         return c;

@@ -28,16 +28,16 @@
                <densidadePopulacional>5981.4</densidadePopulacional>
           </Demografia>
      </cidade>
-     <cidade nome="Barcelona" pais="Espanha" capital="false">
+     <cidade nome="Roma" pais="Itália" capital="false">
           <Administração>
-               <codigoPostal>51001</codigoPostal>
-               <presidente>Juan Jesús Vivas Lara</presidente>
+               <codigoPostal />
+               <presidente />
           </Administração>
           <Dados>
                <website />
-               <linguaOficial>null</linguaOficial>
-               <fusoHorario>+1:00 (Africa/Ceuta)</fusoHorario>
-               <cidadesGeminadas>null</cidadesGeminadas>
+               <linguaOficial>Italiano</linguaOficial>
+               <fusoHorario />
+               <cidadesGeminadas />
           </Dados>
           <links>
                <linkBandeiraPais />
@@ -45,127 +45,15 @@
                <linkMonumentos>null</linkMonumentos>
           </links>
           <Geografia>
-               <latitude>35.8883</latitude>
-               <longitude>-5.3162</longitude>
-               <areaCidade>19.48</areaCidade>
-               <altitude>13.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+               <latitude>-1.0</latitude>
+               <longitude>-1.0</longitude>
+               <areaCidade>-1.0</areaCidade>
+               <altitude>-1.0</altitude>
+               <clima />
           </Geografia>
           <Demografia>
-               <nHabitantes>84777.0</nHabitantes>
-               <densidadePopulacional>4352.0</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Barcelona" pais="Espanha" capital="false">
-          <Administração>
-               <codigoPostal>51001</codigoPostal>
-               <presidente>Juan Jesús Vivas Lara</presidente>
-          </Administração>
-          <Dados>
-               <website />
-               <linguaOficial>null</linguaOficial>
-               <fusoHorario>+1:00 (Africa/Ceuta)</fusoHorario>
-               <cidadesGeminadas>null</cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais />
-               <linkBandeiraCidade />
-               <linkMonumentos>null</linkMonumentos>
-          </links>
-          <Geografia>
-               <latitude>35.8883</latitude>
-               <longitude>-5.3162</longitude>
-               <areaCidade>19.48</areaCidade>
-               <altitude>13.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>84777.0</nHabitantes>
-               <densidadePopulacional>4352.0</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Madrid" pais="Espanha" capital="false">
-          <Administração>
-               <codigoPostal>51001</codigoPostal>
-               <presidente>Juan Jesús Vivas Lara</presidente>
-          </Administração>
-          <Dados>
-               <website />
-               <linguaOficial>null</linguaOficial>
-               <fusoHorario>+1:00 (Africa/Ceuta)</fusoHorario>
-               <cidadesGeminadas>null</cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais />
-               <linkBandeiraCidade />
-               <linkMonumentos>null</linkMonumentos>
-          </links>
-          <Geografia>
-               <latitude>35.8883</latitude>
-               <longitude>-5.3162</longitude>
-               <areaCidade>19.48</areaCidade>
-               <altitude>13.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>84777.0</nHabitantes>
-               <densidadePopulacional>4352.0</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Barcelona" pais="Espanha" capital="false">
-          <Administração>
-               <codigoPostal>51001</codigoPostal>
-               <presidente>Juan Jesús Vivas Lara</presidente>
-          </Administração>
-          <Dados>
-               <website />
-               <linguaOficial>null</linguaOficial>
-               <fusoHorario>+1:00 (Africa/Ceuta)</fusoHorario>
-               <cidadesGeminadas>null</cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais />
-               <linkBandeiraCidade />
-               <linkMonumentos>null</linkMonumentos>
-          </links>
-          <Geografia>
-               <latitude>35.8883</latitude>
-               <longitude>-5.3162</longitude>
-               <areaCidade>19.48</areaCidade>
-               <altitude>13.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>84777.0</nHabitantes>
-               <densidadePopulacional>4352.0</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Lisboa" pais="Portugal" capital="true">
-          <Administração>
-               <codigoPostal>1100</codigoPostal>
-               <presidente>Fernando Medina</presidente>
-          </Administração>
-          <Dados>
-               <website />
-               <linguaOficial>null</linguaOficial>
-               <fusoHorario>+0:00 (Europe/Lisbon)</fusoHorario>
-               <cidadesGeminadas>null</cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais>//dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-               <linkBandeiraCidade />
-               <linkMonumentos>null</linkMonumentos>
-          </links>
-          <Geografia>
-               <latitude>38.7071</latitude>
-               <longitude>-9.13549</longitude>
-               <areaCidade>84.8</areaCidade>
-               <altitude>4.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>507220.0</nHabitantes>
-               <densidadePopulacional>5981.4</densidadePopulacional>
+               <nHabitantes>-1.0</nHabitantes>
+               <densidadePopulacional>-1.0</densidadePopulacional>
           </Demografia>
      </cidade>
 </cidades>
