@@ -4,7 +4,10 @@
  */
 package cidadesdomundo;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,6 +15,7 @@ import javax.swing.JOptionPane;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
 import org.jdom2.Document;
+import org.jdom2.Element;
 
 /**
  *
@@ -63,6 +67,26 @@ public class Frame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
+        jDialog8 = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jButton9 = new javax.swing.JButton();
+        jDialog9 = new javax.swing.JDialog();
+        jButton10 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jDialog10 = new javax.swing.JDialog();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jButton11 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jButton12 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jButton13 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -73,6 +97,7 @@ public class Frame extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -341,6 +366,171 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap(191, Short.MAX_VALUE))
         );
 
+        jLabel9.setText("País");
+
+        jButton9.setText("Pesquisar");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog8Layout = new javax.swing.GroupLayout(jDialog8.getContentPane());
+        jDialog8.getContentPane().setLayout(jDialog8Layout);
+        jDialog8Layout.setHorizontalGroup(
+            jDialog8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog8Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jDialog8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                    .addComponent(jTextField9))
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+        jDialog8Layout.setVerticalGroup(
+            jDialog8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog8Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jDialog8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton9)
+                .addContainerGap(191, Short.MAX_VALUE))
+        );
+
+        jButton10.setText("Pesquisar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("País");
+
+        javax.swing.GroupLayout jDialog9Layout = new javax.swing.GroupLayout(jDialog9.getContentPane());
+        jDialog9.getContentPane().setLayout(jDialog9Layout);
+        jDialog9Layout.setHorizontalGroup(
+            jDialog9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog9Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jDialog9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                    .addComponent(jTextField10))
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+        jDialog9Layout.setVerticalGroup(
+            jDialog9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog9Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jDialog9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton10)
+                .addContainerGap(191, Short.MAX_VALUE))
+        );
+
+        jLabel11.setText("Cidade");
+
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Alterar Habitantes:");
+
+        jButton11.setText("Alterar Habitantes");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("Alterar área:");
+
+        jButton12.setText("Alterar área");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setText("Alterar Presidente:");
+
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Alterar Presidente");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog10Layout = new javax.swing.GroupLayout(jDialog10.getContentPane());
+        jDialog10.getContentPane().setLayout(jDialog10Layout);
+        jDialog10Layout.setHorizontalGroup(
+            jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog10Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addGroup(jDialog10Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(49, 49, 49)
+                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel13)
+                    .addGroup(jDialog10Layout.createSequentialGroup()
+                        .addGroup(jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextField12)
+                            .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
+                        .addGap(42, 42, 42)
+                        .addGroup(jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton11)
+                            .addComponent(jButton13)))
+                    .addGroup(jDialog10Layout.createSequentialGroup()
+                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton12))
+                    .addComponent(jLabel14))
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        jDialog10Layout.setVerticalGroup(
+            jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton13))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addGap(18, 18, 18)
+                .addGroup(jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton11))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel13)
+                .addGap(18, 18, 18)
+                .addGroup(jDialog10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton12))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Cidade a pesquisar");
@@ -373,12 +563,35 @@ public class Frame extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Validar modelo de dados DTD");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("Validar modelo de dados XSD");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
+        jMenuItem18.setText("Limpar textArea");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem18);
+
         jMenuItem4.setText("Sair da aplicação");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem4);
 
         jMenuBar1.add(jMenu1);
@@ -402,6 +615,11 @@ public class Frame extends javax.swing.JFrame {
         jMenu2.add(jMenuItem6);
 
         jMenuItem7.setText("Alterar atributos de uma cidade");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem7);
 
         jMenuBar1.add(jMenu2);
@@ -453,15 +671,35 @@ public class Frame extends javax.swing.JFrame {
         jMenu4.setText("Gerar Outputs");
 
         jMenuItem13.setText("HTML de fotos das bandeiras");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem13);
 
         jMenuItem14.setText("TXT das cidades de uma dado País");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem14);
 
         jMenuItem15.setText("XML de 5 cidades mais populosas");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem15);
 
         jMenuItem16.setText("HTML de monumentos de uma dada cidade");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem16);
 
         jMenuItem17.setText("jMenuItem17");
@@ -505,11 +743,11 @@ public class Frame extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-       
+
         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
         String texto = XMLJDomFunctions.escreverDocumentoString(doc);
         jTextArea1.setText(texto);
-                                              
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -538,7 +776,7 @@ public class Frame extends javax.swing.JFrame {
         jDialog5.setSize(300, 200);
         jDialog5.setLocation(200, 200);
         jDialog5.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -567,27 +805,25 @@ public class Frame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         //HttpRequestFunctions.httpRequest1("https://eden.dei.uc.pt/~abs/ID/pessoas.html", "", "pessoas.html");
-         String pais = jTextField1.getText();  
-         String [] campos=pais.split(", ");
-         String cidade = null;
+        //HttpRequestFunctions.httpRequest1("https://eden.dei.uc.pt/~abs/ID/pessoas.html", "", "pessoas.html");
+        String pais = jTextField1.getText();
+        String[] campos = pais.split(", ");
+        String cidade = null;
         try {
-                cidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
+            cidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-         String web = null;
+
+        String web = null;
         try {
             web = Wrappers.procuraWebsite(cidade);
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-         System.out.println("Website " + web);
-         
-         
-       
-       
+        System.out.println("Website " + web);
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -596,34 +832,34 @@ public class Frame extends javax.swing.JFrame {
         jDialog7.setSize(300, 200);
         jDialog7.setLocation(200, 200);
         jDialog7.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-          String lista= jTextField8.getText();
-          String [] campos=lista.split(", ");
-          String linkPais = null;
-          Cidade x = null;
-          
+        String lista = jTextField8.getText();
+        String[] campos = lista.split(", ");
+        String linkPais = null;
+        Cidade x = null;
+
         try {
             linkPais = Wrappers.encontrarLinkDBCityPais(campos[1]);
-            
+
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-         
+
         try {
-            x = Wrappers.criaCidade(campos[0],campos[1],linkPais);
+            x = Wrappers.criaCidade(campos[0], campos[1], linkPais);
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-          
-          Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-          doc = XMLFunctions.adicionaCidade(x, doc);
-          XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
-          JOptionPane.showMessageDialog(this,"Cidade adicioanada com sucesso!");
-          jDialog7.setVisible(false);
+
+        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        doc = XMLFunctions.adicionaCidade(x, doc);
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+        JOptionPane.showMessageDialog(this, "Cidade adicioanada com sucesso!");
+        jDialog7.setVisible(false);
 
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -634,16 +870,15 @@ public class Frame extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        doc=XMLFunctions.eliminaCidade(jTextField7.getText(),doc);
-      
-        if(doc !=null){
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc,"cidades.xml");
-            JOptionPane.showMessageDialog(this,"Cidade eliminada com sucesso");
+        doc = XMLFunctions.eliminaCidade(jTextField7.getText(), doc);
+
+        if (doc != null) {
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+            JOptionPane.showMessageDialog(this, "Cidade eliminada com sucesso");
+        } else {
+            JOptionPane.showMessageDialog(this, "Erro ao eliminar cidade");
         }
-        else{
-            JOptionPane.showMessageDialog(this,"Erro ao eliminar cidade");
-        }
-       jDialog6.setVisible(false);
+        jDialog6.setVisible(false);
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -653,61 +888,67 @@ public class Frame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-          try {
+        try {
             Scanner ler = new Scanner(System.in);
             System.out.println("Introduza palavra de pesquisa");
-            String xp= null;
-            
+            String xp = null;
+
             String valor = jTextField2.getText();
-            
-            if (jDialog1.getTitle().equals("Nome"))
+
+            if (jDialog1.getTitle().equals("Nome")) {
                 xp = "//cidade[contains(@nome,'" + valor + "')]/@nome";
-           
-            if (jDialog1.getTitle().equals("Capital"))
+            }
+
+            if (jDialog1.getTitle().equals("Capital")) {
                 xp = "//cidade[contains(@capital,'" + valor + "')]/@capital";
-            if (jDialog1.getTitle().equals("Area"))
+            }
+            if (jDialog1.getTitle().equals("Area")) {
                 xp = "//cidade/Geografia[contains(areaCidade,'" + valor + "')]/areaCidade";
-            if (jDialog1.getTitle().equals("nHabitantes"))
+            }
+            if (jDialog1.getTitle().equals("nHabitantes")) {
                 xp = "//cidade/Demografia[contains(nHabitantes,'" + valor + "')]/nHabitantes";
-            if (jDialog1.getTitle().equals("Idioma"))
+            }
+            if (jDialog1.getTitle().equals("Idioma")) {
                 xp = "//cidade/Dados[contains(linguaOficial,'" + valor + "')]/linguaOficial";
-          
+            }
+
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
-            
-            if (res == null)
+
+            if (res == null) {
                 jTextArea1.setText("Ficheiro nao existe");
-            else if (res.size()==0)
+            } else if (res.size() == 0) {
                 jTextArea1.setText("Pesquisa sem informacao");
-            else{               
+            } else {
                 jTextArea1.setText(x);
             }
             jDialog1.setVisible(false);
         } catch (SaxonApiException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-          try {
+        try {
             Scanner ler = new Scanner(System.in);
             System.out.println("Introduza palavra de pesquisa");
-            String xp= null;
+            String xp = null;
             String valor = jTextField3.getText();
-            
-            if (jDialog2.getTitle().equals("Pais"))
+
+            if (jDialog2.getTitle().equals("Pais")) {
                 xp = "//cidade[contains(@pais,'" + valor + "')]/@pais";
-            
+            }
+
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
-            
-            if (res == null)
+
+            if (res == null) {
                 jTextArea1.setText("Ficheiro nao existe");
-            else if (res.size()==0)
+            } else if (res.size() == 0) {
                 jTextArea1.setText("Pesquisa sem informacao");
-            else{               
+            } else {
                 jTextArea1.setText(x);
             }
             jDialog2.setVisible(false);
@@ -718,28 +959,27 @@ public class Frame extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-         try {
+        try {
             Scanner ler = new Scanner(System.in);
             System.out.println("Introduza palavra de pesquisa");
-            String xp= null;
-            
+            String xp = null;
+
             String valor = jTextField4.getText();
-            
-           
+
             xp = "//cidade/Geografia[contains(areaCidade,'" + valor + "')]/areaCidade";
-            
-            if (jDialog3.getTitle().equals("nHabitantes"))
+
+            if (jDialog3.getTitle().equals("nHabitantes")) {
                 xp = "//cidade/Demografia[contains(nHabitantes,'" + valor + "')]/nHabitantes";
-           
-          
+            }
+
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
-            
-            if (res == null)
+
+            if (res == null) {
                 jTextArea1.setText("Ficheiro nao existe");
-            else if (res.size()==0)
+            } else if (res.size() == 0) {
                 jTextArea1.setText("Pesquisa sem informacao");
-            else{               
+            } else {
                 jTextArea1.setText(x);
             }
             jDialog3.setVisible(false);
@@ -750,24 +990,25 @@ public class Frame extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-         try {
+        try {
             Scanner ler = new Scanner(System.in);
             System.out.println("Introduza palavra de pesquisa");
-            String xp= null;
-            
+            String xp = null;
+
             String valor = jTextField5.getText();
-            
-            if (jDialog4.getTitle().equals("Clima"))
+
+            if (jDialog4.getTitle().equals("Clima")) {
                 xp = "//cidade/Geografia[contains(Clima,'" + valor + "')]/Clima";
-          
+            }
+
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
-            
-            if (res == null)
+
+            if (res == null) {
                 jTextArea1.setText("Ficheiro nao existe");
-            else if (res.size()==0)
+            } else if (res.size() == 0) {
                 jTextArea1.setText("Pesquisa sem informacao");
-            else{               
+            } else {
                 jTextArea1.setText(x);
             }
             jDialog4.setVisible(false);
@@ -778,25 +1019,25 @@ public class Frame extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-         try {
+        try {
             Scanner ler = new Scanner(System.in);
             System.out.println("Introduza palavra de pesquisa");
-            String xp= null;
-            
+            String xp = null;
+
             String valor = jTextField6.getText();
-            
-            if (jDialog5.getTitle().equals("Nome"))
+
+            if (jDialog5.getTitle().equals("Nome")) {
                 xp = "//cidade[contains(@capital = true,'" + valor + "')]/@nome";
- 
-            
+            }
+
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
-            
-            if (res == null)
+
+            if (res == null) {
                 jTextArea1.setText("Ficheiro nao existe");
-            else if (res.size()==0)
+            } else if (res.size() == 0) {
                 jTextArea1.setText("Pesquisa sem informacao");
-            else{               
+            } else {
                 jTextArea1.setText(x);
             }
             jDialog5.setVisible(false);
@@ -805,9 +1046,147 @@ public class Frame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        // TODO add your handling code here:
+        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        if (doc != null) {
+            Document novo = JDOMFunctionsXSLT.transformaDocumento(doc, "cidades.xml", "transf_html.xsl");
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "fotosBandeiras.html");
+            String url = "fotosBandeiras.html";
+            File htmlFile = new File(url);
+            JOptionPane.showMessageDialog(null, "Ficheiro HTML Criado", "XML to HTML", JOptionPane.INFORMATION_MESSAGE);
+            try {
+                Desktop.getDesktop().browse(htmlFile.toURI());
+            } catch (IOException ex) {
+                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else
+            JOptionPane.showMessageDialog(null, "Ficheiro XML não existe", "XML to HTML", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            int res = JDOMFunctionsValidate.validarDocumentoDTD("cidades.xml", "cidades.dtd");
+            if (res == 1) {
+                JOptionPane.showMessageDialog(this, "O Ficheiro Válido por DTD.", "Validação", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "O Ficheiro não Válido por DTD", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        if (JDOMFunctionsValidate.validarDocumentoXSD("cidades.xml", "cidades.xsd") == 1) {
+            JOptionPane.showMessageDialog(this, "cidades.xml validado por XSD", "Sucesso", JOptionPane.PLAIN_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "cidades.xml invalido por XSD", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        // TODO add your handling code here:
+        jTextArea1.setText("");
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        // TODO add your handling code here:
+        jDialog8.setTitle("Gerar TXT que mostre a listagem das cidades de um dado país");
+        jDialog8.setSize(300, 200);
+        jDialog8.setLocation(200, 200);
+        jDialog8.setVisible(true);
+
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        // TODO add your handling code here:
+        jDialog9.setTitle("Gerar HTML que mostre as imagens dos monumentos dessa cidade");
+        jDialog9.setSize(300, 200);
+        jDialog9.setLocation(200, 200);
+        jDialog9.setVisible(true);
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+
+        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        doc = XMLFunctions.alteraNHabitantes(jTextField11.getText(), jTextField12.getText(), doc);
+
+        if (doc != null) {
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+            JOptionPane.showMessageDialog(this, "O número de habitantes de " + jTextField11.getText() + " foi alterado com sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Erro ao tentar alterar o número de habitantes da cidade " + jTextField11.getText() + "!");
+
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+
+        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        doc = XMLFunctions.alteraArea(jTextField11.getText(), jTextField13.getText(), doc);
+
+        if (doc != null) {
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+            JOptionPane.showMessageDialog(this, "A área de " + jTextField11.getText() + " foi alterado com sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Erro ao tentar alterar a área da cidade " + jTextField11.getText() + "!");
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+
+        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        doc = XMLFunctions.alteraPresidente(jTextField11.getText(), jTextField14.getText(), doc);
+
+        if (doc != null) {
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+            JOptionPane.showMessageDialog(this, "O Presidente de " + jTextField11.getText() + " foi alterado com sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Erro ao tentar alterar o Presidente da cidade " + jTextField11.getText() + "!");
+
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        jDialog10.setTitle("Alterar atributos de uma cidade");
+        jDialog10.setSize(500, 400);
+        jDialog10.setLocation(200, 200);
+        jDialog10.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -843,6 +1222,10 @@ public class Frame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -850,14 +1233,23 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog10;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JDialog jDialog3;
     private javax.swing.JDialog jDialog4;
     private javax.swing.JDialog jDialog5;
     private javax.swing.JDialog jDialog6;
     private javax.swing.JDialog jDialog7;
+    private javax.swing.JDialog jDialog8;
+    private javax.swing.JDialog jDialog9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -865,6 +1257,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -879,6 +1272,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -890,6 +1284,11 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -897,5 +1296,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

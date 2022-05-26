@@ -21,8 +21,9 @@ import org.w3c.dom.Element;
  * @author User
  */
 public class JDOMFunctionsValidate {
-   //Executa validação do documento XML usando  DTD 
-    public static Document validarDTD(String caminhoFicheiro) throws IOException{
+    //Executa validação do documento XML usando  DTD 
+
+    public static Document validarDTD(String caminhoFicheiro) throws IOException {
         try {
             SAXBuilder builder = new SAXBuilder(true);  // true ativa a validação
             Document doc = (Document) builder.build(new File(caminhoFicheiro));
@@ -37,12 +38,12 @@ public class JDOMFunctionsValidate {
         }
         return null;
     }
-    
-     //Executa validação do documento XML usando XSD
-    public static Document validarXSD(String caminhoFicheiro){
+
+    //Executa validação do documento XML usando XSD
+    public static Document validarXSD(String caminhoFicheiro) {
         try {
             SAXBuilder builder = new SAXBuilder(true); // true ativa a validação
-            
+
             // esta linha ativa a validação com XSD
             builder.setFeature("http://apache.org/xml/features/validation/schema", true);
 
@@ -59,17 +60,17 @@ public class JDOMFunctionsValidate {
         return null;
     }
 
-    public static int validarDocumentoDTD(String xmlFile, String DTDFile) throws IOException{
+    public static int validarDocumentoDTD(String xmlFile, String DTDFile) throws IOException {
         Document doc = (Document) XMLJDomFunctions.lerDocumentoXML(xmlFile);
         File f = new File(DTDFile);
         if (doc != null && f.exists()) { //DTD e XML existem
             Element raiz = doc.getRootElement();
             //Atribuir DTD ao ficheiro XML
-            DocType dtd = new DocType(raiz.getName(), DTDFile);
+            DocType dtd = new DocType(raiz.getName, DTDFile);
             doc.setDocType(dtd);
 
             //Gravar o XML com as alterações em disco
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, xmlFile);
+            XMLJDomFunctions.escreverDocumentoParaFicheiro((org.jdom2.Document) doc, xmlFile);
 
             //CHAMAR A FUNÇÃO DE VALIDAÇÃO por DTD
             Document docDTD = JDOMFunctionsValidate.validarDTD(xmlFile);
@@ -95,10 +96,10 @@ public class JDOMFunctionsValidate {
             raiz.setAttribute(new Attribute("noNamespaceSchemaLocation", XSDFile,
                     Namespace.getNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")));
             //Gravar o XML com as alterações em disco
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, xmlFile);
+            XMLJDomFunctions.escreverDocumentoParaFicheiro((org.jdom2.Document) doc, xmlFile);
 
             //CHAMAR A FUNÇÃO DE VALIDAÇÃO por XSD
-            Document docXSD = JDOMFunctionsJDOMFunctionsValidate.validarXSD(xmlFile);
+            Document docXSD = JDOMFunctionsValidate.validarXSD(xmlFile);
             if (docXSD == null) {
                 System.out.println("INVALIDO por XSD");
                 return -1;
@@ -109,6 +110,5 @@ public class JDOMFunctionsValidate {
         }
         return 0;
     }
-    
-}
 
+}

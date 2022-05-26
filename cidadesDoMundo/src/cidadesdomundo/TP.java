@@ -32,15 +32,8 @@ public class TP {
         
         XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");*/
 
-        
-        ArrayList<String> gemiandas = Wrappers.procuraCidadesGeminadas(linkPais);
-        
-         //System.out.println(modelList);
-        /*
-        
-        doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-      
-        x = XMLFunctions.adicionaCidade(campos[0], doc);*/
+  
+  
         
         
         
