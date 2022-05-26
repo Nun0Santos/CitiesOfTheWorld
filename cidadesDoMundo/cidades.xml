@@ -3,7 +3,7 @@
      <cidade nome="Lisboa" pais="Portugal" capital="true">
           <Administração>
                <codigoPostal>1100</codigoPostal>
-               <presidente>Fernando Medina</presidente>
+               <presidente>abs</presidente>
           </Administração>
           <Dados>
                <website />
@@ -19,41 +19,13 @@
           <Geografia>
                <latitude>38.7071</latitude>
                <longitude>-9.13549</longitude>
-               <areaCidade>84.8</areaCidade>
+               <areaCidade>100</areaCidade>
                <altitude>4.0</altitude>
                <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
           </Geografia>
           <Demografia>
-               <nHabitantes>507220.0</nHabitantes>
+               <nHabitantes>500</nHabitantes>
                <densidadePopulacional>5981.4</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Roma" pais="Itália" capital="false">
-          <Administração>
-               <codigoPostal />
-               <presidente />
-          </Administração>
-          <Dados>
-               <website />
-               <linguaOficial>Italiano</linguaOficial>
-               <fusoHorario />
-               <cidadesGeminadas />
-          </Dados>
-          <links>
-               <linkBandeiraPais />
-               <linkBandeiraCidade />
-               <linkMonumentos>null</linkMonumentos>
-          </links>
-          <Geografia>
-               <latitude>-1.0</latitude>
-               <longitude>-1.0</longitude>
-               <areaCidade>-1.0</areaCidade>
-               <altitude>-1.0</altitude>
-               <clima />
-          </Geografia>
-          <Demografia>
-               <nHabitantes>-1.0</nHabitantes>
-               <densidadePopulacional>-1.0</densidadePopulacional>
           </Demografia>
      </cidade>
 </cidades>
