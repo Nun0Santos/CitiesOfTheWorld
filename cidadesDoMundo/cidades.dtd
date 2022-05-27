@@ -6,7 +6,7 @@
 <!ATTLIST cidade pais CDATA #REQUIRED>
 <!ATTLIST cidade capital (true|false) #REQUIRED>
 
-<!ATTLIST cidades xmlns:xsi CDATA >
+
 
 <!ELEMENT cidades (cidade*)>
 

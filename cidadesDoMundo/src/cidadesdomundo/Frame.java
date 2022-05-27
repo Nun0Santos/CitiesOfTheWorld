@@ -7,6 +7,7 @@ package cidadesdomundo;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -890,38 +891,56 @@ public class Frame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try {
-            Scanner ler = new Scanner(System.in);
-            System.out.println("Introduza palavra de pesquisa");
-            String xp = null;
-
+            Scanner ler = new Scanner(System.in);   
             String valor = jTextField2.getText();
+            XdmValue res1 = null;
+            XdmValue res2 = null;
+            XdmValue res3 = null;
+            XdmValue res4 = null;
+            XdmValue res5 = null;
+             
+            String xp1 = "//cidade[contains(@nome,'" + valor + "')]/@pais";
+            res1 = XPathFunctions.executaXpath(xp1, "cidades.xml");
+            String x1 = XPathFunctions.listaResultado(res1);
 
-            if (jDialog1.getTitle().equals("Nome")) {
-                xp = "//cidade[contains(@nome,'" + valor + "')]/@nome";
-            }
+            String xp2 = "//cidade[contains(@nome,'" + valor + "')]/@capital";
+            res2 = XPathFunctions.executaXpath(xp2, "cidades.xml");
+            String x2 = XPathFunctions.listaResultado(res2);
 
-            if (jDialog1.getTitle().equals("Capital")) {
-                xp = "//cidade[contains(@capital,'" + valor + "')]/@capital";
-            }
-            if (jDialog1.getTitle().equals("Area")) {
-                xp = "//cidade/Geografia[contains(areaCidade,'" + valor + "')]/areaCidade";
-            }
-            if (jDialog1.getTitle().equals("nHabitantes")) {
-                xp = "//cidade/Demografia[contains(nHabitantes,'" + valor + "')]/nHabitantes";
-            }
-            if (jDialog1.getTitle().equals("Idioma")) {
-                xp = "//cidade/Dados[contains(linguaOficial,'" + valor + "')]/linguaOficial";
-            }
+            String xp3 = "//cidade[contains(@nome,'" + valor + "')]/Geografia/areaCidade";
+            res3 = XPathFunctions.executaXpath(xp3, "cidades.xml");
+            String x3 = XPathFunctions.listaResultado(res3);
 
-            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
-            String x = XPathFunctions.listaResultado(res);
+            String xp4 = "//cidade[contains(@nome,'" + valor + "')]/Demografia/nHabitantes";
+            res4 = XPathFunctions.executaXpath(xp4, "cidades.xml");
+            String x4 = XPathFunctions.listaResultado(res4);
 
-            if (res == null) {
+            String xp5 = "//cidade[contains(@nome,'" + valor + "')]/Dados/linguaOficial";
+            res5 = XPathFunctions.executaXpath(xp5, "cidades.xml");
+            String x5 = XPathFunctions.listaResultado(res5);
+  
+            res1 = XPathFunctions.executaXpath(xp1, "cidades.xml");
+            res2 = XPathFunctions.executaXpath(xp2, "cidades.xml");
+            res3 = XPathFunctions.executaXpath(xp3, "cidades.xml");
+            res4 = XPathFunctions.executaXpath(xp4, "cidades.xml");
+            res5 = XPathFunctions.executaXpath(xp5, "cidades.xml");
+
+            x1 = XPathFunctions.listaResultado(res1);
+            x2 = XPathFunctions.listaResultado(res2);
+            x3 = XPathFunctions.listaResultado(res3);
+            x4 = XPathFunctions.listaResultado(res4);
+            x5 = XPathFunctions.listaResultado(res5);
+            
+            if (res1 == null || res2  == null) {
                 jTextArea1.setText("Ficheiro nao existe");
-            } else if (res.size() == 0) {
+            } else if (res1.size() == 0) {
                 jTextArea1.setText("Pesquisa sem informacao");
             } else {
-                jTextArea1.setText(x);
+                jTextArea1.setText(x1);
+                jTextArea1.setText(x2);
+                jTextArea1.setText(x3);
+                jTextArea1.setText(x4);
+                jTextArea1.setText(x5);
             }
             jDialog1.setVisible(false);
         } catch (SaxonApiException ex) {
@@ -938,10 +957,10 @@ public class Frame extends javax.swing.JFrame {
             String xp = null;
             String valor = jTextField3.getText();
 
-            if (jDialog2.getTitle().equals("Pais")) {
-                xp = "//cidade[contains(@pais,'" + valor + "')]/@pais";
+            if (jDialog2.getTitle().equals("pais")) {
+                xp = "//cidade[contains(@pais,'" + valor + "')]/@nome";
             }
-
+            
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
 
