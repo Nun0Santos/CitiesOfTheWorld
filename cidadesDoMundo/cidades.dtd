@@ -2,11 +2,10 @@
 
 
 <!ATTLIST cidade nome CDATA #REQUIRED>
-
 <!ATTLIST cidade pais CDATA #REQUIRED>
 <!ATTLIST cidade capital (true|false) #REQUIRED>
-
-
+<!ATTLIST cidades xmlns:xsi CDATA #IMPLIED>
+<!ATTLIST cidades xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
 
 <!ELEMENT cidades (cidade*)>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cidades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cidades.xsd">
-     <cidade nome="Lisboa" pais="Portugal" capital="false">
+     <cidade nome="Lisboa" pais="Portugal" capital="true">
           <Administracao>
                <codigoPostal>1100</codigoPostal>
                <presidente>Fernando Medina</presidente>
@@ -32,37 +32,6 @@
           <Demografia>
                <nHabitantes>507220.0</nHabitantes>
                <densidadePopulacional>5981.4</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Barcelona" pais="Espanha" capital="false">
-          <Administracao>
-               <codigoPostal>51001</codigoPostal>
-               <presidente>Juan Jesús Vivas Lara</presidente>
-          </Administracao>
-          <Dados>
-               <website>http://ciceuta.es</website>
-               <linguaOficial>Espanhol</linguaOficial>
-               <fusoHorario>UTC  +1:00 (Africa/Ceuta)</fusoHorario>
-               <cidadesGeminadas>
-                    <cidad>Santarém</cidad>
-                    <cidad>Algeciras</cidad>
-               </cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Barcelona.svg/100px-Flag_of_Barcelona.svg.png</linkBandeiraCidade>
-               <linkMonumentos />
-          </links>
-          <Geografia>
-               <latitude>35.8883</latitude>
-               <longitude>-5.3162</longitude>
-               <areaCidade>19.48</areaCidade>
-               <altitude>13.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>84777.0</nHabitantes>
-               <densidadePopulacional>4352.0</densidadePopulacional>
           </Demografia>
      </cidade>
 </cidades>
