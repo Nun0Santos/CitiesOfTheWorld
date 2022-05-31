@@ -28,7 +28,7 @@ public class HttpRequestFunctions {
                 url = new URL(link + URLEncoder.encode(pesquisa, "UTF-8").replace("+", "_")); //alterar replace se necessário
             } else {
                 //Criar URL simples, sem palavra de pesquisa
-                //sSystem.out.println(link);
+                //System.out.println("dentro do http " + link);
                 url = new URL(link);
             }
             //System.out.println(url);

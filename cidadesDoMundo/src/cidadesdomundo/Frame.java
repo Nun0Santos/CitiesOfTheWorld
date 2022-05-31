@@ -747,8 +747,14 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        String texto = XMLJDomFunctions.escreverDocumentoString(doc);
-        jTextArea1.setText(texto);
+       
+        if (doc == null){
+            JOptionPane.showMessageDialog(this, "Ficheiro XML não existe!", "Error", JOptionPane.ERROR_MESSAGE);
+        }else{
+            String texto = XMLJDomFunctions.escreverDocumentoString(doc);
+            jTextArea1.setText(texto);
+        }
+       
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -812,7 +818,7 @@ public class Frame extends javax.swing.JFrame {
         String[] campos = pais.split(", ");
         String cidade = null;
         try {
-            cidade = Wrappers.encontrarLinkDBCityPais(campos[1]);
+            cidade = Wrappers.encontrarLinkDBCityPais(campos[1],campos[0]);
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -838,31 +844,43 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-        String lista = jTextField8.getText();
-        String[] campos = lista.split(", ");
-        String linkPais = null;
-        Cidade x = null;
-
-        try {
-            linkPais = Wrappers.encontrarLinkDBCityPais(campos[1]);
-
-        } catch (IOException ex) {
+            try {                                         
+                // TODO add your handling code here:
+                String lista = jTextField8.getText();
+                String[] campos = lista.split(", ");
+                String linkCidade = null;
+                Cidade x = null;
+                
+                
+                linkCidade = Wrappers.encontrarLinkDBCityPais(campos[1], campos[0]);
+                System.out.println(linkCidade);
+                
+                try {
+                    x = Wrappers.criaCidade(campos[0], campos[1], linkCidade);
+                    Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+                    doc = XMLFunctions.adicionaCidade(x, doc);
+                    
+                    if (doc != null) {
+                        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
+                        JOptionPane.showMessageDialog(this,
+                                "Cidade adicionada com sucesso",
+                                "Informação", JOptionPane.INFORMATION_MESSAGE);
+                        
+                    } else {
+                        JOptionPane.showMessageDialog(this,
+                                "Cidade já existe no ficheiro",
+                                "Informação", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(this,
+                            "Erro ao adicionar cidade",
+                            "Informação", JOptionPane.INFORMATION_MESSAGE);
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                jDialog7.setVisible(false);
+            } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        try {
-            x = Wrappers.criaCidade(campos[0], campos[1], linkPais);
-        } catch (IOException ex) {
-            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        doc = XMLFunctions.adicionaCidade(x, doc);
-        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");
-        JOptionPane.showMessageDialog(this, "Cidade adicioanada com sucesso!");
-        jDialog7.setVisible(false);
-
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
@@ -898,26 +916,26 @@ public class Frame extends javax.swing.JFrame {
             XdmValue res3 = null;
             XdmValue res4 = null;
             XdmValue res5 = null;
-             
+            String nome = "nome";
             String xp1 = "//cidade[contains(@nome,'" + valor + "')]/@pais";
             res1 = XPathFunctions.executaXpath(xp1, "cidades.xml");
-            String x1 = XPathFunctions.listaResultado(res1);
+            String x1 = XPathFunctions.listaResultado(res1,nome);
 
             String xp2 = "//cidade[contains(@nome,'" + valor + "')]/@capital";
             res2 = XPathFunctions.executaXpath(xp2, "cidades.xml");
-            String x2 = XPathFunctions.listaResultado(res2);
+            String x2 = XPathFunctions.listaResultado(res2,nome);
 
             String xp3 = "//cidade[contains(@nome,'" + valor + "')]/Geografia/areaCidade";
             res3 = XPathFunctions.executaXpath(xp3, "cidades.xml");
-            String x3 = XPathFunctions.listaResultado(res3);
+            String x3 = XPathFunctions.listaResultado(res3,nome);
 
             String xp4 = "//cidade[contains(@nome,'" + valor + "')]/Demografia/nHabitantes";
             res4 = XPathFunctions.executaXpath(xp4, "cidades.xml");
-            String x4 = XPathFunctions.listaResultado(res4);
+            String x4 = XPathFunctions.listaResultado(res4,nome);
 
             String xp5 = "//cidade[contains(@nome,'" + valor + "')]/Dados/linguaOficial";
             res5 = XPathFunctions.executaXpath(xp5, "cidades.xml");
-            String x5 = XPathFunctions.listaResultado(res5);
+            String x5 = XPathFunctions.listaResultado(res5,nome);
   
             res1 = XPathFunctions.executaXpath(xp1, "cidades.xml");
             res2 = XPathFunctions.executaXpath(xp2, "cidades.xml");
@@ -925,22 +943,20 @@ public class Frame extends javax.swing.JFrame {
             res4 = XPathFunctions.executaXpath(xp4, "cidades.xml");
             res5 = XPathFunctions.executaXpath(xp5, "cidades.xml");
 
-            x1 = XPathFunctions.listaResultado(res1);
-            x2 = XPathFunctions.listaResultado(res2);
-            x3 = XPathFunctions.listaResultado(res3);
-            x4 = XPathFunctions.listaResultado(res4);
-            x5 = XPathFunctions.listaResultado(res5);
-            
+            x1 = XPathFunctions.listaResultado(res1,nome);
+            x2 = XPathFunctions.listaResultado(res2,nome);
+            x3 = XPathFunctions.listaResultado(res3,nome);
+            x4 = XPathFunctions.listaResultado(res4,nome);
+            x5 = XPathFunctions.listaResultado(res5,nome);
+            StringBuilder texto = new StringBuilder();
+            texto = texto.append(x1).append(x2).append(x3).append(x4).append(x5);
             if (res1 == null || res2  == null) {
                 jTextArea1.setText("Ficheiro nao existe");
             } else if (res1.size() == 0) {
                 jTextArea1.setText("Pesquisa sem informacao");
             } else {
-                jTextArea1.setText(x1);
-                jTextArea1.setText(x2);
-                jTextArea1.setText(x3);
-                jTextArea1.setText(x4);
-                jTextArea1.setText(x5);
+                jTextArea1.setText(texto.toString());
+              
             }
             jDialog1.setVisible(false);
         } catch (SaxonApiException ex) {
@@ -953,21 +969,21 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Scanner ler = new Scanner(System.in);
-            System.out.println("Introduza palavra de pesquisa");
             String xp = null;
             String valor = jTextField3.getText();
-
-            if (jDialog2.getTitle().equals("pais")) {
-                xp = "//cidade[contains(@pais,'" + valor + "')]/@nome";
-            }
+            String nome = "flag";
             
+        
+             xp = "//cidade[contains(@pais,'" + valor + "')]/@nome";
+         
+            System.out.println(xp);
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
-            String x = XPathFunctions.listaResultado(res);
+            String x = XPathFunctions.listaResultado(res,nome);
 
             if (res == null) {
-                jTextArea1.setText("Ficheiro nao existe");
+                jTextArea1.setText("Ficheiro não existe");
             } else if (res.size() == 0) {
-                jTextArea1.setText("Pesquisa sem informacao");
+                jTextArea1.setText("Pesquisa sem informação");
             } else {
                 jTextArea1.setText(x);
             }

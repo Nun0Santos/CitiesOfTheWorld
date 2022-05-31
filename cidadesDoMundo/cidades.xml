@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cidades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cidades.xsd">
+<cidades>
      <cidade nome="Lisboa" pais="Portugal" capital="true">
           <Administracao>
                <codigoPostal>1100</codigoPostal>
@@ -32,6 +32,142 @@
           <Demografia>
                <nHabitantes>507220.0</nHabitantes>
                <densidadePopulacional>5981.4</densidadePopulacional>
+          </Demografia>
+     </cidade>
+     <cidade nome="Barcelona" pais="Espanha" capital="false">
+          <Administracao>
+               <codigoPostal>08071</codigoPostal>
+               <presidente>Ada COLAU BALLANO</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.barcelona.cat</website>
+               <linguaOficial>Espanhol</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Tirana</cidad>
+                    <cidad>Rosário</cidad>
+                    <cidad>Antuérpia</cidad>
+                    <cidad>Sarajevo</cidad>
+                    <cidad>Rio de Janeiro</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Barcelona.svg/100px-Flag_of_Barcelona.svg.png</linkBandeiraCidade>
+               <linkMonumentos />
+          </links>
+          <Geografia>
+               <latitude>41.3879</latitude>
+               <longitude>2.16992</longitude>
+               <areaCidade>98.21</areaCidade>
+               <altitude>34.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>1636762.0</nHabitantes>
+               <densidadePopulacional>16665.9</densidadePopulacional>
+          </Demografia>
+     </cidade>
+     <cidade nome="Madrid" pais="Espanha" capital="false">
+          <Administracao>
+               <codigoPostal>28005</codigoPostal>
+               <presidente>José Luis Martínez-Almeida Navasqües</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.madrid.es</website>
+               <linguaOficial>Espanhol</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Tirana</cidad>
+                    <cidad>Buenos Aires</cidad>
+                    <cidad>Bruxelas</cidad>
+                    <cidad>La Paz</cidad>
+                    <cidad>Sarajevo</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png</linkBandeiraCidade>
+               <linkMonumentos />
+          </links>
+          <Geografia>
+               <latitude>40.4167</latitude>
+               <longitude>-3.70325</longitude>
+               <areaCidade>605.77</areaCidade>
+               <altitude>659.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>3266126.0</nHabitantes>
+               <densidadePopulacional>5391.7</densidadePopulacional>
+          </Demografia>
+     </cidade>
+     <cidade nome="Oslo" pais="Noruega" capital="false">
+          <Administracao>
+               <codigoPostal>0037</codigoPostal>
+               <presidente>Fabian Stang</presidente>
+          </Administracao>
+          <Dados>
+               <website>http://www.oslo.kommune.no</website>
+               <linguaOficial>Norueguês bokmål&lt;br /&gt;Novo norueguês&lt;br /&gt;Norueguês</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Oslo)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Antuérpia</cidad>
+                    <cidad>Xangai</cidad>
+                    <cidad>Copenhaga</cidad>
+                    <cidad>Helsínquia</cidad>
+                    <cidad>Schleswig</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/158.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png</linkBandeiraCidade>
+               <linkMonumentos />
+          </links>
+          <Geografia>
+               <latitude>59.9138</latitude>
+               <longitude>10.7387</longitude>
+               <areaCidade>453.99</areaCidade>
+               <altitude>23.0</altitude>
+               <clima>Clima continental húmido (Classificação climática de Köppen-Geiger: Dfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>560484.0</nHabitantes>
+               <densidadePopulacional>1234.6</densidadePopulacional>
+          </Demografia>
+     </cidade>
+     <cidade nome="Bergen" pais="Noruega" capital="false">
+          <Administracao>
+               <codigoPostal>5020</codigoPostal>
+               <presidente>Nuno Santos</presidente>
+          </Administracao>
+          <Dados>
+               <website>http://www.bergen.kommune.no</website>
+               <linguaOficial>Norueguês bokmål&lt;br /&gt;Novo norueguês&lt;br /&gt;Norueguês</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Oslo)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Rosário</cidad>
+                    <cidad>Québec</cidad>
+                    <cidad>Århus</cidad>
+                    <cidad>Turku</cidad>
+                    <cidad>Lübeck</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/158.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png</linkBandeiraCidade>
+               <linkMonumentos />
+          </links>
+          <Geografia>
+               <latitude>60.3881</latitude>
+               <longitude>5.33185</longitude>
+               <areaCidade>96</areaCidade>
+               <altitude>5.0</altitude>
+               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>5</nHabitantes>
+               <densidadePopulacional>541.5</densidadePopulacional>
           </Demografia>
      </cidade>
 </cidades>

@@ -18,17 +18,17 @@
 	<xsd:element name="linkBandeiraCidade" type="xsd:string"/>
 	
 	<xsd:element name="linkMonumentos" type="xsd:string" />
-	<xsd:element name="latitude" type="xsd:integer"/>
-	<xsd:element name="longitude" type="xsd:integer" />
+	<xsd:element name="latitude" type="xsd:decimal"/>
+	<xsd:element name="longitude" type="xsd:decimal" />
 	
-	<xsd:element name="areaCidade" type="xsd:integer" />
-	<xsd:element name="altitude" type="xsd:integer"/>
+	<xsd:element name="areaCidade" type="xsd:decimal" />
+	<xsd:element name="altitude" type="xsd:decimal"/>
 	<xsd:element name="clima" type="xsd:string" />
 	
-	<xsd:element name="nHabitantes" type="xsd:integer" />
-	<xsd:element name="densidadePopulacional" type="xsd:integer"/>
+	<xsd:element name="nHabitantes" type="xsd:decimal" />
+	<xsd:element name="densidadePopulacional" type="xsd:decimal"/>
 	
-	<xsd:attribute name="Lisboa" type="xsd:string" />
+	<xsd:attribute name="nome" type="xsd:string" />
 	<xsd:attribute name="pais" type="xsd:string"/>
 	<xsd:attribute name="capital" type="xsd:string" />
 	
@@ -55,7 +55,7 @@
 	<xsd:element name="links">   
    		 <xsd:complexType>      
         			<xsd:sequence>         
-          		  		<xsd:element ref="linkBandeiraPortugal" />                
+          		  		<xsd:element ref="linkBandeiraPais" />                
             			<xsd:element ref="linkBandeiraCidade" />
             			<xsd:element ref="linkMonumentos" />                
         			</xsd:sequence>   
@@ -85,7 +85,7 @@
 	
 	<xsd:element name="cidadesGeminadas">   
    		 <xsd:complexType>      
-        			<xsd:sequence>         
+        			<xsd:sequence maxOccurs="unbounded">         
           		  		<xsd:element ref="cidad" />                            
         			</xsd:sequence>   
     		</xsd:complexType>

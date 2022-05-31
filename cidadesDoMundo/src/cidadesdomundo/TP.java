@@ -15,20 +15,18 @@ import org.jdom2.Document;
 public class TP {
 
     public static void main(String[] args) throws IOException {
-        String lista = "madrid, Portugal";
+        String lista = "Braga, Portugal";
         String[] campos = lista.split(", ");
 
-        /* String linkPais = Wrappers.encontrarLinkDBCityPais(campos[1]);
-        System.out.println("link cidade " + linkPais);*/
- /*Cidade x = Wrappers.criaCidade(campos[0],campos[1],linkPais);
+        String link = Wrappers.encontrarLinkDBCityPais(campos[1],campos[0]);
+        System.out.println("link cidade " + link);
+ 
+       /*  Cidade x = Wrappers.criaCidade(campos[0],campos[1],link);
         
         
         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        doc = XMLFunctions.adicionaCidade(x,doc);
-        
-        
-        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "cidades.xml");*/
-        //Cidade x = XMLFunctions.adicionaCidade(camppos[1], doc);
+        doc = XMLFunctions.adicionaCidade(x,doc*/
+ 
         //Document doc = XMLJDomFunctions.lerDocumentoXML("pais.xml");
         /*String geminadas = Wrappers.procuraCidadesGeminadas(linkPais);
          System.out.println("Cidades geminadas " + geminadas);*/

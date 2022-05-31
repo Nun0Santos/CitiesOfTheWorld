@@ -19,27 +19,43 @@ import java.util.regex.Pattern;
  */
 public class Wrappers {
 
-    public static String encontrarLinkDBCityPais(String pais) throws FileNotFoundException, IOException { //encontra cidade de um pais
-        String link = "https://pt.db-city.com/";
-        String DBCity;
-        HttpRequestFunctions.httpRequest1(link, pais, "pais.txt"); //pesqusiar pais
-        String ER = "<a href=\"/([A-Za-z]+--[A-Za-z]+--[A-Za-z]+)\" title=\"[^0-9]+\">([^0-9]+)</a>";
-        //String ER = "<link rel=\"canonical\" href=\"https://pt.db-city.com/\" /><link rel=\"section\" href=\"/[^0-9]+\" title=\"([^0-9]+)\" />"; 
-
-        Pattern p = Pattern.compile(ER);
-        Matcher m;
-        Scanner input = new Scanner(new FileInputStream("pais.txt"));
-        while (input.hasNextLine()) {
-            String linha = input.nextLine();
-            m = p.matcher(linha);
-            if (m.find()) {
-                input.close();
-                DBCity = m.group(1);
-                return "https://pt.db-city.com/" + DBCity;
+    public static String encontrarLinkDBCityPais(String pais, String cidade) throws FileNotFoundException, IOException { //encontra cidade de um pais
+        HttpRequestFunctions.httpRequest1("https://pt.db-city.com/", pais, "pais.txt");
+        try ( Scanner ler = new Scanner(new FileInputStream("pais.txt"))) {
+            String er1 = "<a href=\"([^\"]+)\" title=\"" + cidade + "\">";
+            String er2 = "<h2 id=\"bigcity\">Cidades importantes <span class=\"reshid\">" + pais + "</span></h2>";
+            String er3 = "<table class=\"td25 otd\"><tr><td><a href=\"(/" + pais + "--[^-]+--" + cidade + ")\" title=\"" + cidade + "\">";
+            Pattern p1 = Pattern.compile(er1);
+            Pattern p2 = Pattern.compile(er2);
+            Pattern p3 = Pattern.compile(er3);
+            Matcher m;
+            Matcher m2;
+            Matcher m3;
+            while (ler.hasNextLine()) {
+                String linha = ler.nextLine();
+                m2 = p2.matcher(linha);
+                if (m2.find()) {
+                    //System.out.println(linha);
+                    m = p3.matcher(linha);
+                    while (m.find()) {
+                        ler.close();
+                        return "https://pt.db-city.com" + m.group(1);
+                    }
+                } else {
+                    m3 = p1.matcher(linha);
+                    if (m3.find()) {
+                        //System.out.println(linha);
+                        m = p1.matcher(linha);
+                        while (m.find()) {
+                            ler.close();
+                            return "https://pt.db-city.com" + m.group(1);
+                        }
+                    }
+                }
             }
         }
-        input.close();
-        return null;
+        return "Link da cidade não encontrado";
+   
     }
 
     public static String Wikipedia(String cidade) throws FileNotFoundException, IOException {
@@ -107,7 +123,7 @@ public class Wrappers {
 
     ;
     
-    public static String procuraCapitais(String pais, String cidade) throws FileNotFoundException, IOException { //wili
+    public static String procuraCapitais(String pais, String cidade) throws FileNotFoundException, IOException {
         HttpRequestFunctions.httpRequest1("https://pt.db-city.com/", pais, "cidade2.txt");
         String ER = "<a href=\"/País--Capital\" title=\"Capitale pays_170\">Capital</a> <span class=\"reshid\">[A-Za-z]+</span></th><td><a href=\"/[A-Za-z]+--[A-Za-z]+--[A-Za-z]+\" title=\"[A-Za-z]+\">([A-Za-z]+)</a>";
         Pattern p = Pattern.compile(ER);
@@ -282,6 +298,7 @@ public class Wrappers {
     }
 
     public static String procuraWebsite(String link) throws IOException { // Wiki
+        System.out.println(link);
         HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
         String ER = "<a class=\"url\" href=\"([^0-9]+)\" rel=\"nofollow noreferrer noopener\" target=\"_blank\" title=\"Sítio Web [^0-9]+\">[^0-9]+ <span class=\"fa fa-external-link\"></span></a>";
         Pattern p = Pattern.compile(ER);
@@ -394,7 +411,7 @@ public class Wrappers {
         Double altitude = Wrappers.procuraAltitude(linkCidade);
         String clima = Wrappers.procuraClima(linkCidade);
         String fusoHorario = Wrappers.procuraFUSO(linkCidade);
-        String website = Wrappers.procuraWebsite(cidade);
+        String website = Wrappers.procuraWebsite(linkCidade);
         ArrayList cidadesGeminadas = Wrappers.procuraCidadesGeminadas(linkCidade); 
 
         Cidade c = new Cidade(cidade, pais, capital, linkBandeiraPais, linguaOficial, linkBandeiraCidade, linkMonumentos, areaCidade, nHabitantes, densidadePopulacional, codigoPostal, presidente, latitude, longitude, altitude, clima, fusoHorario, website, cidadesGeminadas);
