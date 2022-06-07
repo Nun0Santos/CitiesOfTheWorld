@@ -6,6 +6,8 @@ package cidadesdomundo;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -90,8 +92,6 @@ public class Frame extends javax.swing.JFrame {
         jTextField14 = new javax.swing.JTextField();
         jButton13 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -370,6 +370,12 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel9.setText("País");
 
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+
         jButton9.setText("Pesquisar");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -409,7 +415,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setText("País");
+        jLabel10.setText("Cidade");
 
         javax.swing.GroupLayout jDialog9Layout = new javax.swing.GroupLayout(jDialog9.getContentPane());
         jDialog9.getContentPane().setLayout(jDialog9Layout);
@@ -535,20 +541,7 @@ public class Frame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Cidade a pesquisar");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Pesquisar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("Output");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -718,26 +711,18 @@ public class Frame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)))
-                .addContainerGap(297, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(228, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -758,10 +743,6 @@ public class Frame extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
         jDialog1.setTitle("Pesquisar pelo nome");
@@ -780,10 +761,33 @@ public class Frame extends javax.swing.JFrame {
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
-        jDialog5.setTitle("Pesquisar todas as capitais existentes no ficheiro");
+        /*jDialog5.setTitle("Pesquisar todas as capitais existentes no ficheiro");
         jDialog5.setSize(300, 200);
         jDialog5.setLocation(200, 200);
-        jDialog5.setVisible(true);
+        jDialog5.setVisible(true);*/
+         try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp = null;
+            
+           
+            xp = "//cidade[@capital = true]/@nome";
+            System.out.println("xp : " + xp);
+
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+
+            if (res == null) {
+                jTextArea1.setText("Ficheiro nao existe");
+            } else if (res.size() == 0) {
+                jTextArea1.setText("Pesquisa sem informacao");
+            } else {
+                jTextArea1.setText(x);
+            }
+            jDialog5.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
@@ -810,29 +814,6 @@ public class Frame extends javax.swing.JFrame {
         jDialog4.setLocation(200, 200);
         jDialog4.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        //HttpRequestFunctions.httpRequest1("https://eden.dei.uc.pt/~abs/ID/pessoas.html", "", "pessoas.html");
-        String pais = jTextField1.getText();
-        String[] campos = pais.split(", ");
-        String cidade = null;
-        try {
-            cidade = Wrappers.encontrarLinkDBCityPais(campos[1],campos[0]);
-        } catch (IOException ex) {
-            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        String web = null;
-        try {
-            web = Wrappers.procuraWebsite(cidade);
-        } catch (IOException ex) {
-            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        System.out.println("Website " + web);
-
-
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -909,54 +890,51 @@ public class Frame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try {
-            Scanner ler = new Scanner(System.in);   
+            Scanner ler = new Scanner(System.in);
             String valor = jTextField2.getText();
-            XdmValue res1 = null;
-            XdmValue res2 = null;
-            XdmValue res3 = null;
-            XdmValue res4 = null;
-            XdmValue res5 = null;
-            String nome = "nome";
-            String xp1 = "//cidade[contains(@nome,'" + valor + "')]/@pais";
-            res1 = XPathFunctions.executaXpath(xp1, "cidades.xml");
-            String x1 = XPathFunctions.listaResultado(res1,nome);
-
-            String xp2 = "//cidade[contains(@nome,'" + valor + "')]/@capital";
-            res2 = XPathFunctions.executaXpath(xp2, "cidades.xml");
-            String x2 = XPathFunctions.listaResultado(res2,nome);
-
-            String xp3 = "//cidade[contains(@nome,'" + valor + "')]/Geografia/areaCidade";
-            res3 = XPathFunctions.executaXpath(xp3, "cidades.xml");
-            String x3 = XPathFunctions.listaResultado(res3,nome);
-
-            String xp4 = "//cidade[contains(@nome,'" + valor + "')]/Demografia/nHabitantes";
-            res4 = XPathFunctions.executaXpath(xp4, "cidades.xml");
-            String x4 = XPathFunctions.listaResultado(res4,nome);
-
-            String xp5 = "//cidade[contains(@nome,'" + valor + "')]/Dados/linguaOficial";
-            res5 = XPathFunctions.executaXpath(xp5, "cidades.xml");
-            String x5 = XPathFunctions.listaResultado(res5,nome);
-  
-            res1 = XPathFunctions.executaXpath(xp1, "cidades.xml");
-            res2 = XPathFunctions.executaXpath(xp2, "cidades.xml");
-            res3 = XPathFunctions.executaXpath(xp3, "cidades.xml");
-            res4 = XPathFunctions.executaXpath(xp4, "cidades.xml");
-            res5 = XPathFunctions.executaXpath(xp5, "cidades.xml");
-
-            x1 = XPathFunctions.listaResultado(res1,nome);
-            x2 = XPathFunctions.listaResultado(res2,nome);
-            x3 = XPathFunctions.listaResultado(res3,nome);
-            x4 = XPathFunctions.listaResultado(res4,nome);
-            x5 = XPathFunctions.listaResultado(res5,nome);
             StringBuilder texto = new StringBuilder();
-            texto = texto.append(x1).append(x2).append(x3).append(x4).append(x5);
-            if (res1 == null || res2  == null) {
-                jTextArea1.setText("Ficheiro nao existe");
-            } else if (res1.size() == 0) {
-                jTextArea1.setText("Pesquisa sem informacao");
+            texto = texto.append("Cidade: ").append(jTextField2.getText()).append("\n\n");
+            ArrayList<String> xpath = new ArrayList<>();
+
+            xpath.add("//cidade[contains(@nome,'" + valor + "')]/@pais");
+            xpath.add("//cidade[contains(@nome,'" + valor + "')]/@capital");
+            xpath.add("//cidade[contains(@nome,'" + valor + "')]/Geografia/areaCidade");
+            xpath.add("//cidade[contains(@nome,'" + valor + "')]/Demografia/nHabitantes");
+            xpath.add("//cidade[contains(@nome,'" + valor + "')]/Dados/linguaOficial");
+
+            for (int i = 0; i < xpath.size(); i++) {
+                XdmValue res2 = XPathFunctions.executaXpath(xpath.get(i), "cidades.xml");
+                if (res2 == null) {
+                    jTextArea1.setText("Ficheiro XML não existe.");
+                }
+                String s2 = XPathFunctions.listaResultado(res2);
+                if (i == 0) {
+                    texto = texto.append("Nome do País: ").append(s2).append("\n");
+                }
+                if (i == 1) {
+                    texto = texto.append("Capital? : ").append(s2).append("\n");
+                }
+                if (i == 2) {
+                    texto = texto.append("Área da Cidade: ").append(s2).append("\n");
+                }
+                if (i == 3) {
+                    texto = texto.append("Número de Habitantes: ").append(s2).append("\n");
+                }
+                if (i == 4) {
+                    texto = texto.append("Lingua do : ").append(s2).append("\n");
+                }
+                if (i == 5) {
+                    texto = texto.append("Código Postal: ").append(s2).append("\n");
+                }
+                if (i == 6) {
+                    texto = texto.append("Nome do Presidente da Cidade: ").append(s2).append("\n");
+                }
+            }
+
+            if (xpath.isEmpty()) {
+                jTextArea1.setText("Pesquisa sem informação");
             } else {
                 jTextArea1.setText(texto.toString());
-              
             }
             jDialog1.setVisible(false);
         } catch (SaxonApiException ex) {
@@ -971,14 +949,11 @@ public class Frame extends javax.swing.JFrame {
             Scanner ler = new Scanner(System.in);
             String xp = null;
             String valor = jTextField3.getText();
-            String nome = "flag";
-            
-        
-             xp = "//cidade[contains(@pais,'" + valor + "')]/@nome";
-         
-            System.out.println(xp);
+
+            xp = "//cidade[contains(@pais,'" + valor + "')]/@nome";
+
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
-            String x = XPathFunctions.listaResultado(res,nome);
+            String x = XPathFunctions.listaResultado(res);
 
             if (res == null) {
                 jTextArea1.setText("Ficheiro não existe");
@@ -999,15 +974,10 @@ public class Frame extends javax.swing.JFrame {
             Scanner ler = new Scanner(System.in);
             System.out.println("Introduza palavra de pesquisa");
             String xp = null;
-
             String valor = jTextField4.getText();
 
-            xp = "//cidade/Geografia[contains(areaCidade,'" + valor + "')]/areaCidade";
-
-            if (jDialog3.getTitle().equals("nHabitantes")) {
-                xp = "//cidade/Demografia[contains(nHabitantes,'" + valor + "')]/nHabitantes";
-            }
-
+            xp = "//cidade/Demografia[nHabitantes > '" + valor + "']/../@nome";
+            
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
 
@@ -1030,20 +1000,17 @@ public class Frame extends javax.swing.JFrame {
             Scanner ler = new Scanner(System.in);
             System.out.println("Introduza palavra de pesquisa");
             String xp = null;
-
             String valor = jTextField5.getText();
-
-            if (jDialog4.getTitle().equals("Clima")) {
-                xp = "//cidade/Geografia[contains(Clima,'" + valor + "')]/Clima";
-            }
-
+            
+            xp = "//cidade/Geografia[contains(Clima,'" + valor + "')]/../@nome";
+            
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
 
             if (res == null) {
                 jTextArea1.setText("Ficheiro nao existe");
             } else if (res.size() == 0) {
-                jTextArea1.setText("Pesquisa sem informacao");
+                jTextArea1.setText("Pesquisa sem informação");
             } else {
                 jTextArea1.setText(x);
             }
@@ -1062,9 +1029,9 @@ public class Frame extends javax.swing.JFrame {
 
             String valor = jTextField6.getText();
 
-            if (jDialog5.getTitle().equals("Nome")) {
-                xp = "//cidade[contains(@capital = true,'" + valor + "')]/@nome";
-            }
+           
+            xp = "//cidade[contains(@capital = true)]/../@nome";
+           
 
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
@@ -1088,6 +1055,9 @@ public class Frame extends javax.swing.JFrame {
         if (doc != null) {
             Document novo = JDOMFunctionsXSLT.transformaDocumento(doc, "cidades.xml", "transf_html.xsl");
             XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "fotosBandeiras.html");
+              JOptionPane.showMessageDialog(this,
+                    "Transformação feita com sucesso... a abrir browser...",
+                    "XSLT para HTML", JOptionPane.INFORMATION_MESSAGE);
             String url = "fotosBandeiras.html";
             File htmlFile = new File(url);
             JOptionPane.showMessageDialog(null, "Ficheiro HTML Criado", "XML to HTML", JOptionPane.INFORMATION_MESSAGE);
@@ -1147,10 +1117,47 @@ public class Frame extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+               Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+              
+        if (doc != null) {
+            try {
+                JDOMFunctionsXSLT.transformaDocumento2("cidades.xml", "transf2_text.xsl", "cidadesTXT.txt");
+                Scanner ler = new Scanner(new FileInputStream("cidadesTXT.txt"));
+                StringBuilder texto = new StringBuilder();
+                String linha;
+                while (ler.hasNextLine()) {
+                        linha = ler.nextLine();
+                        texto = texto.append(linha).append("\n");
+                }
+                ler.close();
+                jTextArea1.setText(texto.toString());
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        if (doc != null) {
+            Document novo = JDOMFunctionsXSLT.transformaDocumento(doc, "cidades.xml", "transf4_html.xsl");
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "fotosMonumentos.html");
+             JOptionPane.showMessageDialog(this,
+                    "Transformação feita com sucesso... a abrir browser...",
+                    "XSLT para HTML", JOptionPane.INFORMATION_MESSAGE);
+            String url = "fotosMonumentos.html";
+            File htmlFile = new File(url);
+            JOptionPane.showMessageDialog(null, "Ficheiro HTML Criado", "XML to HTML", JOptionPane.INFORMATION_MESSAGE);
+            try {
+                Desktop.getDesktop().browse(htmlFile.toURI());
+            } catch (IOException ex) {
+                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else
+            JOptionPane.showMessageDialog(null, "Ficheiro XML não existe", "XML to HTML", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
@@ -1225,6 +1232,10 @@ public class Frame extends javax.swing.JFrame {
         jDialog10.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1259,7 +1270,6 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1321,7 +1331,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;

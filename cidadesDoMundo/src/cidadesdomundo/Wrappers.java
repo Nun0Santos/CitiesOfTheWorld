@@ -373,8 +373,8 @@ public class Wrappers {
     public static ArrayList<String> procuraMonumentos(String link) throws IOException { // Wiki //arratlist
         int count = 0;
         ArrayList<String> procuraMonumentos = new ArrayList<String>();
-        /*HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
-        String ER = "";
+        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
+        String ER = "<a href=\"[^\"]+.jpg\" class=\"image\"><img alt[^!]+ src=\"([^\"]+)\" decoding";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -382,15 +382,11 @@ public class Wrappers {
             String linha = input.nextLine();
             m = p.matcher(linha);
             while (m.find()) {
-                if (count < 5) {
                     procuraMonumentos.add(m.group(1));
-                    count++;
-                } else {
-                    return procuraMonumentos;
-                }
-            }
+            } 
+            return procuraMonumentos;        
         }
-        input.close();*/
+        input.close();
         return procuraMonumentos;
     }
 

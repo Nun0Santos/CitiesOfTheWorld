@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cidades>
+<!DOCTYPE cidades SYSTEM "cidades.dtd">
+<cidades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cidades.xsd">
      <cidade nome="Lisboa" pais="Portugal" capital="true">
           <Administracao>
                <codigoPostal>1100</codigoPostal>
@@ -168,6 +169,40 @@
           <Demografia>
                <nHabitantes>5</nHabitantes>
                <densidadePopulacional>541.5</densidadePopulacional>
+          </Demografia>
+     </cidade>
+     <cidade nome="Lyon" pais="França" capital="false">
+          <Administracao>
+               <codigoPostal>69000</codigoPostal>
+               <presidente>Senhor Grégory DOUCET</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.lyon.fr</website>
+               <linguaOficial>Francesa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;Francês</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Paris)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Goiânia</cidad>
+                    <cidad>Curitiba</cidad>
+                    <cidad>Uagadugu</cidad>
+                    <cidad>Montréal</cidad>
+                    <cidad>Pereira</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/70.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/22px-Flag_of_France.svg.png</linkBandeiraCidade>
+               <linkMonumentos />
+          </links>
+          <Geografia>
+               <latitude>45.7589</latitude>
+               <longitude>4.84139</longitude>
+               <areaCidade>47.87</areaCidade>
+               <altitude>-1.0</altitude>
+               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>522969.0</nHabitantes>
+               <densidadePopulacional>10924.8</densidadePopulacional>
           </Demografia>
      </cidade>
 </cidades>
