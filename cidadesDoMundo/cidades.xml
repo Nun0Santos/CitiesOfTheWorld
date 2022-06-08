@@ -1,74 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE cidades SYSTEM "cidades.dtd">
 <cidades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cidades.xsd">
-     <cidade nome="Lisboa" pais="Portugal" capital="true">
-          <Administracao>
-               <codigoPostal>1100</codigoPostal>
-               <presidente>Fernando Medina</presidente>
-          </Administracao>
-          <Dados>
-               <website>https://www.lisboa.pt</website>
-               <linguaOficial>Português&lt;br /&gt;Mirandese</linguaOficial>
-               <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
-               <cidadesGeminadas>
-                    <cidad>Brasília</cidad>
-                    <cidad>Salvador</cidad>
-                    <cidad>Rio de Janeiro</cidad>
-                    <cidad>Salvador</cidad>
-                    <cidad>São Paulo</cidad>
-               </cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
-               <linkMonumentos />
-          </links>
-          <Geografia>
-               <latitude>38.7071</latitude>
-               <longitude>-9.13549</longitude>
-               <areaCidade>84.8</areaCidade>
-               <altitude>4.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>507220.0</nHabitantes>
-               <densidadePopulacional>5981.4</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Barcelona" pais="Espanha" capital="false">
-          <Administracao>
-               <codigoPostal>08071</codigoPostal>
-               <presidente>Ada COLAU BALLANO</presidente>
-          </Administracao>
-          <Dados>
-               <website>https://www.barcelona.cat</website>
-               <linguaOficial>Espanhol</linguaOficial>
-               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
-               <cidadesGeminadas>
-                    <cidad>Tirana</cidad>
-                    <cidad>Rosário</cidad>
-                    <cidad>Antuérpia</cidad>
-                    <cidad>Sarajevo</cidad>
-                    <cidad>Rio de Janeiro</cidad>
-               </cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Barcelona.svg/100px-Flag_of_Barcelona.svg.png</linkBandeiraCidade>
-               <linkMonumentos />
-          </links>
-          <Geografia>
-               <latitude>41.3879</latitude>
-               <longitude>2.16992</longitude>
-               <areaCidade>98.21</areaCidade>
-               <altitude>34.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>1636762.0</nHabitantes>
-               <densidadePopulacional>16665.9</densidadePopulacional>
-          </Demografia>
-     </cidade>
      <cidade nome="Madrid" pais="Espanha" capital="false">
           <Administracao>
                <codigoPostal>28005</codigoPostal>
@@ -103,106 +34,72 @@
                <densidadePopulacional>5391.7</densidadePopulacional>
           </Demografia>
      </cidade>
-     <cidade nome="Oslo" pais="Noruega" capital="false">
+     <cidade nome="Lisboa" pais="Portugal" capital="true">
           <Administracao>
-               <codigoPostal>0037</codigoPostal>
-               <presidente>Fabian Stang</presidente>
+               <codigoPostal>1100</codigoPostal>
+               <presidente>Fernando Medina</presidente>
           </Administracao>
           <Dados>
-               <website>http://www.oslo.kommune.no</website>
-               <linguaOficial>Norueguês bokmål&lt;br /&gt;Novo norueguês&lt;br /&gt;Norueguês</linguaOficial>
-               <fusoHorario>UTC  +1:00 (Europe/Oslo)</fusoHorario>
+               <website>https://www.lisboa.pt</website>
+               <linguaOficial>Português&lt;br /&gt;Mirandese</linguaOficial>
+               <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
                <cidadesGeminadas>
-                    <cidad>Antuérpia</cidad>
-                    <cidad>Xangai</cidad>
-                    <cidad>Copenhaga</cidad>
-                    <cidad>Helsínquia</cidad>
-                    <cidad>Schleswig</cidad>
+                    <cidad>Rio de Janeiro</cidad>
+                    <cidad>Salvador</cidad>
+                    <cidad>São Paulo</cidad>
+                    <cidad>São Paulo</cidad>
+                    <cidad>Brasília</cidad>
                </cidadesGeminadas>
           </Dados>
           <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/158.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png</linkBandeiraCidade>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
                <linkMonumentos />
           </links>
           <Geografia>
-               <latitude>59.9138</latitude>
-               <longitude>10.7387</longitude>
-               <areaCidade>453.99</areaCidade>
-               <altitude>23.0</altitude>
-               <clima>Clima continental húmido (Classificação climática de Köppen-Geiger: Dfb)</clima>
+               <latitude>38.7071</latitude>
+               <longitude>-9.13549</longitude>
+               <areaCidade>84.8</areaCidade>
+               <altitude>4.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
           </Geografia>
           <Demografia>
-               <nHabitantes>560484.0</nHabitantes>
-               <densidadePopulacional>1234.6</densidadePopulacional>
+               <nHabitantes>507220.0</nHabitantes>
+               <densidadePopulacional>5981.4</densidadePopulacional>
           </Demografia>
      </cidade>
-     <cidade nome="Bergen" pais="Noruega" capital="false">
+     <cidade nome="Sevilha" pais="Espanha" capital="false">
           <Administracao>
-               <codigoPostal>5020</codigoPostal>
-               <presidente>Nuno Santos</presidente>
+               <codigoPostal>41071</codigoPostal>
+               <presidente>Juan ESPADAS CEJAS</presidente>
           </Administracao>
           <Dados>
-               <website>http://www.bergen.kommune.no</website>
-               <linguaOficial>Norueguês bokmål&lt;br /&gt;Novo norueguês&lt;br /&gt;Norueguês</linguaOficial>
-               <fusoHorario>UTC  +1:00 (Europe/Oslo)</fusoHorario>
+               <website>https://www.sevilla.org</website>
+               <linguaOficial>Espanhol</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
                <cidadesGeminadas>
-                    <cidad>Rosário</cidad>
-                    <cidad>Québec</cidad>
-                    <cidad>Århus</cidad>
-                    <cidad>Turku</cidad>
-                    <cidad>Lübeck</cidad>
+                    <cidad>Buenos Aires</cidad>
+                    <cidad>Barcelona</cidad>
+                    <cidad>Cartagena das Índias</cidad>
+                    <cidad>Havana</cidad>
+                    <cidad>San Salvador</cidad>
                </cidadesGeminadas>
           </Dados>
           <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/158.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png</linkBandeiraCidade>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png</linkBandeiraCidade>
                <linkMonumentos />
           </links>
           <Geografia>
-               <latitude>60.3881</latitude>
-               <longitude>5.33185</longitude>
-               <areaCidade>96</areaCidade>
-               <altitude>5.0</altitude>
-               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
+               <latitude>37.3826</latitude>
+               <longitude>-5.99629</longitude>
+               <areaCidade>141.31</areaCidade>
+               <altitude>2.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
           </Geografia>
           <Demografia>
-               <nHabitantes>5</nHabitantes>
-               <densidadePopulacional>541.5</densidadePopulacional>
-          </Demografia>
-     </cidade>
-     <cidade nome="Lyon" pais="França" capital="false">
-          <Administracao>
-               <codigoPostal>69000</codigoPostal>
-               <presidente>Senhor Grégory DOUCET</presidente>
-          </Administracao>
-          <Dados>
-               <website>https://www.lyon.fr</website>
-               <linguaOficial>Francesa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;Francês</linguaOficial>
-               <fusoHorario>UTC  +1:00 (Europe/Paris)</fusoHorario>
-               <cidadesGeminadas>
-                    <cidad>Goiânia</cidad>
-                    <cidad>Curitiba</cidad>
-                    <cidad>Uagadugu</cidad>
-                    <cidad>Montréal</cidad>
-                    <cidad>Pereira</cidad>
-               </cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/70.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/22px-Flag_of_France.svg.png</linkBandeiraCidade>
-               <linkMonumentos />
-          </links>
-          <Geografia>
-               <latitude>45.7589</latitude>
-               <longitude>4.84139</longitude>
-               <areaCidade>47.87</areaCidade>
-               <altitude>-1.0</altitude>
-               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>522969.0</nHabitantes>
-               <densidadePopulacional>10924.8</densidadePopulacional>
+               <nHabitantes>688592.0</nHabitantes>
+               <densidadePopulacional>4872.9</densidadePopulacional>
           </Demografia>
      </cidade>
 </cidades>

@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
+import net.sf.saxon.trans.XPathException;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -771,7 +772,7 @@ public class Frame extends javax.swing.JFrame {
             String xp = null;
             
            
-            xp = "//cidade[@capital = true]/@nome";
+            xp = "//cidade[@capital = 'true']/@nome";
             System.out.println("xp : " + xp);
 
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
@@ -1002,7 +1003,7 @@ public class Frame extends javax.swing.JFrame {
             String xp = null;
             String valor = jTextField5.getText();
             
-            xp = "//cidade/Geografia[contains(Clima,'" + valor + "')]/../@nome";
+            xp = "//cidade/Geografia[contains(clima,'" + valor + "')]/../@nome";
             
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);
@@ -1116,27 +1117,26 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-               Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-              
-        if (doc != null) {
-            try {
-                JDOMFunctionsXSLT.transformaDocumento2("cidades.xml", "transf2_text.xsl", "cidadesTXT.txt");
-                Scanner ler = new Scanner(new FileInputStream("cidadesTXT.txt"));
-                StringBuilder texto = new StringBuilder();
-                String linha;
-                while (ler.hasNextLine()) {
-                        linha = ler.nextLine();
-                        texto = texto.append(linha).append("\n");
-                }
-                ler.close();
-                jTextArea1.setText(texto.toString());
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        Element raiz = new Element("valor");
+        Document docV = new Document(raiz);
+        raiz.addContent(jTextField9.getText());
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(docV,"valor.xml");
+         
+        try {
+            // TODO add your handling code here:
+            SaxonFunctionsXQuery.xQueryToText("cidades.xml", "transf2_text.xql");
+            JOptionPane.showMessageDialog(this,
+                    "Transformação feita com sucesso... a abrir browser...",
+                    "XQuery para Text", JOptionPane.INFORMATION_MESSAGE);
+ 
+            Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+            String t = XMLJDomFunctions.escreverDocumentoString(doc);
+            jTextArea1.setText(t);
+        } catch (XPathException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -1162,6 +1162,23 @@ public class Frame extends javax.swing.JFrame {
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            SaxonFunctionsXQuery.xQueryToXml("cidades.xml1", "transf3_xml.xql");
+            JOptionPane.showMessageDialog(this,
+                    "Transformação feita com sucesso...",
+                    "XQuery para XML", JOptionPane.INFORMATION_MESSAGE);
+            
+            
+            Document doc = XMLJDomFunctions.lerDocumentoXML("cidades1.xml");
+            String t = XMLJDomFunctions.escreverDocumentoString(doc);
+            jTextArea1.setText(t);
+        } catch (XPathException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed

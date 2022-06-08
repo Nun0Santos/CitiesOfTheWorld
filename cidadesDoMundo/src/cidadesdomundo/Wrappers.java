@@ -370,11 +370,11 @@ public class Wrappers {
         return "null";
     }
 
-    public static ArrayList<String> procuraMonumentos(String link) throws IOException { // Wiki //arratlist
+    public static ArrayList<String> procuraMonumentos(String cidade) throws IOException { // Wiki //arratlist
         int count = 0;
         ArrayList<String> procuraMonumentos = new ArrayList<String>();
-        HttpRequestFunctions.httpRequest1(link, "", "cidade2.txt");
-        String ER = "<a href=\"[^\"]+.jpg\" class=\"image\"><img alt[^!]+ src=\"([^\"]+)\" decoding";
+        HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/",cidade, "cidade2.txt");
+        String ER = "<img alt=\"[^0-9]+ (^A-Z) (cropped).jpg\" src=\"(^\")+\" decoding=\"async\"";
         Pattern p = Pattern.compile(ER);
         Matcher m;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
@@ -396,7 +396,7 @@ public class Wrappers {
         String linkBandeiraPais = Wrappers.procuraBandeiraPais(linkCidade);
         String linguaOficial = Wrappers.procuraLinguaOficial(pais);
         String linkBandeiraCidade = Wrappers.procuraBandeiraCidade(cidade);
-        ArrayList linkMonumentos = Wrappers.procuraMonumentos(linkCidade);
+        ArrayList linkMonumentos = Wrappers.procuraMonumentos(cidade);
         Double areaCidade = Wrappers.procuraArea(linkCidade);
         Double nHabitantes = Wrappers.procuraNumeroHabitantes(linkCidade);
         Double densidadePopulacional = Wrappers.procuraDensidadePopulacional(linkCidade);

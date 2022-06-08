@@ -13,19 +13,19 @@
 			<table border ="1">
 				<tr><th>Bandeira</th><th>Cidade</th></tr>
 				<xsl:apply-templates select ="cidade">
-					<xsl:sort select ="@nome"/>
+					<xsl:sort select="@nome"/>
 				</xsl:apply-templates>
 			</table>
-		<xsl:apply-templates/>
+
 		</body>
 	</html>
 	</xsl:template>
 	
 	
-	<xsl:template match="links">
+	<xsl:template match="cidade">
 		<tr>
-			<td><img src="{linkBandeiraPais}" width="100"/></td>
-			<td><xsl:value-of select="//cidade/@nome"/></td>
+			<td><img src="{links/linkBandeiraPais}" width="100"/></td>
+			<td><xsl:value-of select="distinct-values(@pais)"/></td>
 		</tr>
 	</xsl:template>
 
