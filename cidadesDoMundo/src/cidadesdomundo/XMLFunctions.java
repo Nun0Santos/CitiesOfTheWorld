@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cidadesdomundo;
 
 import java.util.ArrayList;
@@ -16,7 +12,7 @@ import org.jdom2.Element;
 
 /**
  *
- * @author User
+ * @author Nuno
  */
 public class XMLFunctions {
 
@@ -78,8 +74,6 @@ public class XMLFunctions {
                     Element cidadesGeminadas = new Element("cidadesGeminadas");
                     
                     for (int i = 0; i < cg.size(); i++) {
-                        //System.out.println(cg.size());
-                        
                         Element c = new Element("cidad").addContent(cg.get(i));
                         cidadesGeminadas.addContent(c);
                     }
@@ -94,14 +88,10 @@ public class XMLFunctions {
                     
                     filho = new Element("linkBandeiraCidade").addContent(cidad.getLinkBandeiraCidade());
                     links.addContent(filho);
-                    
-                    /*filho = new Element("linkMonumentos").addContent(cidad.getLinkMonumentos());
-                    links.addContent(filho);*/
+                   
                     
                     Element linkMonumentos = new Element("linkMonumentos"); 
-                    for (int i = 0; i < lk.size(); i++) { 
-                        //System.out.println(lk.size());
-                        
+                    for (int i = 0; i < lk.size(); i++) {               
                         Element c = new Element("link").addContent(lk.get(i)); 
                         linkMonumentos.addContent(c);
                     }

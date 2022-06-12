@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cidadesdomundo;
 
 import java.io.FileInputStream;
@@ -14,7 +10,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author User
+ * @author Nuno
  *
  */
 public class Wrappers {
@@ -25,12 +21,57 @@ public class Wrappers {
             String er1 = "<a href=\"([^\"]+)\" title=\"" + cidade + "\">";
             String er2 = "<h2 id=\"bigcity\">Cidades importantes <span class=\"reshid\">" + pais + "</span></h2>";
             String er3 = "<table class=\"td25 otd\"><tr><td><a href=\"(/" + pais + "--[^-]+--" + cidade + ")\" title=\"" + cidade + "\">";
+            String er4 = "<td><a href=\"/Portugal--" + cidade + "--" + cidade + "\" title=\"" + cidade + "\">(" + cidade + ")</a></td>";
+
             Pattern p1 = Pattern.compile(er1);
             Pattern p2 = Pattern.compile(er2);
             Pattern p3 = Pattern.compile(er3);
-            Matcher m;
+            Pattern p4 = Pattern.compile(er4);
+
+            Matcher m1;
             Matcher m2;
             Matcher m3;
+            Matcher m4;
+            /*while (ler.hasNextLine()) {
+                String linha = ler.nextLine();
+                m1 = p1.matcher(linha);
+                m2 = p2.matcher(linha);
+                m3 = p3.matcher(linha);
+                m4 = p4.matcher(linha);
+                if (m1.find()) {
+                    while (m1.find()) {
+                        ler.close();
+                        return "https://pt.db-city.com" + m1.group(1);
+                    }
+                } else {
+                    if (m2.find()) {
+                        while (m2.find()) {
+                            ler.close();
+                            return "https://pt.db-city.com" + m1.group(1);
+                        }
+                    } else {
+                        if (m3.find()) {
+                            while (m3.find()) {
+                                ler.close();
+                                return "https://pt.db-city.com" + m3.group(1);
+                            }
+                        }
+                        else{
+                          if (m4.find()) {
+                            while (m4.find()) {
+                                 ler.close();
+                                return "https://pt.db-city.com" + m4.group(1);
+                            }
+                          }
+                        
+                        }
+                    }
+                }
+            }*/
+            p1 = Pattern.compile(er1);
+            p2 = Pattern.compile(er2);
+            p3 = Pattern.compile(er3);
+            Matcher m;
             while (ler.hasNextLine()) {
                 String linha = ler.nextLine();
                 m2 = p2.matcher(linha);
@@ -55,7 +96,7 @@ public class Wrappers {
             }
         }
         return "Link da cidade não encontrado";
-   
+
     }
 
     public static String Wikipedia(String cidade) throws FileNotFoundException, IOException {
@@ -93,7 +134,7 @@ public class Wrappers {
             m = p.matcher(linha);
             if (m.find()) {
                 input.close();
-                return Double.parseDouble(m.group(1).replace(".", "")); //Falta tirar o . no final
+                return Double.parseDouble(m.group(1).replace(".", ""));
             }
         }
         input.close();
@@ -125,14 +166,18 @@ public class Wrappers {
     
     public static String procuraCapitais(String pais, String cidade) throws FileNotFoundException, IOException {
         HttpRequestFunctions.httpRequest1("https://pt.db-city.com/", pais, "cidade2.txt");
-        String ER = "<a href=\"/País--Capital\" title=\"Capitale pays_170\">Capital</a> <span class=\"reshid\">[A-Za-z]+</span></th><td><a href=\"/[A-Za-z]+--[A-Za-z]+--[A-Za-z]+\" title=\"[A-Za-z]+\">([A-Za-z]+)</a>";
+        String ER = "<a href=\"/País--Capital\" title=\"Capitale pays_[^a-z]+\">Capital</a> <span class=\"reshid\">[^0-9]+</span></th><td><a href=\"/[^0-9]+--[^0-9]+--[^0-9]+\" title=\"[^0-9]+\">([^0-9]+)</a>";
+        String ER2 = "<a href=\"/País--Capital\" title=\"Capitale pays_[^a-z]+\">Capital</a> <span class=\"reshid\">[^0-9]+</span></th><td><a href=\"/[^0-9]+--[^0-9]+--[^0-9]+--[^0-9]+\" title=\"[^0-9]+\">([^0-9]+)</a>";
         Pattern p = Pattern.compile(ER);
+        Pattern p2 = Pattern.compile(ER2);
         Matcher m;
+        Matcher m2;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
         while (input.hasNextLine()) {
             String linha = input.nextLine();
             m = p.matcher(linha);
-            if (m.find()) {
+            m2 = p.matcher(linha);
+            if (m.find() || m2.find()) {
                 input.close();
                 if (m.group(1).equals(cidade)) {
                     return "true";
@@ -354,16 +399,24 @@ public class Wrappers {
 
     public static String procuraLinguaOficial(String pais) throws IOException {
         HttpRequestFunctions.httpRequest1("https://pt.db-city.com/", pais, "cidade2.txt");
-        String ER = "<tr><th>Língua oficial</th><td>([^0-9]+)</td></tr><tr><th>[^0-9]+</th><td>[^0-9]+</td></tr>";
+        String ER = "<tr><th>Língua oficial</th><td>([^0-9]+)<br />[^0-9]+</td></tr>";
+        String ER2 = "<tr><th>Língua oficial</th><td>([^0-9]+)</td></tr>";
         Pattern p = Pattern.compile(ER);
+        Pattern p2 = Pattern.compile(ER2);
         Matcher m;
+        Matcher m2;
         Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
         while (input.hasNextLine()) {
             String linha = input.nextLine();
             m = p.matcher(linha);
+            m2 = p2.matcher(linha);
             if (m.find()) {
                 input.close();
                 return m.group(1);
+            }
+            if (m2.find()) {
+                input.close();
+                return m2.group(1);
             }
         }
         input.close();
@@ -375,39 +428,35 @@ public class Wrappers {
         HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/", cidade, "cidade.txt");
         Scanner ler = new Scanner(new FileInputStream("cidade.txt"));
         Scanner ler2 = new Scanner(new FileInputStream("cidade.txt"));
-        // <div class="thumbimage" style="height:152px;overflow:hidden"><a href="/wiki/Ficheiro:Barcelona,_airport_approach_(27733825928).jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Barcelona%2C_airport_approach_%2827733825928%29.jpg/288px-Barcelona%2C_airport_approach_%2827733825928%29.jpg" decoding
-        // <a href="/wiki/Ficheiro:Vista_de_Almada_by_Juntas_(cropped).jpg" class="image"><img alt="Vista de Almada by Juntas (cropped).jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Vista_de_Almada_by_Juntas_%28cropped%29.jpg/280px-Vista_de_Almada_by_Juntas_%28cropped%29.jpg" decoding
         String er2 = "<a href=\"[^\"]+.jpg\" class=\"image\"><img alt[^!]+ src=\"([^\"]+)\" decoding";
-        // <a href="/wiki/Ficheiro:Detroit_Montage.jpg" class="image" title="Do topo, da esquerda para a direita: panorama de Downtown Detroit, Spirit of Detroit, Greektown, Ponte Ambassador, Michigan Soldiers&#39; and Sailors&#39; Monument, Fox Theatre e Comerica Park."><img alt="Do topo, da esquerda para a direita: panorama de Downtown Detroit, Spirit of Detroit, Greektown, Ponte Ambassador, Michigan Soldiers&#39; and Sailors&#39; Monument, Fox Theatre e Comerica Park." src="//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Detroit_Montage.jpg/280px-Detroit_Montage.jpg" decoding
         String er4 = "<div class=\"floatnone\"><a href=\"[^\"]+.jpg\" class=\"image\" title=\"[^\"]+\"><img alt=\"[^\"]+\" src=\"([^\"]+)\" decoding";
         Pattern p = Pattern.compile(er4);
         Matcher m;
-        int count=0;
-        
+        int count = 0;
+
         while (ler.hasNextLine()) {
             String linha = ler.nextLine();
             m = p.matcher(linha);
             if (m.find()) { // Cidades que têm uma class = "floatnone"
-                    listaImagens.add("https:"+m.group(1)); // -> Só entra 1x
-                    System.out.println("ENTROU");
-                    return listaImagens;
-            }   
+                listaImagens.add("https:" + m.group(1));
+                return listaImagens;
+            }
         }
         p = Pattern.compile(er2);
         while (ler2.hasNextLine()) {
             String linha = ler2.nextLine();
             m = p.matcher(linha);
-            while (m.find()) { 
-                if(count < 3){
-                    listaImagens.add("https:"+m.group(1));
+            while (m.find()) {
+                if (count < 3) {
+                    listaImagens.add("https:" + m.group(1));
                     count++;
                 } else {
                     return listaImagens;
                 }
-            }   
+            }
         }
         ler.close();
-        System.out.println("Erro na listagem de imagens de "+cidade+".");
+        System.out.println("Erro na listagem de imagens de " + cidade + ".");
         return listaImagens;
     }
 
@@ -429,7 +478,7 @@ public class Wrappers {
         String clima = Wrappers.procuraClima(linkCidade);
         String fusoHorario = Wrappers.procuraFUSO(linkCidade);
         String website = Wrappers.procuraWebsite(linkCidade);
-        ArrayList cidadesGeminadas = Wrappers.procuraCidadesGeminadas(linkCidade); 
+        ArrayList cidadesGeminadas = Wrappers.procuraCidadesGeminadas(linkCidade);
 
         Cidade c = new Cidade(cidade, pais, capital, linkBandeiraPais, linguaOficial, linkBandeiraCidade, linkMonumentos, areaCidade, nHabitantes, densidadePopulacional, codigoPostal, presidente, latitude, longitude, altitude, clima, fusoHorario, website, cidadesGeminadas);
         return c;

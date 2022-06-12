@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package cidadesdomundo;
 
 import java.io.*;
@@ -14,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author
+ * @author Nuno
  */
 public class HttpRequestFunctions {
 

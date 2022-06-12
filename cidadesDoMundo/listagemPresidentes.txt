@@ -1,0 +1,10 @@
+Listagem dos Presidentes:
+	Ada COLAU BALLANO
+	Fabian Stang
+	Fernando Medina
+	Manuel Machado
+	Nuno Santos
+	Ricardo Rio
+	Rui Moreira
+	Senhor Grégory DOUCET
+	Senhora Anne HIDALGO

@@ -2,18 +2,24 @@ xquery version "1.0";
 
 
 
-<html><body>
-
-
+<html>
+     <body>
 <h1>Listagem de imagens</h1>
 
-<table border = "1">
+{
+
+
+
 
 	for $x in doc("C:/Users/User/Desktop/GitHub/CitiesOfTheWorld/cidadesDoMundo/cidades.xml")//cidade
 	let $v := doc("C:/Users/User/Desktop/GitHub/CitiesOfTheWorld/cidadesDoMundo/cidade.xml")/cidade/text()	
-	where  $x/@nome = $v
-	return ("&#10;",data($x/links/linkMonumentos/link)
-
-			
-</table>
-</body></html>
+	let $lista := $x/
+links/linkMonumentos/link
+	where  contains($x/@nome,$v)
+	return for $k in $lista
+		return 
+			<td><img src="{$k}" width="200"/></td>
+		
+}
+     </body>
+</html>

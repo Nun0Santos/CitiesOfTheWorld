@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cidadesdomundo;
 
 import java.io.File;
@@ -18,41 +14,41 @@ import net.sf.saxon.trans.XPathException;
 
 /**
  *
- * @author User
+ * @author Nuno
  */
-
 public class SaxonFunctionsXQuery {
-    public static void xQueryToText(String outputFile, String queryFile) throws XPathException, IOException{
+
+    public static void xQueryToText(String outputFile, String queryFile) throws XPathException, IOException {
         Configuration config = new Configuration();
         StaticQueryContext sqc = new StaticQueryContext(config);
         XQueryExpression exp = sqc.compileQuery(new FileReader(queryFile));
         DynamicQueryContext dynamicContext = new DynamicQueryContext(config);
-        
+
         Properties props = new Properties();
         props.setProperty(OutputKeys.METHOD, "text");
         exp.run(dynamicContext, new StreamResult(new File(outputFile)), props);
     }
-    
-    public static void xQueryToHtml(String outputFile, String queryFile) throws XPathException, IOException{
+
+    public static void xQueryToHtml(String outputFile, String queryFile) throws XPathException, IOException {
         Configuration config = new Configuration();
         StaticQueryContext sqc = new StaticQueryContext(config);
         XQueryExpression exp = sqc.compileQuery(new FileReader(queryFile));
         DynamicQueryContext dynamicContext = new DynamicQueryContext(config);
-       
+
         Properties props = new Properties();
-        props.setProperty(OutputKeys.METHOD, "html");   
+        props.setProperty(OutputKeys.METHOD, "html");
         exp.run(dynamicContext, new StreamResult(new File(outputFile)), props);
     }
-    
-    public static void xQueryToXml(String outputFile, String queryFile) throws XPathException, IOException{
+
+    public static void xQueryToXml(String outputFile, String queryFile) throws XPathException, IOException {
         Configuration config = new Configuration();
         StaticQueryContext sqc = new StaticQueryContext(config);
         XQueryExpression exp = sqc.compileQuery(new FileReader(queryFile));
         DynamicQueryContext dynamicContext = new DynamicQueryContext(config);
-       
+
         Properties props = new Properties();
         props.setProperty(OutputKeys.METHOD, "xml");
         exp.run(dynamicContext, new StreamResult(new File(outputFile)), props);
     }
-    
+
 }

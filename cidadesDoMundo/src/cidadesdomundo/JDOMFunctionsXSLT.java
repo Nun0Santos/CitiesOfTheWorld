@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cidadesdomundo;
 
 import java.io.BufferedReader;
@@ -23,7 +19,7 @@ import org.jdom2.transform.XSLTransformer;
 
 /**
  *
- * @author User
+ * @author Nuno
  */
 public class JDOMFunctionsXSLT {
 
@@ -52,7 +48,6 @@ public class JDOMFunctionsXSLT {
     /* Também perimte Transformações para TXT method="text"
        Não cria objeto DOM Document
        Cria diretamente em disco o ficheiro da transformação*/
-
     public static void transformaDocumento2(String xmlFile, String xslFile, String sOutFile) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(xmlFile));
