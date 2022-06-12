@@ -17,7 +17,7 @@
 	<xsd:element name="linkBandeiraPais" type="xsd:string"/>
 	<xsd:element name="linkBandeiraCidade" type="xsd:string"/>
 	
-	<xsd:element name="linkMonumentos" type="xsd:string" />
+	<xsd:element name="link" type="xsd:string" />
 	<xsd:element name="latitude" type="xsd:decimal"/>
 	<xsd:element name="longitude" type="xsd:decimal" />
 	
@@ -91,6 +91,14 @@
     		</xsd:complexType>
 	</xsd:element>
 	
+	<xsd:element name="linkMonumentos">
+		<xsd:complexType>
+			<xsd:sequence maxOccurs="unbounded">
+				<xsd:element ref="link" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
 	<xsd:element name="cidade">   
    		 <xsd:complexType>      
         			<xsd:sequence>         
@@ -107,10 +115,10 @@
 	</xsd:element>
 	
 	<xsd:element name="cidades">   
-   		 <xsd:complexType>      
-        			<xsd:sequence>         
-          		  		<xsd:element ref="cidade"/>                          
-        			</xsd:sequence>  
+   		 <xsd:complexType>
+			 <xsd:sequence maxOccurs="unbounded">
+				 <xsd:element ref="cidade"/>
+			 </xsd:sequence>
     		</xsd:complexType>
 	</xsd:element>
 	

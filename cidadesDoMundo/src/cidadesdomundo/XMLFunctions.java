@@ -39,6 +39,9 @@ public class XMLFunctions {
                     
                     ArrayList<String> cg = new ArrayList<String>();
                     cg = cidad.getCidadesGeminadas(); // Cidades Geminadas
+                     
+                    ArrayList<String> lk = new ArrayList<String>();
+                    lk = cidad.getLinkMonumentos(); // link monumentos
                     
                     Element pai = new Element("cidade");
                     
@@ -75,7 +78,7 @@ public class XMLFunctions {
                     Element cidadesGeminadas = new Element("cidadesGeminadas");
                     
                     for (int i = 0; i < cg.size(); i++) {
-                        System.out.println(cg.size());
+                        //System.out.println(cg.size());
                         
                         Element c = new Element("cidad").addContent(cg.get(i));
                         cidadesGeminadas.addContent(c);
@@ -92,9 +95,17 @@ public class XMLFunctions {
                     filho = new Element("linkBandeiraCidade").addContent(cidad.getLinkBandeiraCidade());
                     links.addContent(filho);
                     
-                    filho = new Element("linkMonumentos").addContent(cidad.getLinkMonumentos());
-                    links.addContent(filho);
+                    /*filho = new Element("linkMonumentos").addContent(cidad.getLinkMonumentos());
+                    links.addContent(filho);*/
                     
+                    Element linkMonumentos = new Element("linkMonumentos"); 
+                    for (int i = 0; i < lk.size(); i++) { 
+                        //System.out.println(lk.size());
+                        
+                        Element c = new Element("link").addContent(lk.get(i)); 
+                        linkMonumentos.addContent(c);
+                    }
+                    links.addContent(linkMonumentos);
                     pai.addContent(links);
                     
                     Element geografia = new Element("Geografia");

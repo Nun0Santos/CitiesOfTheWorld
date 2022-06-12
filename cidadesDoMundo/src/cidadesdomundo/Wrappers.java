@@ -371,23 +371,44 @@ public class Wrappers {
     }
 
     public static ArrayList<String> procuraMonumentos(String cidade) throws IOException { // Wiki //arratlist
-        int count = 0;
-        ArrayList<String> procuraMonumentos = new ArrayList<String>();
-        HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/",cidade, "cidade2.txt");
-        String ER = "<img alt=\"[^0-9]+ (^A-Z) (cropped).jpg\" src=\"(^\")+\" decoding=\"async\"";
-        Pattern p = Pattern.compile(ER);
+        ArrayList<String> listaImagens = new ArrayList<String>();
+        HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/", cidade, "cidade.txt");
+        Scanner ler = new Scanner(new FileInputStream("cidade.txt"));
+        Scanner ler2 = new Scanner(new FileInputStream("cidade.txt"));
+        // <div class="thumbimage" style="height:152px;overflow:hidden"><a href="/wiki/Ficheiro:Barcelona,_airport_approach_(27733825928).jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Barcelona%2C_airport_approach_%2827733825928%29.jpg/288px-Barcelona%2C_airport_approach_%2827733825928%29.jpg" decoding
+        // <a href="/wiki/Ficheiro:Vista_de_Almada_by_Juntas_(cropped).jpg" class="image"><img alt="Vista de Almada by Juntas (cropped).jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Vista_de_Almada_by_Juntas_%28cropped%29.jpg/280px-Vista_de_Almada_by_Juntas_%28cropped%29.jpg" decoding
+        String er2 = "<a href=\"[^\"]+.jpg\" class=\"image\"><img alt[^!]+ src=\"([^\"]+)\" decoding";
+        // <a href="/wiki/Ficheiro:Detroit_Montage.jpg" class="image" title="Do topo, da esquerda para a direita: panorama de Downtown Detroit, Spirit of Detroit, Greektown, Ponte Ambassador, Michigan Soldiers&#39; and Sailors&#39; Monument, Fox Theatre e Comerica Park."><img alt="Do topo, da esquerda para a direita: panorama de Downtown Detroit, Spirit of Detroit, Greektown, Ponte Ambassador, Michigan Soldiers&#39; and Sailors&#39; Monument, Fox Theatre e Comerica Park." src="//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Detroit_Montage.jpg/280px-Detroit_Montage.jpg" decoding
+        String er4 = "<div class=\"floatnone\"><a href=\"[^\"]+.jpg\" class=\"image\" title=\"[^\"]+\"><img alt=\"[^\"]+\" src=\"([^\"]+)\" decoding";
+        Pattern p = Pattern.compile(er4);
         Matcher m;
-        Scanner input = new Scanner(new FileInputStream("cidade2.txt"));
-        while (input.hasNextLine()) {
-            String linha = input.nextLine();
+        int count=0;
+        
+        while (ler.hasNextLine()) {
+            String linha = ler.nextLine();
             m = p.matcher(linha);
-            while (m.find()) {
-                    procuraMonumentos.add(m.group(1));
-            } 
-            return procuraMonumentos;        
+            if (m.find()) { // Cidades que têm uma class = "floatnone"
+                    listaImagens.add("https:"+m.group(1)); // -> Só entra 1x
+                    System.out.println("ENTROU");
+                    return listaImagens;
+            }   
         }
-        input.close();
-        return procuraMonumentos;
+        p = Pattern.compile(er2);
+        while (ler2.hasNextLine()) {
+            String linha = ler2.nextLine();
+            m = p.matcher(linha);
+            while (m.find()) { 
+                if(count < 3){
+                    listaImagens.add("https:"+m.group(1));
+                    count++;
+                } else {
+                    return listaImagens;
+                }
+            }   
+        }
+        ler.close();
+        System.out.println("Erro na listagem de imagens de "+cidade+".");
+        return listaImagens;
     }
 
     public static Cidade criaCidade(String cidade, String pais, String linkCidade) throws IOException {

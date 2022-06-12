@@ -92,6 +92,18 @@ public class Frame extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jTextField14 = new javax.swing.JTextField();
         jButton13 = new javax.swing.JButton();
+        jDialog11 = new javax.swing.JDialog();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jButton14 = new javax.swing.JButton();
+        jDialog12 = new javax.swing.JDialog();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jButton15 = new javax.swing.JButton();
+        jDialog13 = new javax.swing.JDialog();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jButton16 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -112,6 +124,9 @@ public class Frame extends javax.swing.JFrame {
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
@@ -540,6 +555,108 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
+        jLabel15.setText("Nome do Presidente");
+
+        jButton14.setText("Pesquisar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog11Layout = new javax.swing.GroupLayout(jDialog11.getContentPane());
+        jDialog11.getContentPane().setLayout(jDialog11Layout);
+        jDialog11Layout.setHorizontalGroup(
+            jDialog11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog11Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addGroup(jDialog11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+        jDialog11Layout.setVerticalGroup(
+            jDialog11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog11Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jDialog11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton14)
+                .addContainerGap(159, Short.MAX_VALUE))
+        );
+
+        jLabel16.setText("Idioma");
+
+        jButton15.setText("Pesquisar");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog12Layout = new javax.swing.GroupLayout(jDialog12.getContentPane());
+        jDialog12.getContentPane().setLayout(jDialog12Layout);
+        jDialog12Layout.setHorizontalGroup(
+            jDialog12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog12Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jDialog12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                    .addComponent(jTextField16))
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+        jDialog12Layout.setVerticalGroup(
+            jDialog12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog12Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jDialog12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton15)
+                .addContainerGap(191, Short.MAX_VALUE))
+        );
+
+        jLabel17.setText("Código Postal");
+
+        jButton16.setText("Pesquisar");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog13Layout = new javax.swing.GroupLayout(jDialog13.getContentPane());
+        jDialog13.getContentPane().setLayout(jDialog13Layout);
+        jDialog13Layout.setHorizontalGroup(
+            jDialog13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog13Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jDialog13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(151, Short.MAX_VALUE))
+        );
+        jDialog13Layout.setVerticalGroup(
+            jDialog13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog13Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jDialog13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton16)
+                .addContainerGap(191, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Output");
@@ -661,6 +778,30 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         jMenu3.add(jMenuItem12);
+
+        jMenuItem19.setText("Pesquisar cidade pelo nome do Presidente");
+        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem19ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem19);
+
+        jMenuItem20.setText("Pesquisar cidade pelo idioma");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem20);
+
+        jMenuItem21.setText("Pesquisar cidade pelo código postal");
+        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem21ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem21);
 
         jMenuBar1.add(jMenu3);
 
@@ -913,7 +1054,7 @@ public class Frame extends javax.swing.JFrame {
                     texto = texto.append("Nome do País: ").append(s2).append("\n");
                 }
                 if (i == 1) {
-                    texto = texto.append("Capital? : ").append(s2).append("\n");
+                    texto = texto.append("Capital: ").append(s2).append("\n");
                 }
                 if (i == 2) {
                     texto = texto.append("Área da Cidade: ").append(s2).append("\n");
@@ -922,7 +1063,7 @@ public class Frame extends javax.swing.JFrame {
                     texto = texto.append("Número de Habitantes: ").append(s2).append("\n");
                 }
                 if (i == 4) {
-                    texto = texto.append("Lingua do : ").append(s2).append("\n");
+                    texto = texto.append("Lingua do País: ").append(s2).append("\n");
                 }
                 if (i == 5) {
                     texto = texto.append("Código Postal: ").append(s2).append("\n");
@@ -1124,14 +1265,22 @@ public class Frame extends javax.swing.JFrame {
          
         try {
             // TODO add your handling code here:
-            SaxonFunctionsXQuery.xQueryToText("cidades.xml", "transf2_text.xql");
-            JOptionPane.showMessageDialog(this,
-                    "Transformação feita com sucesso... a abrir browser...",
-                    "XQuery para Text", JOptionPane.INFORMATION_MESSAGE);
- 
-            Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-            String t = XMLJDomFunctions.escreverDocumentoString(doc);
-            jTextArea1.setText(t);
+            SaxonFunctionsXQuery.xQueryToText("cidadesDeUmPais.txt", "transf2_text.xql");
+             JOptionPane.showMessageDialog(this,
+                    "Query feita com sucesso... ficheiro TXT criado! ",
+                    "XQuery",
+                    JOptionPane.INFORMATION_MESSAGE);
+             
+            Scanner ler = new Scanner(new FileInputStream("cidadesDeUmPais.txt"));
+            StringBuilder texto = new StringBuilder();
+            String linha;
+            while (ler.hasNextLine()) {
+                linha = ler.nextLine();
+                texto = texto.append(linha).append("\n");
+            }
+            ler.close();
+            jTextArea1.setText(texto.toString());
+            
         } catch (XPathException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -1141,14 +1290,20 @@ public class Frame extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-         Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        if (doc != null) {
-            Document novo = JDOMFunctionsXSLT.transformaDocumento(doc, "cidades.xml", "transf4_html.xsl");
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "fotosMonumentos.html");
-             JOptionPane.showMessageDialog(this,
+        Element raiz = new Element("cidade");
+        Document docV = new Document(raiz);
+        raiz.addContent(jTextField10.getText());
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(docV, "cidade.xml");
+        try {
+            try {
+                SaxonFunctionsXQuery.xQueryToHtml("MonumentosCidade.html", "transfToHTML4.xql");
+            } catch (IOException ex) {
+                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            JOptionPane.showMessageDialog(this,
                     "Transformação feita com sucesso... a abrir browser...",
                     "XSLT para HTML", JOptionPane.INFORMATION_MESSAGE);
-            String url = "fotosMonumentos.html";
+            String url = "MonumentosCidade.html";
             File htmlFile = new File(url);
             JOptionPane.showMessageDialog(null, "Ficheiro HTML Criado", "XML to HTML", JOptionPane.INFORMATION_MESSAGE);
             try {
@@ -1156,22 +1311,27 @@ public class Frame extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else
-            JOptionPane.showMessageDialog(null, "Ficheiro XML não existe", "XML to HTML", JOptionPane.ERROR_MESSAGE);
-    }//GEN-LAST:event_jButton10ActionPerformed
+        } catch (XPathException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
 
+    }//GEN-LAST:event_jButton10ActionPerformed
+    }
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
-            SaxonFunctionsXQuery.xQueryToXml("cidades.xml1", "transf3_xml.xql");
+            SaxonFunctionsXQuery.xQueryToXml("cidadesDescendente.xml", "transf3_1_xml.xql");
             JOptionPane.showMessageDialog(this,
                     "Transformação feita com sucesso...",
                     "XQuery para XML", JOptionPane.INFORMATION_MESSAGE);
             
             
-            Document doc = XMLJDomFunctions.lerDocumentoXML("cidades1.xml");
+            Document doc = XMLJDomFunctions.lerDocumentoXML("cidadesDescendente.xml");
             String t = XMLJDomFunctions.escreverDocumentoString(doc);
+            
+            SaxonFunctionsXQuery.xQueryToXml("5cidadesMaisPopulosas.xml", "transf3_2_xml.xql");
+            doc = XMLJDomFunctions.lerDocumentoXML("5cidadesMaisPopulosas.xml");
+             t = XMLJDomFunctions.escreverDocumentoString(doc);
             jTextArea1.setText(t);
         } catch (XPathException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
@@ -1253,6 +1413,106 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
 
+    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
+        // TODO add your handling code here:
+        jDialog11.setTitle("Pesquisar pelo nome");
+        jDialog11.setSize(500, 200);
+        jDialog11.setLocation(200, 200);
+        jDialog11.setVisible(true);
+    }//GEN-LAST:event_jMenuItem19ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+           try {
+            Scanner ler = new Scanner(System.in);
+            String xp = null;
+            String valor = jTextField3.getText();
+
+            xp = "//cidade/Administracao[presidente = '" + valor + "']/../@nome";
+
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+
+            if (res == null) {
+                jTextArea1.setText("Ficheiro não existe");
+            } else if (res.size() == 0) {
+                jTextArea1.setText("Pesquisa sem informação");
+            } else {
+                jTextArea1.setText(x);
+            }
+            jDialog2.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        // TODO add your handling code here:
+        jDialog12.setTitle("Pesquisar pelo idioma");
+        jDialog12.setSize(300, 200);
+        jDialog12.setLocation(200, 200);
+        jDialog12.setVisible(true);
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+         // TODO add your handling code here:
+        try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp = null;
+            String valor = jTextField16.getText();
+            
+            xp = "//cidade/Dados[contains(linguaOficial,'" + valor + "')]/../@nome";
+            
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+
+            if (res == null) {
+                jTextArea1.setText("Ficheiro nao existe");
+            } else if (res.size() == 0) {
+                jTextArea1.setText("Pesquisa sem informação");
+            } else {
+                jTextArea1.setText(x);
+            }
+            jDialog4.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+         // TODO add your handling code here:
+        try {
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Introduza palavra de pesquisa");
+            String xp = null;
+            
+            xp = "//cidade/Administracao[contains(codigoPostal,'" + jTextField17.getText() + "')]/../@nome";
+            
+            XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
+            String x = XPathFunctions.listaResultado(res);
+
+            if (res == null) {
+                jTextArea1.setText("Ficheiro nao existe");
+            } else if (res.size() == 0) {
+                jTextArea1.setText("Pesquisa sem informação");
+            } else {
+                jTextArea1.setText(x);
+            }
+            jDialog4.setVisible(false);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+        // TODO add your handling code here:
+        jDialog13.setTitle("Pesquisar pelo código postal");
+        jDialog13.setSize(300, 200);
+        jDialog13.setLocation(200, 200);
+        jDialog13.setVisible(true);
+    }//GEN-LAST:event_jMenuItem21ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1291,6 +1551,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1301,6 +1564,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog10;
+    private javax.swing.JDialog jDialog11;
+    private javax.swing.JDialog jDialog12;
+    private javax.swing.JDialog jDialog13;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JDialog jDialog3;
     private javax.swing.JDialog jDialog4;
@@ -1315,6 +1581,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1338,7 +1607,10 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -1353,6 +1625,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;

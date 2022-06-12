@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE cidades SYSTEM "cidades.dtd">
 <cidades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cidades.xsd">
-     <cidade nome="Madrid" pais="Espanha" capital="false">
-          <Administracao>
-               <codigoPostal>28005</codigoPostal>
-               <presidente>José Luis Martínez-Almeida Navasqües</presidente>
-          </Administracao>
-          <Dados>
-               <website>https://www.madrid.es</website>
-               <linguaOficial>Espanhol</linguaOficial>
-               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
-               <cidadesGeminadas>
-                    <cidad>Tirana</cidad>
-                    <cidad>Buenos Aires</cidad>
-                    <cidad>Bruxelas</cidad>
-                    <cidad>La Paz</cidad>
-                    <cidad>Sarajevo</cidad>
-               </cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png</linkBandeiraCidade>
-               <linkMonumentos />
-          </links>
-          <Geografia>
-               <latitude>40.4167</latitude>
-               <longitude>-3.70325</longitude>
-               <areaCidade>605.77</areaCidade>
-               <altitude>659.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>3266126.0</nHabitantes>
-               <densidadePopulacional>5391.7</densidadePopulacional>
-          </Demografia>
-     </cidade>
      <cidade nome="Lisboa" pais="Portugal" capital="true">
           <Administracao>
                <codigoPostal>1100</codigoPostal>
@@ -54,7 +21,11 @@
           <links>
                <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
                <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
-               <linkMonumentos />
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/280px-Lisbon_%2836831596786%29_%28cropped%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg/139px-Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lisboa_IMG_6805_%2820499138133%29.jpg/139px-Lisboa_IMG_6805_%2820499138133%29.jpg</link>
+               </linkMonumentos>
           </links>
           <Geografia>
                <latitude>38.7071</latitude>
@@ -66,6 +37,44 @@
           <Demografia>
                <nHabitantes>507220.0</nHabitantes>
                <densidadePopulacional>5981.4</densidadePopulacional>
+          </Demografia>
+     </cidade>
+     <cidade nome="Barcelona" pais="Espanha" capital="false">
+          <Administracao>
+               <codigoPostal>08071</codigoPostal>
+               <presidente>Ada COLAU BALLANO</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.barcelona.cat</website>
+               <linguaOficial>Espanhol</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Tirana</cidad>
+                    <cidad>Rosário</cidad>
+                    <cidad>Antuérpia</cidad>
+                    <cidad>Sarajevo</cidad>
+                    <cidad>Rio de Janeiro</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Barcelona.svg/100px-Flag_of_Barcelona.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Barcelona_March_2015-2a.jpg/85px-Barcelona_March_2015-2a.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Barcelona_ISS009-E-9987.jpg/220px-Barcelona_ISS009-E-9987.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Barcelona_Platja_de_Sant_Sebastia_i_Barceloneta.jpg/220px-Barcelona_Platja_de_Sant_Sebastia_i_Barceloneta.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>41.3879</latitude>
+               <longitude>2.16992</longitude>
+               <areaCidade>98.21</areaCidade>
+               <altitude>34.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>1636762.0</nHabitantes>
+               <densidadePopulacional>16665.9</densidadePopulacional>
           </Demografia>
      </cidade>
      <cidade nome="Sevilha" pais="Espanha" capital="false">
@@ -88,7 +97,9 @@
           <links>
                <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
                <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png</linkBandeiraCidade>
-               <linkMonumentos />
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Metropol_parasol_02042011_001.jpg/250px-Metropol_parasol_02042011_001.jpg</link>
+               </linkMonumentos>
           </links>
           <Geografia>
                <latitude>37.3826</latitude>

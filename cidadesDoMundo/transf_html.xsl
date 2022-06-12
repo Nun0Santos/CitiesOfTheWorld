@@ -12,7 +12,7 @@
 			<h1>Listagem de fotos</h1>
 			<table border ="1">
 				<tr><th>Bandeira</th><th>Cidade</th></tr>
-				<xsl:apply-templates select ="cidade">
+				<xsl:apply-templates select ="distinct-values(cidade/@pais)">
 					<xsl:sort select="@nome"/>
 				</xsl:apply-templates>
 			</table>
@@ -22,10 +22,10 @@
 	</xsl:template>
 	
 	
-	<xsl:template match="cidade">
+	<xsl:template match="cidade/@pais">
 		<tr>
 			<td><img src="{links/linkBandeiraPais}" width="100"/></td>
-			<td><xsl:value-of select="distinct-values(@pais)"/></td>
+			<td><xsl:value-of select="."/></td>
 		</tr>
 	</xsl:template>
 

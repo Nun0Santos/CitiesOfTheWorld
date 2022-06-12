@@ -15,16 +15,23 @@ import org.jdom2.Document;
 public class TP {
 
     public static void main(String[] args) throws IOException {
-        String lista = "Braga, Portugal";
+        String lista = "Lisboa, Portugal";
         String[] campos = lista.split(", ");
-
+        ArrayList<String> listaImagens = new ArrayList<String>();
+        
         String link = Wrappers.encontrarLinkDBCityPais(campos[1],campos[0]);
         System.out.println("link cidade " + link);
  
-       /*  Cidade x = Wrappers.criaCidade(campos[0],campos[1],link);
+       /*  Cidade x = Wrappers.criaCidade(campos[0],campos[1],link);*/
+       
         
+         listaImagens = Wrappers.procuraMonumentos(campos[0]);
+         
+         for(int i=0; i<listaImagens.size(); ++i)
+              System.out.println("monumentos " + listaImagens.get(i));
+
         
-        Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
+        /*Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
         doc = XMLFunctions.adicionaCidade(x,doc*/
  
         //Document doc = XMLJDomFunctions.lerDocumentoXML("pais.xml");

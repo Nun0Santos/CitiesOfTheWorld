@@ -29,7 +29,9 @@
 
 <!ELEMENT linkBandeiraPais (#PCDATA)>
 <!ELEMENT linkBandeiraCidade (#PCDATA)>
-<!ELEMENT linkMonumentos (#PCDATA)>
+<!ELEMENT linkMonumentos (link*)>
+
+<!ELEMENT link (#PCDATA)>
 
 <!ELEMENT latitude (#PCDATA)>
 <!ELEMENT longitude (#PCDATA)>
