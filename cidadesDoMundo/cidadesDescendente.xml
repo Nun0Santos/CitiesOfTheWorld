@@ -193,46 +193,6 @@
          <densidadePopulacional>10924.8</densidadePopulacional>
       </Demografia>
    </cidade>
-   <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Lisboa"
-           pais="Portugal"
-           capital="true">
-      <Administracao>
-         <codigoPostal>1100</codigoPostal>
-         <presidente>Fernando Medina</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.lisboa.pt</website>
-         <linguaOficial>Português</linguaOficial>
-         <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Rio de Janeiro</cidad>
-            <cidad>Salvador</cidad>
-            <cidad>São Paulo</cidad>
-            <cidad>São Paulo</cidad>
-            <cidad>Brasília</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/280px-Lisbon_%2836831596786%29_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg/139px-Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lisboa_IMG_6805_%2820499138133%29.jpg/139px-Lisboa_IMG_6805_%2820499138133%29.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>38.7071</latitude>
-         <longitude>-9.13549</longitude>
-         <areaCidade>84.8</areaCidade>
-         <altitude>4.0</altitude>
-         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>507220.0</nHabitantes>
-         <densidadePopulacional>5981.4</densidadePopulacional>
-      </Demografia>
-   </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Porto"
            pais="Portugal"
            capital="false">
@@ -351,6 +311,46 @@
       <Demografia>
          <nHabitantes>133724.0</nHabitantes>
          <densidadePopulacional>418.7</densidadePopulacional>
+      </Demografia>
+   </cidade>
+   <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Lisboa"
+           pais="Portugal"
+           capital="true">
+      <Administracao>
+         <codigoPostal>1100</codigoPostal>
+         <presidente>Fernando Medina</presidente>
+      </Administracao>
+      <Dados>
+         <website>https://www.lisboa.pt</website>
+         <linguaOficial>Português</linguaOficial>
+         <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
+         <cidadesGeminadas>
+            <cidad>Rio de Janeiro</cidad>
+            <cidad>Salvador</cidad>
+            <cidad>São Paulo</cidad>
+            <cidad>São Paulo</cidad>
+            <cidad>Brasília</cidad>
+         </cidadesGeminadas>
+      </Dados>
+      <links>
+         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
+         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
+         <linkMonumentos>
+            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/280px-Lisbon_%2836831596786%29_%28cropped%29.jpg</link>
+            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg/139px-Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg</link>
+            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lisboa_IMG_6805_%2820499138133%29.jpg/139px-Lisboa_IMG_6805_%2820499138133%29.jpg</link>
+         </linkMonumentos>
+      </links>
+      <Geografia>
+         <latitude>38.7071</latitude>
+         <longitude>-9.13549</longitude>
+         <areaCidade>84.8</areaCidade>
+         <altitude>4.0</altitude>
+         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+      </Geografia>
+      <Demografia>
+         <nHabitantes>15</nHabitantes>
+         <densidadePopulacional>5981.4</densidadePopulacional>
       </Demografia>
    </cidade>
 </queryResult>

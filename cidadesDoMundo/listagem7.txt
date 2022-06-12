@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Cidades>
-     <cidade pais="Barcelona">Espanha</cidade>
-     <cidade pais="Lisboa">Portugal</cidade>
-     <cidade pais="Sevilha">Espanha</cidade>
-</Cidades>

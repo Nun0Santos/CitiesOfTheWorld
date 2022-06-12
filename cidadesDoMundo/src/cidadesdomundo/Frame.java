@@ -1011,6 +1011,7 @@ public class Frame extends javax.swing.JFrame {
                 Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
             }
             jDialog7.setVisible(false);
+            jTextField8.setText(" ");
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1032,6 +1033,7 @@ public class Frame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Erro ao eliminar cidade");
         }
         jDialog6.setVisible(false);
+        jTextField7.setText(" ");
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -1089,6 +1091,7 @@ public class Frame extends javax.swing.JFrame {
                 jTextArea1.setText(texto.toString());
             }
             jDialog1.setVisible(false);
+            jTextField2.setText(" ");
         } catch (SaxonApiException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1115,6 +1118,7 @@ public class Frame extends javax.swing.JFrame {
                 jTextArea1.setText(x);
             }
             jDialog2.setVisible(false);
+            jTextField3.setText(" ");
         } catch (SaxonApiException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1134,13 +1138,14 @@ public class Frame extends javax.swing.JFrame {
             String x = XPathFunctions.listaResultado(res);
 
             if (res == null) {
-                jTextArea1.setText("Ficheiro nao existe");
+                jTextArea1.setText("Ficheiro não existe");
             } else if (res.size() == 0) {
-                jTextArea1.setText("Pesquisa sem informacao");
+                jTextArea1.setText("Pesquisa sem informação");
             } else {
                 jTextArea1.setText(x);
             }
             jDialog3.setVisible(false);
+            jTextField4.setText(" ");
         } catch (SaxonApiException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1167,6 +1172,7 @@ public class Frame extends javax.swing.JFrame {
                 jTextArea1.setText(x);
             }
             jDialog4.setVisible(false);
+            jTextField5.setText(" ");
         } catch (SaxonApiException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1176,10 +1182,7 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Scanner ler = new Scanner(System.in);
-            System.out.println("Introduza palavra de pesquisa");
             String xp = null;
-
-            String valor = jTextField6.getText();
 
             xp = "//cidade[contains(@capital = true)]/../@nome";
 
@@ -1200,25 +1203,6 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        // TODO add your handling code here:
-        /*Document doc = XMLJDomFunctions.lerDocumentoXML("cidades.xml");
-        if (doc != null) {
-            Document novo = JDOMFunctionsXSLT.transformaDocumento(doc, "cidades.xml", "transf_html.xsl");
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "fotosBandeiras.html");
-              JOptionPane.showMessageDialog(this,
-                    "Transformação feita com sucesso... a abrir browser...",
-                    "XSLT para HTML", JOptionPane.INFORMATION_MESSAGE);
-            String url = "fotosBandeiras.html";
-            File htmlFile = new File(url);
-            JOptionPane.showMessageDialog(null, "Ficheiro HTML Criado", "XML to HTML", JOptionPane.INFORMATION_MESSAGE);
-            try {
-                Desktop.getDesktop().browse(htmlFile.toURI());
-            } catch (IOException ex) {
-                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } else
-            JOptionPane.showMessageDialog(null, "Ficheiro XML não existe", "XML to HTML", JOptionPane.ERROR_MESSAGE);*/
-
         try {
 
             SaxonFunctionsXQuery.xQueryToHtml("fotosBandeira.html", "transf_html.xql");
@@ -1394,6 +1378,8 @@ public class Frame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Erro ao tentar alterar o número de habitantes da cidade " + jTextField11.getText() + "!");
 
         }
+        jDialog10.setVisible(false);
+        jTextField12.setText(" ");
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -1408,6 +1394,8 @@ public class Frame extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao tentar alterar a área da cidade " + jTextField11.getText() + "!");
         }
+        jDialog10.setVisible(false);
+        jTextField13.setText(" ");
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
@@ -1427,6 +1415,8 @@ public class Frame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Erro ao tentar alterar o Presidente da cidade " + jTextField11.getText() + "!");
 
         }
+        jDialog10.setVisible(false);
+        jTextField14.setText(" ");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
@@ -1504,6 +1494,7 @@ public class Frame extends javax.swing.JFrame {
                 jTextArea1.setText(x);
             }
             jDialog12.setVisible(false);
+            jTextField16.setText(" ");
         } catch (SaxonApiException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }

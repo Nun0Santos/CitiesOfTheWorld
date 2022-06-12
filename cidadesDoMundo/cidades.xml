@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE cidades SYSTEM "cidades.dtd">
 <cidades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cidades.xsd">
      <cidade nome="Coimbra" pais="Portugal" capital="false">
           <Administracao>
@@ -149,7 +148,7 @@
                <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
           </Geografia>
           <Demografia>
-               <nHabitantes>507220.0</nHabitantes>
+               <nHabitantes>15</nHabitantes>
                <densidadePopulacional>5981.4</densidadePopulacional>
           </Demografia>
      </cidade>

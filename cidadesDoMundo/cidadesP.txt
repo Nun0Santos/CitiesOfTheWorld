@@ -1,5 +1,0 @@
-Listagem de Cidades:	Barcelona
-	Bergen
-	Lisboa
-	Madrid
-	Oslo
