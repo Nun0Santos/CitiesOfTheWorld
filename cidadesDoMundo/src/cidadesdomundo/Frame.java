@@ -925,7 +925,7 @@ public class Frame extends javax.swing.JFrame {
             String xp = null;
 
             xp = "//cidade[@capital = 'true']/@nome";
-            System.out.println("xp : " + xp);
+            //System.out.println("xp : " + xp);
 
             XdmValue res = XPathFunctions.executaXpath(xp, "cidades.xml");
             String x = XPathFunctions.listaResultado(res);

@@ -1,5 +1,3 @@
 
- Cidade -- Coimbra 
- Cidade -- Porto 
- Cidade -- Braga 
- Cidade -- Lisboa
+ Cidade -- Barcelona 
+ Cidade -- Sevilha

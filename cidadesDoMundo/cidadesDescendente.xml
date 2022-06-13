@@ -2,355 +2,355 @@
 <queryResult>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Paris" pais="França"
            capital="true">
-      <Administracao>
-         <codigoPostal>75000</codigoPostal>
-         <presidente>Senhora Anne HIDALGO</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.paris.fr</website>
-         <linguaOficial>Francesa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;Francês&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;Liberté, égalité, fraternité</linguaOficial>
-         <fusoHorario>UTC  +1:00 (Europe/Paris)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Tirana</cidad>
-            <cidad>Sidnei</cidad>
-            <cidad>São Paulo</cidad>
-            <cidad>Rio de Janeiro</cidad>
-            <cidad>Goiânia</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/70.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cscr-featured1.png/20px-Cscr-featured1.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/288px-Louvre_Museum_Wikimedia_Commons.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ParisiiCoins.jpg/220px-ParisiiCoins.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Palais_de_la_Cite.jpg/220px-Palais_de_la_Cite.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>48.8032</latitude>
-         <longitude>2.3511</longitude>
-         <areaCidade>105.4</areaCidade>
-         <altitude>-1.0</altitude>
-         <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>2165423.0</nHabitantes>
-         <densidadePopulacional>20544.8</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>75000</codigoPostal>
+               <presidente>Senhora Anne HIDALGO</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.paris.fr</website>
+               <linguaOficial>Francesa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;Francês&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;Liberté, égalité, fraternité</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Paris)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Tirana</cidad>
+                    <cidad>Sidnei</cidad>
+                    <cidad>São Paulo</cidad>
+                    <cidad>Rio de Janeiro</cidad>
+                    <cidad>Goiânia</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/70.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cscr-featured1.png/20px-Cscr-featured1.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/288px-Louvre_Museum_Wikimedia_Commons.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/ParisiiCoins.jpg/220px-ParisiiCoins.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Palais_de_la_Cite.jpg/220px-Palais_de_la_Cite.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>48.8032</latitude>
+               <longitude>2.3511</longitude>
+               <areaCidade>105.4</areaCidade>
+               <altitude>-1.0</altitude>
+               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>2165423.0</nHabitantes>
+               <densidadePopulacional>20544.8</densidadePopulacional>
+          </Demografia>
+     </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Barcelona"
            pais="Espanha"
            capital="false">
-      <Administracao>
-         <codigoPostal>08071</codigoPostal>
-         <presidente>Ada COLAU BALLANO</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.barcelona.cat</website>
-         <linguaOficial>Espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;</linguaOficial>
-         <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Tirana</cidad>
-            <cidad>Rosário</cidad>
-            <cidad>Antuérpia</cidad>
-            <cidad>Sarajevo</cidad>
-            <cidad>Rio de Janeiro</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Barcelona.svg/100px-Flag_of_Barcelona.svg.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Barcelona_March_2015-2a.jpg/85px-Barcelona_March_2015-2a.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Barcelona_ISS009-E-9987.jpg/220px-Barcelona_ISS009-E-9987.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Barcelona_Platja_de_Sant_Sebastia_i_Barceloneta.jpg/220px-Barcelona_Platja_de_Sant_Sebastia_i_Barceloneta.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>41.3879</latitude>
-         <longitude>2.16992</longitude>
-         <areaCidade>98.21</areaCidade>
-         <altitude>34.0</altitude>
-         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>1636762.0</nHabitantes>
-         <densidadePopulacional>16665.9</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>08071</codigoPostal>
+               <presidente>Ada COLAU BALLANO</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.barcelona.cat</website>
+               <linguaOficial>Espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Tirana</cidad>
+                    <cidad>Rosário</cidad>
+                    <cidad>Antuérpia</cidad>
+                    <cidad>Sarajevo</cidad>
+                    <cidad>Rio de Janeiro</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Barcelona.svg/100px-Flag_of_Barcelona.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Barcelona_March_2015-2a.jpg/85px-Barcelona_March_2015-2a.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Barcelona_ISS009-E-9987.jpg/220px-Barcelona_ISS009-E-9987.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Barcelona_Platja_de_Sant_Sebastia_i_Barceloneta.jpg/220px-Barcelona_Platja_de_Sant_Sebastia_i_Barceloneta.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>41.3879</latitude>
+               <longitude>2.16992</longitude>
+               <areaCidade>98.21</areaCidade>
+               <altitude>34.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>1636762.0</nHabitantes>
+               <densidadePopulacional>16665.9</densidadePopulacional>
+          </Demografia>
+     </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Sevilha"
            pais="Espanha"
            capital="false">
-      <Administracao>
-         <codigoPostal>41071</codigoPostal>
-         <presidente>Nuno Santos</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.sevilla.org</website>
-         <linguaOficial>Espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;</linguaOficial>
-         <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Buenos Aires</cidad>
-            <cidad>Barcelona</cidad>
-            <cidad>Cartagena das Índias</cidad>
-            <cidad>Havana</cidad>
-            <cidad>San Salvador</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Metropol_parasol_02042011_001.jpg/250px-Metropol_parasol_02042011_001.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>37.3826</latitude>
-         <longitude>-5.99629</longitude>
-         <areaCidade>141.31</areaCidade>
-         <altitude>2.0</altitude>
-         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>688592.0</nHabitantes>
-         <densidadePopulacional>4872.9</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>41071</codigoPostal>
+               <presidente>Nuno Santos</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.sevilla.org</website>
+               <linguaOficial>Espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;espanhol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Madrid)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Buenos Aires</cidad>
+                    <cidad>Barcelona</cidad>
+                    <cidad>Cartagena das Índias</cidad>
+                    <cidad>Havana</cidad>
+                    <cidad>San Salvador</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/194.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Metropol_parasol_02042011_001.jpg/250px-Metropol_parasol_02042011_001.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>37.3826</latitude>
+               <longitude>-5.99629</longitude>
+               <areaCidade>141.31</areaCidade>
+               <altitude>2.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>688592.0</nHabitantes>
+               <densidadePopulacional>4872.9</densidadePopulacional>
+          </Demografia>
+     </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Oslo" pais="Noruega"
            capital="true">
-      <Administracao>
-         <codigoPostal>0037</codigoPostal>
-         <presidente>Fabian Stang</presidente>
-      </Administracao>
-      <Dados>
-         <website>http://www.oslo.kommune.no</website>
-         <linguaOficial>Norueguês bokmål&lt;br /&gt;Novo norueguês</linguaOficial>
-         <fusoHorario>UTC  +1:00 (Europe/Oslo)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Antuérpia</cidad>
-            <cidad>Xangai</cidad>
-            <cidad>Copenhaga</cidad>
-            <cidad>Helsínquia</cidad>
-            <cidad>Schleswig</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/158.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Medieval_Oslo_map.jpg/225px-Medieval_Oslo_map.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Christiania_Norway_in_1814_by_MK_Tholstrup.jpg/250px-Christiania_Norway_in_1814_by_MK_Tholstrup.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Stortinget_2009.jpg/200px-Stortinget_2009.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>59.9138</latitude>
-         <longitude>10.7387</longitude>
-         <areaCidade>453.99</areaCidade>
-         <altitude>23.0</altitude>
-         <clima>Clima continental húmido (Classificação climática de Köppen-Geiger: Dfb)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>560484.0</nHabitantes>
-         <densidadePopulacional>1234.6</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>0037</codigoPostal>
+               <presidente>Fabian Stang</presidente>
+          </Administracao>
+          <Dados>
+               <website>http://www.oslo.kommune.no</website>
+               <linguaOficial>Norueguês bokmål&lt;br /&gt;Novo norueguês</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Oslo)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Antuérpia</cidad>
+                    <cidad>Xangai</cidad>
+                    <cidad>Copenhaga</cidad>
+                    <cidad>Helsínquia</cidad>
+                    <cidad>Schleswig</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/158.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Medieval_Oslo_map.jpg/225px-Medieval_Oslo_map.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Christiania_Norway_in_1814_by_MK_Tholstrup.jpg/250px-Christiania_Norway_in_1814_by_MK_Tholstrup.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Stortinget_2009.jpg/200px-Stortinget_2009.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>59.9138</latitude>
+               <longitude>10.7387</longitude>
+               <areaCidade>453.99</areaCidade>
+               <altitude>23.0</altitude>
+               <clima>Clima continental húmido (Classificação climática de Köppen-Geiger: Dfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>560484.0</nHabitantes>
+               <densidadePopulacional>1234.6</densidadePopulacional>
+          </Demografia>
+     </cidade>
+   <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Dublin"
+           pais="Irlanda"
+           capital="true">
+          <Administracao>
+               <codigoPostal/>
+               <presidente>Hazel Chu</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.dublincity.ie</website>
+               <linguaOficial>Inglês</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Dublin)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Posadas</cidad>
+                    <cidad>La Paz</cidad>
+                    <cidad>Monterrey</cidad>
+                    <cidad>Mexico</cidad>
+                    <cidad>Bratislava</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/101.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Irlande.svg/240px-Irlande.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Dublin_Docklands_-_panoramio_%282%29.jpg/300px-Dublin_Docklands_-_panoramio_%282%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Malahide_Castle.jpg/200px-Malahide_Castle.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ireland_256_bg_062202.jpg/200px-Ireland_256_bg_062202.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>53.3434</latitude>
+               <longitude>-6.26761</longitude>
+               <areaCidade>114.99</areaCidade>
+               <altitude>23.0</altitude>
+               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>525383.0</nHabitantes>
+               <densidadePopulacional>4568.9</densidadePopulacional>
+          </Demografia>
+     </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Lyon" pais="França"
            capital="false">
-      <Administracao>
-         <codigoPostal>69000</codigoPostal>
-         <presidente>Senhor Grégory DOUCET</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.lyon.fr</website>
-         <linguaOficial>Francesa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;Francês&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;Liberté, égalité, fraternité</linguaOficial>
-         <fusoHorario>UTC  +1:00 (Europe/Paris)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Goiânia</cidad>
-            <cidad>Curitiba</cidad>
-            <cidad>Uagadugu</cidad>
-            <cidad>Montréal</cidad>
-            <cidad>Pereira</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/70.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/22px-Flag_of_France.svg.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lyon-Paysages.jpg/275px-Lyon-Paysages.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>45.7589</latitude>
-         <longitude>4.84139</longitude>
-         <areaCidade>47.87</areaCidade>
-         <altitude>-1.0</altitude>
-         <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>522969.0</nHabitantes>
-         <densidadePopulacional>10924.8</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>69000</codigoPostal>
+               <presidente>Senhor Grégory DOUCET</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.lyon.fr</website>
+               <linguaOficial>Francesa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Gentílico&lt;/th&gt;&lt;td&gt;Francês&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Lema&lt;/th&gt;&lt;td&gt;Liberté, égalité, fraternité</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Paris)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Goiânia</cidad>
+                    <cidad>Curitiba</cidad>
+                    <cidad>Uagadugu</cidad>
+                    <cidad>Montréal</cidad>
+                    <cidad>Pereira</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/70.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/22px-Flag_of_France.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lyon-Paysages.jpg/275px-Lyon-Paysages.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>45.7589</latitude>
+               <longitude>4.84139</longitude>
+               <areaCidade>47.87</areaCidade>
+               <altitude>-1.0</altitude>
+               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>522969.0</nHabitantes>
+               <densidadePopulacional>10924.8</densidadePopulacional>
+          </Demografia>
+     </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Porto"
            pais="Portugal"
            capital="false">
-      <Administracao>
-         <codigoPostal>4049</codigoPostal>
-         <presidente>Rui Moreira</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.cm-porto.pt</website>
-         <linguaOficial>Português</linguaOficial>
-         <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Luanda</cidad>
-            <cidad>Liège</cidad>
-            <cidad>Recife</cidad>
-            <cidad>Belo Horizonte</cidad>
-            <cidad>São Vicente</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Porto_COA.svg/90px-Porto_COA.svg.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Porto_Montage.jpg/280px-Porto_Montage.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Porto%2C_S%C3%A9_do_Porto_%287%29.jpg/170px-Porto%2C_S%C3%A9_do_Porto_%287%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/ISS-32_Nighttime_image_of_Portugal_featuring_Porto_and_Vila_Nova_de_Gaia.jpg/220px-ISS-32_Nighttime_image_of_Portugal_featuring_Porto_and_Vila_Nova_de_Gaia.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>41.15</latitude>
-         <longitude>-8.61024</longitude>
-         <areaCidade>41.3</areaCidade>
-         <altitude>83.0</altitude>
-         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csb)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>215284.0</nHabitantes>
-         <densidadePopulacional>5212.7</densidadePopulacional>
-      </Demografia>
-   </cidade>
-   <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Braga"
-           pais="Portugal"
-           capital="false">
-      <Administracao>
-         <codigoPostal>4704</codigoPostal>
-         <presidente>Ricardo Rio</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.cm-braga.pt</website>
-         <linguaOficial>Português</linguaOficial>
-         <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Santo André</cidad>
-            <cidad>Ribeira Brava</cidad>
-            <cidad>Tarrafal de São Nicolau</cidad>
-            <cidad>Puteaux</cidad>
-            <cidad>Clermont-Ferrand</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/BRG.png/90px-BRG.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Braga_Banco_Portugal_%28cropped%29.jpg/139px-Braga_Banco_Portugal_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Bas%C3%ADlica_Nossa_Senhora_do_Sameiro_%286%29_%28cropped%29.jpg/139px-Bas%C3%ADlica_Nossa_Senhora_do_Sameiro_%286%29_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Igreja_do_Convento_dos_Congregados%2C_Braga_%2816778987800%29.jpg/92px-Igreja_do_Convento_dos_Congregados%2C_Braga_%2816778987800%29.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>41.5518</latitude>
-         <longitude>-8.4229</longitude>
-         <areaCidade>183.2</areaCidade>
-         <altitude>193.0</altitude>
-         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csb)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>181919.0</nHabitantes>
-         <densidadePopulacional>993.0</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>4049</codigoPostal>
+               <presidente>Rui Moreira</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.cm-porto.pt</website>
+               <linguaOficial>Português</linguaOficial>
+               <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Luanda</cidad>
+                    <cidad>Liège</cidad>
+                    <cidad>Recife</cidad>
+                    <cidad>Belo Horizonte</cidad>
+                    <cidad>São Vicente</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Porto_COA.svg/90px-Porto_COA.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Porto_Montage.jpg/280px-Porto_Montage.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Porto%2C_S%C3%A9_do_Porto_%287%29.jpg/170px-Porto%2C_S%C3%A9_do_Porto_%287%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/ISS-32_Nighttime_image_of_Portugal_featuring_Porto_and_Vila_Nova_de_Gaia.jpg/220px-ISS-32_Nighttime_image_of_Portugal_featuring_Porto_and_Vila_Nova_de_Gaia.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>41.15</latitude>
+               <longitude>-8.61024</longitude>
+               <areaCidade>41.3</areaCidade>
+               <altitude>83.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>215284.0</nHabitantes>
+               <densidadePopulacional>5212.7</densidadePopulacional>
+          </Demografia>
+     </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Coimbra"
            pais="Portugal"
            capital="false">
-      <Administracao>
-         <codigoPostal>3000</codigoPostal>
-         <presidente>Manuel Machado</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.cm-coimbra.pt</website>
-         <linguaOficial>Português</linguaOficial>
-         <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Santos</cidad>
-            <cidad>São Paulo</cidad>
-            <cidad>São Paulo</cidad>
-            <cidad>Curitiba</cidad>
-            <cidad>São Vicente</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/CBR.png/90px-CBR.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Coimbra_e_o_rio_Mondego_%286167200429%29_%28cropped%29.jpg/280px-Coimbra_e_o_rio_Mondego_%286167200429%29_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Portugal-2017-C-205_%2827111103668%29_%28cropped%29.jpg/139px-Portugal-2017-C-205_%2827111103668%29_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/94918-Coimbra_%2849022894973%29_%28cropped%29.jpg/139px-94918-Coimbra_%2849022894973%29_%28cropped%29.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>40.2115</latitude>
-         <longitude>-8.4292</longitude>
-         <areaCidade>319.4</areaCidade>
-         <altitude>29.0</altitude>
-         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csb)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>133724.0</nHabitantes>
-         <densidadePopulacional>418.7</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>3000</codigoPostal>
+               <presidente>Manuel Machado</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.cm-coimbra.pt</website>
+               <linguaOficial>Português</linguaOficial>
+               <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Santos</cidad>
+                    <cidad>São Paulo</cidad>
+                    <cidad>São Paulo</cidad>
+                    <cidad>Curitiba</cidad>
+                    <cidad>São Vicente</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/CBR.png/90px-CBR.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Coimbra_e_o_rio_Mondego_%286167200429%29_%28cropped%29.jpg/280px-Coimbra_e_o_rio_Mondego_%286167200429%29_%28cropped%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Portugal-2017-C-205_%2827111103668%29_%28cropped%29.jpg/139px-Portugal-2017-C-205_%2827111103668%29_%28cropped%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/94918-Coimbra_%2849022894973%29_%28cropped%29.jpg/139px-94918-Coimbra_%2849022894973%29_%28cropped%29.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>40.2115</latitude>
+               <longitude>-8.4292</longitude>
+               <areaCidade>319.4</areaCidade>
+               <altitude>29.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>133724.0</nHabitantes>
+               <densidadePopulacional>418.7</densidadePopulacional>
+          </Demografia>
+     </cidade>
    <cidade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nome="Lisboa"
            pais="Portugal"
            capital="true">
-      <Administracao>
-         <codigoPostal>1100</codigoPostal>
-         <presidente>Fernando Medina</presidente>
-      </Administracao>
-      <Dados>
-         <website>https://www.lisboa.pt</website>
-         <linguaOficial>Português</linguaOficial>
-         <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
-         <cidadesGeminadas>
-            <cidad>Rio de Janeiro</cidad>
-            <cidad>Salvador</cidad>
-            <cidad>São Paulo</cidad>
-            <cidad>São Paulo</cidad>
-            <cidad>Brasília</cidad>
-         </cidadesGeminadas>
-      </Dados>
-      <links>
-         <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-         <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
-         <linkMonumentos>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/280px-Lisbon_%2836831596786%29_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg/139px-Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg</link>
-            <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lisboa_IMG_6805_%2820499138133%29.jpg/139px-Lisboa_IMG_6805_%2820499138133%29.jpg</link>
-         </linkMonumentos>
-      </links>
-      <Geografia>
-         <latitude>38.7071</latitude>
-         <longitude>-9.13549</longitude>
-         <areaCidade>84.8</areaCidade>
-         <altitude>4.0</altitude>
-         <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
-      </Geografia>
-      <Demografia>
-         <nHabitantes>15</nHabitantes>
-         <densidadePopulacional>5981.4</densidadePopulacional>
-      </Demografia>
-   </cidade>
+          <Administracao>
+               <codigoPostal>1100</codigoPostal>
+               <presidente>Emanuel</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.lisboa.pt</website>
+               <linguaOficial>Português</linguaOficial>
+               <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Rio de Janeiro</cidad>
+                    <cidad>Salvador</cidad>
+                    <cidad>São Paulo</cidad>
+                    <cidad>São Paulo</cidad>
+                    <cidad>Brasília</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Crest_of_Lisboa.png/90px-Crest_of_Lisboa.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/280px-Lisbon_%2836831596786%29_%28cropped%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg/139px-Rua_Augusta_Arch_-_April_2019_%28cropped%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lisboa_IMG_6805_%2820499138133%29.jpg/139px-Lisboa_IMG_6805_%2820499138133%29.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>38.7071</latitude>
+               <longitude>-9.13549</longitude>
+               <areaCidade>84.8</areaCidade>
+               <altitude>4.0</altitude>
+               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csa)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>15</nHabitantes>
+               <densidadePopulacional>5981.4</densidadePopulacional>
+          </Demografia>
+     </cidade>
 </queryResult>

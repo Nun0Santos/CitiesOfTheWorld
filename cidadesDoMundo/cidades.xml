@@ -76,48 +76,10 @@
                <densidadePopulacional>5212.7</densidadePopulacional>
           </Demografia>
      </cidade>
-     <cidade nome="Braga" pais="Portugal" capital="false">
-          <Administracao>
-               <codigoPostal>4704</codigoPostal>
-               <presidente>Ricardo Rio</presidente>
-          </Administracao>
-          <Dados>
-               <website>https://www.cm-braga.pt</website>
-               <linguaOficial>Português</linguaOficial>
-               <fusoHorario>UTC  +0:00 (Europe/Lisbon)</fusoHorario>
-               <cidadesGeminadas>
-                    <cidad>Santo André</cidad>
-                    <cidad>Ribeira Brava</cidad>
-                    <cidad>Tarrafal de São Nicolau</cidad>
-                    <cidad>Puteaux</cidad>
-                    <cidad>Clermont-Ferrand</cidad>
-               </cidadesGeminadas>
-          </Dados>
-          <links>
-               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/170.png</linkBandeiraPais>
-               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/BRG.png/90px-BRG.png</linkBandeiraCidade>
-               <linkMonumentos>
-                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Braga_Banco_Portugal_%28cropped%29.jpg/139px-Braga_Banco_Portugal_%28cropped%29.jpg</link>
-                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Bas%C3%ADlica_Nossa_Senhora_do_Sameiro_%286%29_%28cropped%29.jpg/139px-Bas%C3%ADlica_Nossa_Senhora_do_Sameiro_%286%29_%28cropped%29.jpg</link>
-                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Igreja_do_Convento_dos_Congregados%2C_Braga_%2816778987800%29.jpg/92px-Igreja_do_Convento_dos_Congregados%2C_Braga_%2816778987800%29.jpg</link>
-               </linkMonumentos>
-          </links>
-          <Geografia>
-               <latitude>41.5518</latitude>
-               <longitude>-8.4229</longitude>
-               <areaCidade>183.2</areaCidade>
-               <altitude>193.0</altitude>
-               <clima>Clima mediterrânico (Classificação climática de Köppen-Geiger: Csb)</clima>
-          </Geografia>
-          <Demografia>
-               <nHabitantes>181919.0</nHabitantes>
-               <densidadePopulacional>993.0</densidadePopulacional>
-          </Demografia>
-     </cidade>
      <cidade nome="Lisboa" pais="Portugal" capital="true">
           <Administracao>
                <codigoPostal>1100</codigoPostal>
-               <presidente>Fernando Medina</presidente>
+               <presidente>Emanuel</presidente>
           </Administracao>
           <Dados>
                <website>https://www.lisboa.pt</website>
@@ -336,6 +298,44 @@
           <Demografia>
                <nHabitantes>522969.0</nHabitantes>
                <densidadePopulacional>10924.8</densidadePopulacional>
+          </Demografia>
+     </cidade>
+     <cidade nome="Dublin" pais="Irlanda" capital="true">
+          <Administracao>
+               <codigoPostal />
+               <presidente>Hazel Chu</presidente>
+          </Administracao>
+          <Dados>
+               <website>https://www.dublincity.ie</website>
+               <linguaOficial>Inglês</linguaOficial>
+               <fusoHorario>UTC  +1:00 (Europe/Dublin)</fusoHorario>
+               <cidadesGeminadas>
+                    <cidad>Posadas</cidad>
+                    <cidad>La Paz</cidad>
+                    <cidad>Monterrey</cidad>
+                    <cidad>Mexico</cidad>
+                    <cidad>Bratislava</cidad>
+               </cidadesGeminadas>
+          </Dados>
+          <links>
+               <linkBandeiraPais>https://dwpt1kkww6vki.cloudfront.net/img/drapeau/120/101.png</linkBandeiraPais>
+               <linkBandeiraCidade>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Irlande.svg/240px-Irlande.svg.png</linkBandeiraCidade>
+               <linkMonumentos>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Dublin_Docklands_-_panoramio_%282%29.jpg/300px-Dublin_Docklands_-_panoramio_%282%29.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Malahide_Castle.jpg/200px-Malahide_Castle.jpg</link>
+                    <link>https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ireland_256_bg_062202.jpg/200px-Ireland_256_bg_062202.jpg</link>
+               </linkMonumentos>
+          </links>
+          <Geografia>
+               <latitude>53.3434</latitude>
+               <longitude>-6.26761</longitude>
+               <areaCidade>114.99</areaCidade>
+               <altitude>23.0</altitude>
+               <clima>Clima oceânico (Classificação climática de Köppen-Geiger: Cfb)</clima>
+          </Geografia>
+          <Demografia>
+               <nHabitantes>525383.0</nHabitantes>
+               <densidadePopulacional>4568.9</densidadePopulacional>
           </Demografia>
      </cidade>
 </cidades>

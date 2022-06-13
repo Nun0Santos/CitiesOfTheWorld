@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Cidades>
      <cidade pais="Barcelona">Espanha</cidade>
-     <cidade pais="Braga">Portugal</cidade>
      <cidade pais="Coimbra">Portugal</cidade>
+     <cidade pais="Dublin">Irlanda</cidade>
      <cidade pais="Lisboa">Portugal</cidade>
      <cidade pais="Lyon">França</cidade>
      <cidade pais="Oslo">Noruega</cidade>
